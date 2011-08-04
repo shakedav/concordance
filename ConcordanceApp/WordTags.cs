@@ -11,7 +11,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 {
     public partial class WordTags : Form
     {
-        public WordTags()
+        public WordTags(string word, Form myparent)
         {
             InitializeComponent();
         }
