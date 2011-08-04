@@ -34,8 +34,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void AddTag_Click(object sender, EventArgs e)
         {
-            DB.TagWord(_word,comboBox1.Text);
+            int result = DB.TagWord(_word,comboBox1.Text);
+            if (result == -1)
+                MessageBox.Show("Tag Already Exists for this word");
             Tags.DataSource = DB.GetTagsofWord(_word).ToList<GetTagsofWordResult>();
+            this.tagsTableAdapter.Fill(this.concordationDataSet.Tags);
         }
     }
 }
