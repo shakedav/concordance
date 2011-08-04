@@ -28,7 +28,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void AddTaglnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddTag form = new AddTag();
+            AddTag form = new AddTag(this);
             form.Show();
         }
 
@@ -38,6 +38,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             if (result == -1)
                 MessageBox.Show("Tag Already Exists for this word");
             Tags.DataSource = DB.GetTagsofWord(_word).ToList<GetTagsofWordResult>();
+            this.tagsTableAdapter.Fill(this.concordationDataSet.Tags);
+        }
+
+        private void comboBox1_Enter(object sender, EventArgs e)
+        {
             this.tagsTableAdapter.Fill(this.concordationDataSet.Tags);
         }
     }

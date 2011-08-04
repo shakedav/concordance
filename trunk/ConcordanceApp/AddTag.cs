@@ -12,9 +12,16 @@ namespace concordanceapConcordationDataSetTableAdaptersp
     public partial class AddTag : Form
     {
         DBConDataContext DB = new DBConDataContext();
+        Form parent;
         public AddTag()
         {
             InitializeComponent();
+        }
+        
+        public AddTag(Form myparent)
+        {
+            InitializeComponent();
+            parent = myparent;
         }
 
         private void AddTag_Load(object sender, EventArgs e)
@@ -30,6 +37,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 this.tagsTableAdapter.Fill(this.concordationDataSet.Tags);
             else
                 MessageBox.Show("Tag Already Exists");
+        }
+
+        private void AddTag_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            parent.Invalidate();
         }
     }
 }
