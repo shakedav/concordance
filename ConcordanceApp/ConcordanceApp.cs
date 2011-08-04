@@ -92,7 +92,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             TagsNum.Text = DB.GetContainingTags(SearchBox.Text).ToString();
             TagsNum.Visible = true;
             if (TagsNum.Text.Equals("0"))
-                TagsNum.Enabled = false;
+            {
+                TagsNum.Enabled = true;
+                TagsNum.Text = "Add a tag to the word";
+            }
             else
                 TagsNum.Enabled = true;
             
