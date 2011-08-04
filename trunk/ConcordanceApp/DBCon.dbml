@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Concordation" Class="DBConDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SHAKEDAV-PC\CONCORDATION;Initial Catalog=Concordation;Integrated Security=True" SettingsObjectName="concordanceapConcordationDataSetTableAdaptersp.Properties.Settings" SettingsPropertyName="ConcordationConnectionString3" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.addAttributes" Method="addAttributes">
+    <Parameter Name="docID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="attValue" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="attType" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetSearchWord" Method="GetSearchWord">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetSearchWordResult">
+      <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LineNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WordNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertDocument" Method="InsertDocument">
+    <Parameter Name="DocType" Parameter="docType" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Path" Parameter="path" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertWord" Method="InsertWord">
+    <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Line" Parameter="line" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WordNum" Parameter="wordNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocID" Parameter="docID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ContextWords" Method="ContextWords">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="ContextWordsResult">
+      <Column Name="Context" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Line" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Word Number" Member="Word_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Document" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTaggedWords" Method="GetTaggedWords">
+    <ElementType Name="GetTaggedWordsResult">
+      <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TagName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AddTag" Method="AddTag">
+    <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetTotalAppearances" Method="GetTotalAppearances">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetContainingDocs" Method="GetContainingDocs">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetContainingTags" Method="GetContainingTags">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetDocsOfWord" Method="GetDocsOfWord">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetDocsOfWordResult">
+      <Column Name="value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTagsofWord" Method="GetTagsofWord">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetTagsofWordResult">
+      <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TagName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllWords" Method="GetAllWords">
+    <ElementType Name="GetAllWordsResult">
+      <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TagWord" Method="TagWord">
+    <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

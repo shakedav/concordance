@@ -1,0 +1,22 @@
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.pdb
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\ConcordanceApp.ConcordanceApp.resources
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\ConcordanceApp.Properties.Resources.resources
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.exe
+C:\Users\shakedav\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\x86\Release\WindowsFormsApplication1.pdb
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\bin\Release\ConcordanceApp.exe
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\bin\Release\ConcordanceApp.pdb
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\ConcordanceApp.Properties.Resources.resources
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\ConcordanceApp.exe
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\ConcordanceApp.pdb
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\ConcordanceApp.ConcordanceApp.resources
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\obj\x86\Release\ConcordanceApp.AttributesForm.resources
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\bin\Release\ConcordanceApp.exe.config
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\bin\Release\Concordation.mdf
+C:\Users\shakedav\Documents\My Dropbox\2011b\סדנא בסיסי נתונים\Conconrodasion\Winform\ConcordanceApp\ConcordanceApp\bin\Release\Concordation_log.ldf
