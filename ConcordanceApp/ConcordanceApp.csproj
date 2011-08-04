@@ -125,6 +125,9 @@
     <EmbeddedResource Include="DocNames.resx">
       <DependentUpon>DocNames.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WordTags.resx">
+      <DependentUpon>WordTags.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ConcordationDataSet.xsc">
       <DependentUpon>ConcordationDataSet.xsd</DependentUpon>
     </None>
