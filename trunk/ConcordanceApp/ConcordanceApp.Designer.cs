@@ -148,10 +148,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // UpDocLbl
             // 
+            this.UpDocLbl.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.UpDocLbl.AutoSize = true;
+            this.UpDocLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpDocLbl.LinkColor = System.Drawing.Color.DodgerBlue;
             this.UpDocLbl.Location = new System.Drawing.Point(12, 192);
             this.UpDocLbl.Name = "UpDocLbl";
-            this.UpDocLbl.Size = new System.Drawing.Size(93, 13);
+            this.UpDocLbl.Size = new System.Drawing.Size(108, 13);
             this.UpDocLbl.TabIndex = 11;
             this.UpDocLbl.TabStop = true;
             this.UpDocLbl.Text = "Upload Document";
@@ -159,10 +162,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // AddDocTypeLbl
             // 
+            this.AddDocTypeLbl.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddDocTypeLbl.AutoSize = true;
+            this.AddDocTypeLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDocTypeLbl.LinkColor = System.Drawing.Color.DodgerBlue;
             this.AddDocTypeLbl.Location = new System.Drawing.Point(12, 215);
             this.AddDocTypeLbl.Name = "AddDocTypeLbl";
-            this.AddDocTypeLbl.Size = new System.Drawing.Size(105, 13);
+            this.AddDocTypeLbl.Size = new System.Drawing.Size(123, 13);
             this.AddDocTypeLbl.TabIndex = 12;
             this.AddDocTypeLbl.TabStop = true;
             this.AddDocTypeLbl.Text = "Add Document Type";
@@ -181,10 +187,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // DocumentsLbl
             // 
             this.DocumentsLbl.AutoSize = true;
-            this.DocumentsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.DocumentsLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentsLbl.ForeColor = System.Drawing.Color.DimGray;
             this.DocumentsLbl.Location = new System.Drawing.Point(12, 169);
             this.DocumentsLbl.Name = "DocumentsLbl";
-            this.DocumentsLbl.Size = new System.Drawing.Size(60, 13);
+            this.DocumentsLbl.Size = new System.Drawing.Size(79, 13);
             this.DocumentsLbl.TabIndex = 14;
             this.DocumentsLbl.Text = "Documents";
             // 
@@ -272,22 +279,24 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // TotAppearances
             // 
             this.TotAppearances.AutoSize = true;
-            this.TotAppearances.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.TotAppearances.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotAppearances.Location = new System.Drawing.Point(800, 39);
             this.TotAppearances.Name = "TotAppearances";
-            this.TotAppearances.Size = new System.Drawing.Size(115, 16);
+            this.TotAppearances.Size = new System.Drawing.Size(124, 14);
             this.TotAppearances.TabIndex = 23;
             this.TotAppearances.Text = "Total Appearances";
             // 
             // TotAppeartxt
             // 
+            this.TotAppeartxt.ActiveLinkColor = System.Drawing.Color.DarkOrange;
             this.TotAppeartxt.AutoSize = true;
-            this.TotAppeartxt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.TotAppeartxt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotAppeartxt.ForeColor = System.Drawing.Color.Orange;
             this.TotAppeartxt.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.TotAppeartxt.LinkColor = System.Drawing.Color.Red;
+            this.TotAppeartxt.LinkColor = System.Drawing.Color.Orange;
             this.TotAppeartxt.Location = new System.Drawing.Point(800, 16);
             this.TotAppeartxt.Name = "TotAppeartxt";
-            this.TotAppeartxt.Size = new System.Drawing.Size(82, 16);
+            this.TotAppeartxt.Size = new System.Drawing.Size(104, 16);
             this.TotAppeartxt.TabIndex = 24;
             this.TotAppeartxt.TabStop = true;
             this.TotAppeartxt.Text = "TotAppeartxt";
