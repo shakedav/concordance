@@ -106,8 +106,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void TagsNum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //WordTags form = new WordTags(SearchBox.Text,this);
-            //form.Show();
+            WordTags form = new WordTags(SearchBox.Text,this);
+            form.Show();
         }
 
         private void AddTagLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
