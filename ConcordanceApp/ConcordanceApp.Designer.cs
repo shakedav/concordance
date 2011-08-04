@@ -60,6 +60,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.ContainingDocsnum = new System.Windows.Forms.LinkLabel();
             this.TagsNum = new System.Windows.Forms.LinkLabel();
             this.Tags = new System.Windows.Forms.Label();
+            this.RelationsNum = new System.Windows.Forms.LinkLabel();
+            this.RelationsNumlbl = new System.Windows.Forms.Label();
+            this.ExpressionsNum = new System.Windows.Forms.LinkLabel();
+            this.Expressions = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,11 +379,63 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Tags.TabIndex = 29;
             this.Tags.Text = "Tags";
             // 
+            // RelationsNum
+            // 
+            this.RelationsNum.AutoSize = true;
+            this.RelationsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.RelationsNum.LinkColor = System.Drawing.Color.Red;
+            this.RelationsNum.Location = new System.Drawing.Point(800, 212);
+            this.RelationsNum.Name = "RelationsNum";
+            this.RelationsNum.Size = new System.Drawing.Size(86, 16);
+            this.RelationsNum.TabIndex = 32;
+            this.RelationsNum.TabStop = true;
+            this.RelationsNum.Text = "RelationsNum";
+            this.RelationsNum.Visible = false;
+            this.RelationsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            // 
+            // RelationsNumlbl
+            // 
+            this.RelationsNumlbl.AutoSize = true;
+            this.RelationsNumlbl.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.RelationsNumlbl.Location = new System.Drawing.Point(800, 235);
+            this.RelationsNumlbl.Name = "RelationsNumlbl";
+            this.RelationsNumlbl.Size = new System.Drawing.Size(60, 16);
+            this.RelationsNumlbl.TabIndex = 31;
+            this.RelationsNumlbl.Text = "Relations";
+            // 
+            // ExpressionsNum
+            // 
+            this.ExpressionsNum.AutoSize = true;
+            this.ExpressionsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ExpressionsNum.LinkColor = System.Drawing.Color.Red;
+            this.ExpressionsNum.Location = new System.Drawing.Point(800, 276);
+            this.ExpressionsNum.Name = "ExpressionsNum";
+            this.ExpressionsNum.Size = new System.Drawing.Size(101, 16);
+            this.ExpressionsNum.TabIndex = 34;
+            this.ExpressionsNum.TabStop = true;
+            this.ExpressionsNum.Text = "ExpressionsNum";
+            this.ExpressionsNum.Visible = false;
+            this.ExpressionsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            // 
+            // Expressions
+            // 
+            this.Expressions.AutoSize = true;
+            this.Expressions.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Expressions.Location = new System.Drawing.Point(800, 299);
+            this.Expressions.Name = "Expressions";
+            this.Expressions.Size = new System.Drawing.Size(75, 16);
+            this.Expressions.TabIndex = 33;
+            this.Expressions.Text = "Expressions";
+            // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 425);
+            this.Controls.Add(this.ExpressionsNum);
+            this.Controls.Add(this.Expressions);
+            this.Controls.Add(this.RelationsNum);
+            this.Controls.Add(this.RelationsNumlbl);
             this.Controls.Add(this.TagsNum);
             this.Controls.Add(this.Tags);
             this.Controls.Add(this.ContainingDocsnum);
@@ -447,5 +503,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private LinkLabel ContainingDocsnum;
         private LinkLabel TagsNum;
         private Label Tags;
+        private LinkLabel RelationsNum;
+        private Label RelationsNumlbl;
+        private LinkLabel ExpressionsNum;
+        private Label Expressions;
     }
 }

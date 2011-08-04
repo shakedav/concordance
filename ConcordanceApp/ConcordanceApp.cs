@@ -98,6 +98,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
             else
                 TagsNum.Enabled = true;
+            RelationsNum.Text = DB.getRelationsOfWord(SearchBox.Text).ToString();
             
         }
 
