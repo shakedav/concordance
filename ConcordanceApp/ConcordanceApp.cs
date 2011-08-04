@@ -115,7 +115,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void AddTagLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddTag form = new AddTag();
+            AddTag form = new AddTag(this);
             form.Show();
         }
     }

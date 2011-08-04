@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AddTagDataGrid = new System.Windows.Forms.DataGridView();
-            this.getTagsofWordResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
+            this.tagNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
+            this.getTagsofWordResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tagsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.TagsTableAdapter();
             this.AddTagTagNamelbl = new System.Windows.Forms.Label();
             this.AddTagTxtBox = new System.Windows.Forms.TextBox();
             this.AddTagbtn = new System.Windows.Forms.Button();
-            this.tagNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.AddTagDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getTagsofWordResultBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getTagsofWordResultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // AddTagDataGrid
@@ -60,19 +60,27 @@
             this.AddTagDataGrid.Size = new System.Drawing.Size(416, 150);
             this.AddTagDataGrid.TabIndex = 0;
             // 
-            // getTagsofWordResultBindingSource
+            // tagNameDataGridViewTextBoxColumn
             // 
-            this.getTagsofWordResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetTagsofWordResult);
+            this.tagNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tagNameDataGridViewTextBoxColumn.DataPropertyName = "TagName";
+            this.tagNameDataGridViewTextBoxColumn.HeaderText = "Tag Name";
+            this.tagNameDataGridViewTextBoxColumn.Name = "tagNameDataGridViewTextBoxColumn";
+            this.tagNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tagsBindingSource
+            // 
+            this.tagsBindingSource.DataMember = "Tags";
+            this.tagsBindingSource.DataSource = this.concordationDataSet;
             // 
             // concordationDataSet
             // 
             this.concordationDataSet.DataSetName = "ConcordationDataSet";
             this.concordationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // tagsBindingSource
+            // getTagsofWordResultBindingSource
             // 
-            this.tagsBindingSource.DataMember = "Tags";
-            this.tagsBindingSource.DataSource = this.concordationDataSet;
+            this.getTagsofWordResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetTagsofWordResult);
             // 
             // tagsTableAdapter
             // 
@@ -104,14 +112,6 @@
             this.AddTagbtn.UseVisualStyleBackColor = true;
             this.AddTagbtn.Click += new System.EventHandler(this.AddTagbtn_Click);
             // 
-            // tagNameDataGridViewTextBoxColumn
-            // 
-            this.tagNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tagNameDataGridViewTextBoxColumn.DataPropertyName = "TagName";
-            this.tagNameDataGridViewTextBoxColumn.HeaderText = "Tag Name";
-            this.tagNameDataGridViewTextBoxColumn.Name = "tagNameDataGridViewTextBoxColumn";
-            this.tagNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // AddTag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,11 +123,12 @@
             this.Controls.Add(this.AddTagDataGrid);
             this.Name = "AddTag";
             this.Text = "Add Tag";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTag_FormClosed);
             this.Load += new System.EventHandler(this.AddTag_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AddTagDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.getTagsofWordResultBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getTagsofWordResultBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
