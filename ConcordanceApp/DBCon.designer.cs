@@ -167,11 +167,25 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetContainingRelations")]
+		public int GetContainingRelations([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getRelationsOfWord")]
 		public ISingleResult<getRelationsOfWordResult> getRelationsOfWord([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
 			return ((ISingleResult<getRelationsOfWordResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RelateWords")]
+		public int RelateWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string relation, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> isDual)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1, word2, relation, isDual);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -478,24 +492,60 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 	public partial class getRelationsOfWordResult
 	{
 		
-		private int _relationID;
+		private string _word1;
+		
+		private string _RelationName;
+		
+		private string _word2;
 		
 		public getRelationsOfWordResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_relationID", DbType="Int NOT NULL")]
-		public int relationID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word1", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string word1
 		{
 			get
 			{
-				return this._relationID;
+				return this._word1;
 			}
 			set
 			{
-				if ((this._relationID != value))
+				if ((this._word1 != value))
 				{
-					this._relationID = value;
+					this._word1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RelationName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string RelationName
+		{
+			get
+			{
+				return this._RelationName;
+			}
+			set
+			{
+				if ((this._RelationName != value))
+				{
+					this._RelationName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word2", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string word2
+		{
+			get
+			{
+				return this._word2;
+			}
+			set
+			{
+				if ((this._word2 != value))
+				{
+					this._word2 = value;
 				}
 			}
 		}
