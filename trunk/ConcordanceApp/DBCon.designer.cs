@@ -159,6 +159,20 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word, tagName);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddRelation")]
+		public int AddRelation([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Relation", DbType="VarChar(50)")] string relation)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), relation);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getRelationsOfWord")]
+		public ISingleResult<getRelationsOfWordResult> getRelationsOfWord([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
+			return ((ISingleResult<getRelationsOfWordResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -456,6 +470,32 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Word != value))
 				{
 					this._Word = value;
+				}
+			}
+		}
+	}
+	
+	public partial class getRelationsOfWordResult
+	{
+		
+		private int _relationID;
+		
+		public getRelationsOfWordResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_relationID", DbType="Int NOT NULL")]
+		public int relationID
+		{
+			get
+			{
+				return this._relationID;
+			}
+			set
+			{
+				if ((this._relationID != value))
+				{
+					this._relationID = value;
 				}
 			}
 		}

@@ -119,5 +119,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AddTag form = new AddTag(this);
             form.Show();
         }
+
+        private void AddRelationsLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddRelation form = new AddRelation(this);
+            form.Show();
+        }
     }
 }

@@ -82,4 +82,14 @@
     <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.AddRelation" Method="AddRelation">
+    <Parameter Name="Relation" Parameter="relation" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getRelationsOfWord" Method="getRelationsOfWord">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="getRelationsOfWordResult">
+      <Column Name="relationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>
