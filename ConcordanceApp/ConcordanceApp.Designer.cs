@@ -64,6 +64,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.RelationsNumlbl = new System.Windows.Forms.Label();
             this.ExpressionsNum = new System.Windows.Forms.LinkLabel();
             this.Expressions = new System.Windows.Forms.Label();
+            this.Relationslbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -238,6 +239,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddRelationsLbl.TabIndex = 18;
             this.AddRelationsLbl.TabStop = true;
             this.AddRelationsLbl.Text = "Add Relation";
+            this.AddRelationsLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddRelationsLbl_LinkClicked);
             // 
             // openFileDialog1
             // 
@@ -427,11 +429,22 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Expressions.TabIndex = 33;
             this.Expressions.Text = "Expressions";
             // 
+            // Relationslbl
+            // 
+            this.Relationslbl.AutoSize = true;
+            this.Relationslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Relationslbl.Location = new System.Drawing.Point(12, 380);
+            this.Relationslbl.Name = "Relationslbl";
+            this.Relationslbl.Size = new System.Drawing.Size(51, 13);
+            this.Relationslbl.TabIndex = 35;
+            this.Relationslbl.Text = "Relations";
+            // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 425);
+            this.Controls.Add(this.Relationslbl);
             this.Controls.Add(this.ExpressionsNum);
             this.Controls.Add(this.Expressions);
             this.Controls.Add(this.RelationsNum);
@@ -507,5 +520,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private Label RelationsNumlbl;
         private LinkLabel ExpressionsNum;
         private Label Expressions;
+        private Label Relationslbl;
     }
 }

@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddRelation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRelation.Designer.cs">
+      <DependentUpon>AddRelation.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTag.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     <Compile Include="WordTags.Designer.cs">
       <DependentUpon>WordTags.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddRelation.resx">
+      <DependentUpon>AddRelation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTag.resx">
       <DependentUpon>AddTag.cs</DependentUpon>
     </EmbeddedResource>
