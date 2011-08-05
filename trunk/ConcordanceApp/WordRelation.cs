@@ -23,13 +23,20 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             parent = myparent;
             _word = word;
-            WordRelationsGrid.DataSource = DB.getRelationsOfWord(_word);
             InitializeComponent();
         }
 
         private void WordRelation_Load(object sender, EventArgs e)
         {
-            WordRelationsGrid.DataSource = DB.getRelationsOfWord(_word);
+            // TODO: This line of code loads data into the 'concordationDataSet._Relations' table. You can move, or remove it, as needed.
+            this.relationsTableAdapter.Fill(this.concordationDataSet._Relations);
+           WordRelationsGrid.DataSource = DB.getRelationsOfWord(_word);
+        }
+
+        private void AddTaglnk_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RelateWords form = new RelateWords(this);
+            form.Show();
         }
     }
 }

@@ -394,6 +394,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.RelationsNum.Text = "RelationsNum";
             this.RelationsNum.Visible = false;
             this.RelationsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            this.RelationsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RelationsNum_LinkClicked);
             // 
             // RelationsNumlbl
             // 

@@ -86,10 +86,23 @@
     <Parameter Name="Relation" Parameter="relation" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.GetContainingRelations" Method="GetContainingRelations">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.getRelationsOfWord" Method="getRelationsOfWord">
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="getRelationsOfWordResult">
-      <Column Name="relationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="word1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RelationName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="word2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.RelateWords" Method="RelateWords">
+    <Parameter Name="word1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="word2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="relation" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="isDual" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

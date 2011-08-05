@@ -68,14 +68,19 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                     DB.InsertWord(word.word, word.lineNum, word.wordNum, DocID);
             }
         }
-       
+
         private void SearchBtn_Click(object sender, EventArgs e)
-        {               
+        {
 
             //dataGridView1.DataSource = DB.GetSearchWord(SearchBox.Text);
             dataGridView1.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
             dataGridView1.Visible = true;
-            TotAppeartxt.Text = DB.GetTotalAppearances(SearchBox.Text).ToString();
+            this.GetSearchNumbers();
+        }
+
+        private void GetSearchNumbers()
+        {
+             TotAppeartxt.Text = DB.GetTotalAppearances(SearchBox.Text).ToString();
             TotAppeartxt.Visible = true;
             if (TotAppeartxt.Text.Equals("0"))
                 TotAppeartxt.Enabled = false;
@@ -98,10 +103,17 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
             else
                 TagsNum.Enabled = true;
-            RelationsNum.Text = DB.getRelationsOfWord(SearchBox.Text).ToString();
-            
+            RelationsNum.Text = DB.GetContainingRelations(SearchBox.Text).ToString();
+            RelationsNum.Visible = true;
+            if (RelationsNum.Text.Equals("0"))
+            {
+                RelationsNum.Enabled = true;
+                RelationsNum.Text = "Add a relation for the word";
+            }
+            else
+                RelationsNum.Enabled = true;
         }
-
+        
         private void ContainingDocsnum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DocNames form = new DocNames(SearchBox.Text, this);
@@ -123,6 +135,12 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private void AddRelationsLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddRelation form = new AddRelation(this);
+            form.Show();
+        }
+
+        private void RelationsNum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            WordRelation form = new WordRelation(SearchBox.Text,this);
             form.Show();
         }
     }

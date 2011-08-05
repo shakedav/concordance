@@ -57,7 +57,7 @@
             this.AddTagDataGrid.Location = new System.Drawing.Point(13, 13);
             this.AddTagDataGrid.Name = "AddTagDataGrid";
             this.AddTagDataGrid.ReadOnly = true;
-            this.AddTagDataGrid.Size = new System.Drawing.Size(416, 150);
+            this.AddTagDataGrid.Size = new System.Drawing.Size(416, 271);
             this.AddTagDataGrid.TabIndex = 0;
             // 
             // tagNameDataGridViewTextBoxColumn
@@ -89,7 +89,7 @@
             // AddTagTagNamelbl
             // 
             this.AddTagTagNamelbl.AutoSize = true;
-            this.AddTagTagNamelbl.Location = new System.Drawing.Point(13, 170);
+            this.AddTagTagNamelbl.Location = new System.Drawing.Point(12, 301);
             this.AddTagTagNamelbl.Name = "AddTagTagNamelbl";
             this.AddTagTagNamelbl.Size = new System.Drawing.Size(60, 13);
             this.AddTagTagNamelbl.TabIndex = 1;
@@ -97,14 +97,14 @@
             // 
             // AddTagTxtBox
             // 
-            this.AddTagTxtBox.Location = new System.Drawing.Point(80, 170);
+            this.AddTagTxtBox.Location = new System.Drawing.Point(78, 298);
             this.AddTagTxtBox.Name = "AddTagTxtBox";
             this.AddTagTxtBox.Size = new System.Drawing.Size(100, 20);
             this.AddTagTxtBox.TabIndex = 2;
             // 
             // AddTagbtn
             // 
-            this.AddTagbtn.Location = new System.Drawing.Point(354, 170);
+            this.AddTagbtn.Location = new System.Drawing.Point(354, 290);
             this.AddTagbtn.Name = "AddTagbtn";
             this.AddTagbtn.Size = new System.Drawing.Size(75, 34);
             this.AddTagbtn.TabIndex = 3;
@@ -116,11 +116,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 216);
+            this.ClientSize = new System.Drawing.Size(433, 336);
             this.Controls.Add(this.AddTagbtn);
             this.Controls.Add(this.AddTagTxtBox);
             this.Controls.Add(this.AddTagTagNamelbl);
             this.Controls.Add(this.AddTagDataGrid);
+            this.MaximumSize = new System.Drawing.Size(449, 374);
+            this.MinimumSize = new System.Drawing.Size(449, 374);
             this.Name = "AddTag";
             this.Text = "Add Tag";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTag_FormClosed);
