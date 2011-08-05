@@ -16,6 +16,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         public AddRelation()
         {
             InitializeComponent();
+           
         }
 
         public AddRelation(Form myparent)
