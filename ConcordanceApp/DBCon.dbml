@@ -100,8 +100,8 @@
   </Function>
   <Function Name="dbo.RelateWords" Method="RelateWords">
     <Parameter Name="word1" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="word2" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="relation" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="word2" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="isDual" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
