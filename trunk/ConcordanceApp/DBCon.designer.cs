@@ -182,9 +182,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RelateWords")]
-		public int RelateWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string relation, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> isDual)
+		public int RelateWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string relation, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> isDual)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1, word2, relation, isDual);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1, relation, word2, isDual);
 			return ((int)(result.ReturnValue));
 		}
 	}

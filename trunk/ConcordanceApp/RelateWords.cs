@@ -17,6 +17,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         public RelateWords()
         {
             InitializeComponent();
+            this.relationsTableAdapter.Fill(this.concordationDataSet._Relations);
         }
 
         public RelateWords(Form myparent)
@@ -50,6 +51,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             if (result == -1)
                 MessageBox.Show("Relation Already Exists");
             this.Close();
+        }
+
+        private void RelationBox_Enter(object sender, EventArgs e)
+        {
+            this.relationsTableAdapter.Fill(this.concordationDataSet._Relations);
         }
     }
 }

@@ -38,12 +38,12 @@
             this.RelationBox = new System.Windows.Forms.ComboBox();
             this.relationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Word2Box = new System.Windows.Forms.ComboBox();
+            this.wordsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.wordsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.WordsTableAdapter();
             this.relationsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.RelationsTableAdapter();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.Direction = new System.Windows.Forms.CheckBox();
-            this.wordsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.wordsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.relationsBindingSource)).BeginInit();
@@ -113,6 +113,7 @@
             this.RelationBox.Size = new System.Drawing.Size(121, 21);
             this.RelationBox.TabIndex = 4;
             this.RelationBox.ValueMember = "RelationName";
+            this.RelationBox.Enter += new System.EventHandler(this.RelationBox_Enter);
             // 
             // relationsBindingSource
             // 
@@ -130,6 +131,11 @@
             this.Word2Box.Size = new System.Drawing.Size(121, 21);
             this.Word2Box.TabIndex = 5;
             this.Word2Box.ValueMember = "Word";
+            // 
+            // wordsBindingSource1
+            // 
+            this.wordsBindingSource1.DataMember = "Words";
+            this.wordsBindingSource1.DataSource = this.concordationDataSet;
             // 
             // wordsTableAdapter
             // 
@@ -169,11 +175,6 @@
             this.Direction.TabIndex = 8;
             this.Direction.Text = "Bi-Directional";
             this.Direction.UseVisualStyleBackColor = true;
-            // 
-            // wordsBindingSource1
-            // 
-            this.wordsBindingSource1.DataMember = "Words";
-            this.wordsBindingSource1.DataSource = this.concordationDataSet;
             // 
             // RelateWords
             // 
