@@ -28,9 +28,14 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void WordExpression_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'concordationDataSet.Expressions' table. You can move, or remove it, as needed.
-            this.expressionsTableAdapter.Fill(this.concordationDataSet.Expressions);
+            WordExpressionDG.DataSource = DB.GetExpressionsOfWord(_word);
 
+        }
+
+        private void AddExpression_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddExpression form = new AddExpression(this);
+            form.Show();
         }
     }
 }
