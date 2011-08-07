@@ -120,4 +120,21 @@
       <Column Name="expression" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetContainingExpressions" Method="GetContainingExpressions">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertWord2" Method="InsertWord2">
+    <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Line" Parameter="line" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WordNum" Parameter="wordNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocID" Parameter="docID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetExpressionsOfWord" Method="GetExpressionsOfWord">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetExpressionsOfWordResult">
+      <Column Name="Expression" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

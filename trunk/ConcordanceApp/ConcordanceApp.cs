@@ -65,7 +65,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 DB.addAttributes(DocID, name, (int)AttributeTypes.SONGNAME);
                 words = FileHandler.ParseFile(filePath + fileName);
                 foreach (WordItem word in words)
-                    DB.InsertWord(word.word, word.lineNum, word.wordNum, DocID);
+                    DB.InsertWord2(word.word, word.lineNum, word.wordNum, DocID);
             }
         }
 
@@ -112,6 +112,15 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
             else
                 RelationsNum.Enabled = true;
+            ExpressionsNum.Text = DB.GetContainingExpressions(SearchBox.Text).ToString();
+            ExpressionsNum.Visible = true;
+            if (ExpressionsNum.Text.Equals("0"))
+            {
+                ExpressionsNum.Enabled = true;
+                ExpressionsNum.Text = "Add a relation for the word";
+            }
+            else
+                ExpressionsNum.Enabled = true;
         }
         
         private void ContainingDocsnum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

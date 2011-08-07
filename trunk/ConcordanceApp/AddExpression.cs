@@ -43,6 +43,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             {
                 wordnum++;
                 wordid = DB.GetWordID(word);
+                if (wordid == -1)
+                {
+                    DB.InsertWord2(word, -1, -1, -1);
+                    wordid = DB.GetWordID(word);
+                }
                 DB.AddExpression(wordid, Expressiontxt.Text, wordnum);
             }
             ExpressionsGrid.DataSource = DB.GetExpressions();

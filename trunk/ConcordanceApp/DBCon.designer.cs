@@ -208,6 +208,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<GetExpressionsResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetContainingExpressions")]
+		public int GetContainingExpressions([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertWord2")]
+		public int InsertWord2([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word", DbType="VarChar(50)")] string word, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Line", DbType="Int")] System.Nullable<int> line, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordNum", DbType="Int")] System.Nullable<int> wordNum, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocID", DbType="Int")] System.Nullable<int> docID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word, line, wordNum, docID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetExpressionsOfWord")]
+		public ISingleResult<GetExpressionsOfWordResult> GetExpressionsOfWord([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
+			return ((ISingleResult<GetExpressionsOfWordResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -593,6 +614,32 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._expression != value))
 				{
 					this._expression = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetExpressionsOfWordResult
+	{
+		
+		private string _Expression;
+		
+		public GetExpressionsOfWordResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Expression", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Expression
+		{
+			get
+			{
+				return this._Expression;
+			}
+			set
+			{
+				if ((this._Expression != value))
+				{
+					this._Expression = value;
 				}
 			}
 		}
