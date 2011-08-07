@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddExpression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExpression.Designer.cs">
+      <DependentUpon>AddExpression.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddRelation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     <Compile Include="RelateWords.Designer.cs">
       <DependentUpon>RelateWords.cs</DependentUpon>
     </Compile>
+    <Compile Include="WordExpression.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WordExpression.Designer.cs">
+      <DependentUpon>WordExpression.cs</DependentUpon>
+    </Compile>
     <Compile Include="WordHashItem.cs" />
     <Compile Include="FileHandler.cs" />
     <Compile Include="ConcordanceApp.cs">
@@ -134,6 +146,10 @@
     <Compile Include="WordTags.Designer.cs">
       <DependentUpon>WordTags.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddExpression.resx">
+      <DependentUpon>AddExpression.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddRelation.resx">
       <DependentUpon>AddRelation.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RelateWords.resx">
       <DependentUpon>RelateWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WordExpression.resx">
+      <DependentUpon>WordExpression.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WordRelation.resx">
       <DependentUpon>WordRelation.cs</DependentUpon>
@@ -186,6 +205,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\GetDocsOfWordResult.datasource" />
+    <None Include="Properties\DataSources\GetExpressionsResult.datasource" />
     <None Include="Properties\DataSources\getRelationsOfWordResult.datasource" />
     <None Include="Properties\DataSources\GetTagsofWordResult.datasource" />
     <None Include="Properties\DataSources\GetWordsResult.datasource" />

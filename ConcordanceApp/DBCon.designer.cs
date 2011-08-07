@@ -187,6 +187,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1, relation, word2, isDual);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetWordID")]
+		public int GetWordID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddExpression")]
+		public int AddExpression([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> wordid, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Expression", DbType="VarChar(50)")] string expression, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> wordNum)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), wordid, expression, wordNum);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetExpressions")]
+		public ISingleResult<GetExpressionsResult> GetExpressions()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetExpressionsResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -546,6 +567,32 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._word2 != value))
 				{
 					this._word2 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetExpressionsResult
+	{
+		
+		private string _expression;
+		
+		public GetExpressionsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_expression", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string expression
+		{
+			get
+			{
+				return this._expression;
+			}
+			set
+			{
+				if ((this._expression != value))
+				{
+					this._expression = value;
 				}
 			}
 		}
