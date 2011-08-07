@@ -105,4 +105,19 @@
     <Parameter Name="isDual" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.GetWordID" Method="GetWordID">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddExpression" Method="AddExpression">
+    <Parameter Name="wordid" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Expression" Parameter="expression" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="wordNum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetExpressions" Method="GetExpressions">
+    <ElementType Name="GetExpressionsResult">
+      <Column Name="expression" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

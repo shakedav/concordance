@@ -45,8 +45,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddTagLbl = new System.Windows.Forms.LinkLabel();
             this.DocumentsLbl = new System.Windows.Forms.Label();
             this.TagsLbl = new System.Windows.Forms.Label();
-            this.GroupsLbl = new System.Windows.Forms.Label();
-            this.AddGroupLbl = new System.Windows.Forms.LinkLabel();
             this.AddRelationsLbl = new System.Windows.Forms.LinkLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SearchBtn = new System.Windows.Forms.Button();
@@ -65,6 +63,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.ExpressionsNum = new System.Windows.Forms.LinkLabel();
             this.Expressions = new System.Windows.Forms.Label();
             this.Relationslbl = new System.Windows.Forms.Label();
+            this.Expressionslbl = new System.Windows.Forms.Label();
+            this.AddExpression = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -181,9 +181,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // AddTagLbl
             // 
             this.AddTagLbl.AutoSize = true;
+            this.AddTagLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.AddTagLbl.Location = new System.Drawing.Point(12, 276);
             this.AddTagLbl.Name = "AddTagLbl";
-            this.AddTagLbl.Size = new System.Drawing.Size(48, 13);
+            this.AddTagLbl.Size = new System.Drawing.Size(47, 13);
             this.AddTagLbl.TabIndex = 13;
             this.AddTagLbl.TabStop = true;
             this.AddTagLbl.Text = "Add Tag";
@@ -210,30 +211,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.TagsLbl.TabIndex = 15;
             this.TagsLbl.Text = "Tags";
             // 
-            // GroupsLbl
-            // 
-            this.GroupsLbl.AutoSize = true;
-            this.GroupsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.GroupsLbl.Location = new System.Drawing.Point(12, 316);
-            this.GroupsLbl.Name = "GroupsLbl";
-            this.GroupsLbl.Size = new System.Drawing.Size(41, 13);
-            this.GroupsLbl.TabIndex = 17;
-            this.GroupsLbl.Text = "Groups";
-            // 
-            // AddGroupLbl
-            // 
-            this.AddGroupLbl.AutoSize = true;
-            this.AddGroupLbl.Location = new System.Drawing.Point(12, 339);
-            this.AddGroupLbl.Name = "AddGroupLbl";
-            this.AddGroupLbl.Size = new System.Drawing.Size(58, 13);
-            this.AddGroupLbl.TabIndex = 16;
-            this.AddGroupLbl.TabStop = true;
-            this.AddGroupLbl.Text = "Add Group";
-            // 
             // AddRelationsLbl
             // 
             this.AddRelationsLbl.AutoSize = true;
-            this.AddRelationsLbl.Location = new System.Drawing.Point(12, 403);
+            this.AddRelationsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.AddRelationsLbl.Location = new System.Drawing.Point(12, 337);
             this.AddRelationsLbl.Name = "AddRelationsLbl";
             this.AddRelationsLbl.Size = new System.Drawing.Size(68, 13);
             this.AddRelationsLbl.TabIndex = 18;
@@ -419,6 +401,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.ExpressionsNum.Text = "ExpressionsNum";
             this.ExpressionsNum.Visible = false;
             this.ExpressionsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            this.ExpressionsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ExpressionsNum_LinkClicked);
             // 
             // Expressions
             // 
@@ -434,17 +417,41 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.Relationslbl.AutoSize = true;
             this.Relationslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Relationslbl.Location = new System.Drawing.Point(12, 380);
+            this.Relationslbl.Location = new System.Drawing.Point(12, 315);
             this.Relationslbl.Name = "Relationslbl";
             this.Relationslbl.Size = new System.Drawing.Size(51, 13);
             this.Relationslbl.TabIndex = 35;
             this.Relationslbl.Text = "Relations";
+            // 
+            // Expressionslbl
+            // 
+            this.Expressionslbl.AutoSize = true;
+            this.Expressionslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Expressionslbl.Location = new System.Drawing.Point(12, 377);
+            this.Expressionslbl.Name = "Expressionslbl";
+            this.Expressionslbl.Size = new System.Drawing.Size(64, 13);
+            this.Expressionslbl.TabIndex = 37;
+            this.Expressionslbl.Text = "Expressions";
+            // 
+            // AddExpression
+            // 
+            this.AddExpression.AutoSize = true;
+            this.AddExpression.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.AddExpression.Location = new System.Drawing.Point(12, 399);
+            this.AddExpression.Name = "AddExpression";
+            this.AddExpression.Size = new System.Drawing.Size(81, 13);
+            this.AddExpression.TabIndex = 36;
+            this.AddExpression.TabStop = true;
+            this.AddExpression.Text = "Add Expression";
+            this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
             // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 425);
+            this.Controls.Add(this.Expressionslbl);
+            this.Controls.Add(this.AddExpression);
             this.Controls.Add(this.Relationslbl);
             this.Controls.Add(this.ExpressionsNum);
             this.Controls.Add(this.Expressions);
@@ -462,8 +469,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SearchBtn);
             this.Controls.Add(this.AddRelationsLbl);
-            this.Controls.Add(this.GroupsLbl);
-            this.Controls.Add(this.AddGroupLbl);
             this.Controls.Add(this.TagsLbl);
             this.Controls.Add(this.DocumentsLbl);
             this.Controls.Add(this.AddTagLbl);
@@ -502,8 +507,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private LinkLabel AddTagLbl;
         private Label DocumentsLbl;
         private Label TagsLbl;
-        private Label GroupsLbl;
-        private LinkLabel AddGroupLbl;
         private LinkLabel AddRelationsLbl;
         private OpenFileDialog openFileDialog1;
         private Button SearchBtn;
@@ -522,5 +525,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private LinkLabel ExpressionsNum;
         private Label Expressions;
         private Label Relationslbl;
+        private Label Expressionslbl;
+        private LinkLabel AddExpression;
     }
 }

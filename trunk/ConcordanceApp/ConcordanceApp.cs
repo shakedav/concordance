@@ -143,5 +143,17 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             WordRelation form = new WordRelation(SearchBox.Text,this);
             form.Show();
         }
+
+        private void ExpressionsNum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            WordExpression form = new WordExpression(SearchBox.Text, this);
+            form.Show();
+        }
+
+        private void AddExpression_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddExpression form = new AddExpression(this);
+            form.Show();
+        }
     }
 }

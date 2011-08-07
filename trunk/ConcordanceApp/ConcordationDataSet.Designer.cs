@@ -10088,7 +10088,7 @@ SELECT ExpID, Expression, WordID, WordNum FROM Expressions WHERE (ExpID = @ExpID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, RelationName FROM dbo.Relations order by RelationName";
+            this._commandCollection[0].CommandText = "SELECT ID, RelationName FROM dbo.Relations";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10405,7 +10405,7 @@ SELECT ExpID, Expression, WordID, WordNum FROM Expressions WHERE (ExpID = @ExpID
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID, TagName FROM dbo.Tags order by TagName";
+            this._commandCollection[0].CommandText = "SELECT ID, TagName FROM dbo.Tags";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
