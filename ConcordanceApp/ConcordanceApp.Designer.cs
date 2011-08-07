@@ -52,7 +52,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TotAppearances = new System.Windows.Forms.Label();
             this.TotAppeartxt = new System.Windows.Forms.LinkLabel();
-            this.SearchedWordlbl = new System.Windows.Forms.Label();
             this.Wordtxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ContainingDocsnum = new System.Windows.Forms.LinkLabel();
@@ -291,17 +290,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.TotAppeartxt.Visible = false;
             this.TotAppeartxt.VisitedLinkColor = System.Drawing.Color.Red;
             // 
-            // SearchedWordlbl
-            // 
-            this.SearchedWordlbl.AutoSize = true;
-            this.SearchedWordlbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.SearchedWordlbl.Location = new System.Drawing.Point(237, 10);
-            this.SearchedWordlbl.Name = "SearchedWordlbl";
-            this.SearchedWordlbl.Size = new System.Drawing.Size(141, 16);
-            this.SearchedWordlbl.TabIndex = 25;
-            this.SearchedWordlbl.Text = "The Searched Word is:";
-            this.SearchedWordlbl.Visible = false;
-            // 
             // Wordtxt
             // 
             this.Wordtxt.AutoSize = true;
@@ -462,7 +450,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.ContainingDocsnum);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Wordtxt);
-            this.Controls.Add(this.SearchedWordlbl);
             this.Controls.Add(this.TotAppeartxt);
             this.Controls.Add(this.TotAppearances);
             this.Controls.Add(this.groupBox1);
@@ -514,7 +501,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private GroupBox groupBox1;
         private Label TotAppearances;
         private LinkLabel TotAppeartxt;
-        private Label SearchedWordlbl;
         private Label Wordtxt;
         private Label label1;
         private LinkLabel ContainingDocsnum;

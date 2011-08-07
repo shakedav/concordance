@@ -76,13 +76,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			return ((ISingleResult<GetSearchWordResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertDocument")]
-		public int InsertDocument([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocType", DbType="VarChar(50)")] string docType, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileName", DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Path", DbType="VarChar(50)")] string path)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), docType, fileName, path);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertWord")]
 		public int InsertWord([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word", DbType="VarChar(50)")] string word, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Line", DbType="Int")] System.Nullable<int> line, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordNum", DbType="Int")] System.Nullable<int> wordNum, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocID", DbType="Int")] System.Nullable<int> docID)
 		{
@@ -228,6 +221,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
 			return ((ISingleResult<GetExpressionsOfWordResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDocType")]
+		public int GetDocType([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string typeName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), typeName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertDocument")]
+		public int InsertDocument([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileName", DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Path", DbType="VarChar(50)")] string path)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), typeID, fileName, path);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDocAttrs")]
+		public ISingleResult<GetDocAttrsResult> GetDocAttrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> doctype)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), doctype);
+			return ((ISingleResult<GetDocAttrsResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -640,6 +654,32 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Expression != value))
 				{
 					this._Expression = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDocAttrsResult
+	{
+		
+		private string _AttName;
+		
+		public GetDocAttrsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string AttName
+		{
+			get
+			{
+				return this._AttName;
+			}
+			set
+			{
+				if ((this._AttName != value))
+				{
+					this._AttName = value;
 				}
 			}
 		}

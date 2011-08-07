@@ -11,7 +11,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 {
     public partial class ConcordanceApp : Form
     {
-        public enum AttributeTypes { PATH = 1, FILENAME, AUTHOR, COMPOSER, SONGNAME };
+        public enum AttributeTypes { PATH = 1, FILENAME, AUTHOR, COMPOSER, NAME };
         DBConDataContext DB = new DBConDataContext();
         public ConcordanceApp()
         {
@@ -23,26 +23,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         }
 
+        
         private void UpDocLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
             // Get the Doc Type from the Form
-            /*int DocID = DocAttributes.getTypeID();*/
             AttributesForm form = new AttributesForm(1, this);
             form.ShowDialog();
  
             /*DocAttributes.Show();*/
             string Author = form.Author;
-            string Composer = form.Composer;
-            string SongName = form.SongName;
+            /*string Composer = form.Composer;*/
+            string SongName = form.DocumentName;
+            int DocID = form.DocType;
 
-            if (string.IsNullOrEmpty(Author) || string.IsNullOrEmpty(SongName) || string.IsNullOrEmpty(Composer))
+            if (string.IsNullOrEmpty(Author) || string.IsNullOrEmpty(SongName) )/*|| string.IsNullOrEmpty(Composer))*/
             {
                 form.Close();
             }
         }
 
-        public void LoadDocument(string author, string composer, string name)
+        public void LoadDocument(string author, string name, int DocID)
         {
             ArrayList words = new ArrayList();
             //ArrayList Attrib = new ArrayList();
@@ -58,11 +59,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 string fileName = fDialog.SafeFileNames.FirstOrDefault();
                 string filePath = fDialog.FileNames.FirstOrDefault();
                 filePath = filePath.Remove(filePath.IndexOf(fileName));
-                int DocID = DB.InsertDocument("Song", fileName, filePath);
+                DocID = DB.InsertDocument(DocID, fileName, filePath);
                 /* insert the attributes to the DB */
                 DB.addAttributes(DocID, author, (int)AttributeTypes.AUTHOR);
-                DB.addAttributes(DocID, composer, (int)AttributeTypes.COMPOSER);
-                DB.addAttributes(DocID, name, (int)AttributeTypes.SONGNAME);
+                //DB.addAttributes(DocID, composer, (int)AttributeTypes.COMPOSER);
+                DB.addAttributes(DocID, name, (int)AttributeTypes.NAME);
                 words = FileHandler.ParseFile(filePath + fileName);
                 foreach (WordItem word in words)
                     DB.InsertWord2(word.word, word.lineNum, word.wordNum, DocID);
