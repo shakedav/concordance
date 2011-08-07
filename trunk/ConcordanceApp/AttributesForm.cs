@@ -13,6 +13,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
     public partial class AttributesForm : Form
     {
         ConcordanceApp myParent = null;
+        DBConDataContext DB = new DBConDataContext();
         public AttributesForm(int DocID, ConcordanceApp myParent)
         {
             InitializeComponent();
@@ -29,40 +30,48 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
         }
 
-        public string Composer
+        /*public string Composer
         {
             set { Composertxt.Text = value; }
             get
             {
                 return Composertxt.Text;
             }
-        }
+        }*/
 
-        public string SongName
+        public string DocumentName
         {
-            set { SongNametxt.Text = value; }
+            set { Nametxt.Text = value; }
             get
             {
-                return SongNametxt.Text;                 
+                return Nametxt.Text;                 
             }
         }
 
-        private void SongNametxt_Leave(object sender, EventArgs e)
+        public int DocType
         {
-            if (SongNametxt.Text == "")
-                NameError.SetError(SongNametxt, "Name is mandatory");
+            get
+            {
+                return DB.GetDocType(DocTypeBox.Text);
+            }
+        }
+
+        private void Nametxt_Leave(object sender, EventArgs e)
+        {
+            if (Nametxt.Text == "")
+                NameError.SetError(Nametxt, "Name is mandatory");
             else
-                NameError.SetError(SongNametxt, "");
+                NameError.SetError(Nametxt, "");
 
         }
 
-        private void Composertxt_Leave(object sender, EventArgs e)
+       /* private void Composertxt_Leave(object sender, EventArgs e)
         {
             if (Composertxt.Text == "")
                 ComposerError.SetError(Composertxt, "Composer is mandatory");
             else
                 ComposerError.SetError(Composertxt, "");
-        }
+        }*/
 
         private void Authortxt_Leave(object sender, EventArgs e)
         {
@@ -79,8 +88,22 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void Nextbtn_Click(object sender, EventArgs e)
         {
-            myParent.LoadDocument(this.Author, this.Composer, this.SongName);
+            myParent.LoadDocument(this.Author, this.DocumentName, this.DocType);
             this.Close();
         }
+
+        private void AttributesForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'concordationDataSet.DocumentTypes' table. You can move, or remove it, as needed.
+            this.documentTypesTableAdapter.Fill(this.concordationDataSet.DocumentTypes);
+
+        }
+
+        private void MoreAttrs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form form = new AddAttributes(this,this.DocType);
+            form.Show();
+        }
+
     }
 }
