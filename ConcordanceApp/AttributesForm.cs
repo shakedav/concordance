@@ -90,8 +90,21 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             myParent.LoadDocument(this.Author, this.DocumentName, this.DocType);
             this.Close();
-            AddAttributes form = new AddAttributes(this,this.DocType);
-            form.Show();
+            if (this.DocType == 1)
+            {
+                // TODO: Add StoryAttrs Form
+                StoryAttrs form = new StoryAttrs(this, this.DocType);
+                form.ShowDialog();
+            }
+            if (this.DocType == 2)
+            {
+                // TODO: Add SongAttrs Form
+                SongAttrs form = new SongAttrs(this, this.DocType);
+                form.ShowDialog();
+            }
+
+            /*AddAttributes form = new AddAttributes(this,this.DocType);
+            form.Show();*/
         }
 
         private void AttributesForm_Load(object sender, EventArgs e)

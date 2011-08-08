@@ -135,12 +135,6 @@
     <Parameter Name="typeName" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.InsertDocument" Method="InsertDocument">
-    <Parameter Name="TypeID" Parameter="typeID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Path" Parameter="path" Type="System.String" DbType="VarChar(50)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.GetDocAttrs" Method="GetDocAttrs">
     <Parameter Name="doctype" Type="System.Int32" DbType="Int" />
     <ElementType Name="GetDocAttrsResult">
@@ -168,5 +162,11 @@
       <Column Name="[Attribute Name]" Member="Attribute_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Attribute" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.InsertDocument" Method="InsertDocument">
+    <Parameter Name="TypeID" Parameter="typeID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Path" Parameter="path" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -124,6 +124,18 @@
     <Compile Include="RelateWords.Designer.cs">
       <DependentUpon>RelateWords.cs</DependentUpon>
     </Compile>
+    <Compile Include="SongAttrs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SongAttrs.Designer.cs">
+      <DependentUpon>SongAttrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StoryAttrs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StoryAttrs.Designer.cs">
+      <DependentUpon>StoryAttrs.cs</DependentUpon>
+    </Compile>
     <Compile Include="WordExpression.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +190,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RelateWords.resx">
       <DependentUpon>RelateWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SongAttrs.resx">
+      <DependentUpon>SongAttrs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StoryAttrs.resx">
+      <DependentUpon>StoryAttrs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WordExpression.resx">
       <DependentUpon>WordExpression.cs</DependentUpon>

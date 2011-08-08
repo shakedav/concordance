@@ -230,13 +230,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertDocument")]
-		public int InsertDocument([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileName", DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Path", DbType="VarChar(50)")] string path)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), typeID, fileName, path);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDocAttrs")]
 		public ISingleResult<GetDocAttrsResult> GetDocAttrs([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> doctype)
 		{
@@ -270,6 +263,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), docID);
 			return ((ISingleResult<GetExistingAttsfordocResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.InsertDocument")]
+		public int InsertDocument([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileName", DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Path", DbType="VarChar(50)")] string path)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), typeID, fileName, path);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
