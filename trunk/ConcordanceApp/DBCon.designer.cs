@@ -139,13 +139,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			return ((ISingleResult<GetTagsofWordResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetAllWords")]
-		public ISingleResult<GetAllWordsResult> GetAllWords()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<GetAllWordsResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TagWord")]
 		public int TagWord([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word", DbType="VarChar(50)")] string word, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TagName", DbType="VarChar(50)")] string tagName)
 		{
@@ -172,13 +165,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
 			return ((ISingleResult<getRelationsOfWordResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RelateWords")]
-		public int RelateWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string relation, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> isDual)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1, relation, word2, isDual);
-			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetWordID")]
@@ -269,6 +255,20 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		public int InsertDocument([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileName", DbType="VarChar(50)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Path", DbType="VarChar(50)")] string path)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), typeID, fileName, path);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetAllWords")]
+		public ISingleResult<GetAllWordsResult> GetAllWords()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetAllWordsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RelateWords")]
+		public int RelateWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word1, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string relation, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word2, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> isDual)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1, relation, word2, isDual);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -547,32 +547,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		}
 	}
 	
-	public partial class GetAllWordsResult
-	{
-		
-		private string _Word;
-		
-		public GetAllWordsResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Word", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Word
-		{
-			get
-			{
-				return this._Word;
-			}
-			set
-			{
-				if ((this._Word != value))
-				{
-					this._Word = value;
-				}
-			}
-		}
-	}
-	
 	public partial class getRelationsOfWordResult
 	{
 		
@@ -796,6 +770,86 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Attribute != value))
 				{
 					this._Attribute = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetAllWordsResult
+	{
+		
+		private string _Word;
+		
+		private int _LineNum;
+		
+		private int _WordNum;
+		
+		private string _Value;
+		
+		public GetAllWordsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Word", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Word
+		{
+			get
+			{
+				return this._Word;
+			}
+			set
+			{
+				if ((this._Word != value))
+				{
+					this._Word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LineNum", DbType="Int NOT NULL")]
+		public int LineNum
+		{
+			get
+			{
+				return this._LineNum;
+			}
+			set
+			{
+				if ((this._LineNum != value))
+				{
+					this._LineNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WordNum", DbType="Int NOT NULL")]
+		public int WordNum
+		{
+			get
+			{
+				return this._WordNum;
+			}
+			set
+			{
+				if ((this._WordNum != value))
+				{
+					this._WordNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this._Value = value;
 				}
 			}
 		}
