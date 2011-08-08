@@ -64,6 +64,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Relationslbl = new System.Windows.Forms.Label();
             this.Expressionslbl = new System.Windows.Forms.Label();
             this.AddExpression = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -434,11 +435,23 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddExpression.Text = "Add Expression";
             this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(800, 337);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
+            this.linkLabel1.TabIndex = 38;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Show All Words";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 425);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Expressionslbl);
             this.Controls.Add(this.AddExpression);
             this.Controls.Add(this.Relationslbl);
@@ -471,7 +484,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.ArticlesCB);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.SearchBox);
-            this.MaximumSize = new System.Drawing.Size(1020, 463);
             this.MinimumSize = new System.Drawing.Size(1020, 463);
             this.Name = "ConcordanceApp";
             this.Text = "Concordance";
@@ -516,5 +528,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private Label Relationslbl;
         private Label Expressionslbl;
         private LinkLabel AddExpression;
+        private LinkLabel linkLabel1;
     }
 }

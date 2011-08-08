@@ -47,10 +47,17 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 isDual = 1;
             else
                 isDual = 0;
-            int result = DB.RelateWords(Word1Box.Text, RelationBox.Text, Word2Box.Text, isDual);
-            if (result == -1)
-                MessageBox.Show("Relation Already Exists");
-            this.Close();
+            if (RelationBox.Text != "")
+            {
+                int result = DB.RelateWords(Word1Box.Text, RelationBox.Text, Word2Box.Text, isDual);
+                if (result == -1)
+                    MessageBox.Show("Relation Already Exists");
+                this.Close();
+                
+            }
+            else
+                MessageBox.Show("Relation Name is mandatory, Click the \"add Relation\" Link");
+            
         }
 
         private void RelationBox_Enter(object sender, EventArgs e)

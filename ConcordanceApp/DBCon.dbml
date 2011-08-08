@@ -66,11 +66,6 @@
       <Column Name="TagName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.GetAllWords" Method="GetAllWords">
-    <ElementType Name="GetAllWordsResult">
-      <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.TagWord" Method="TagWord">
     <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
@@ -91,13 +86,6 @@
       <Column Name="RelationName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="word2" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.RelateWords" Method="RelateWords">
-    <Parameter Name="word1" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="relation" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="word2" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="isDual" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.GetWordID" Method="GetWordID">
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
@@ -167,6 +155,21 @@
     <Parameter Name="TypeID" Parameter="typeID" Type="System.Int32" DbType="Int" />
     <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="Path" Parameter="path" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllWords" Method="GetAllWords">
+    <ElementType Name="GetAllWordsResult">
+      <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LineNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="WordNum" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RelateWords" Method="RelateWords">
+    <Parameter Name="word1" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="relation" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="word2" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="isDual" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -118,7 +118,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             if (ExpressionsNum.Text.Equals("0"))
             {
                 ExpressionsNum.Enabled = true;
-                ExpressionsNum.Text = "Add a relation for the word";
+                ExpressionsNum.Text = "Add an expression for the word";
             }
             else
                 ExpressionsNum.Enabled = true;
@@ -168,7 +168,14 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void AddDocTypeLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            AddDocType form = new AddDocType();
+            form.Show();
+        }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AllWords form = new AllWords();
+            form.Show();
         }
     }
 }
