@@ -243,6 +243,34 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), doctype);
 			return ((ISingleResult<GetDocAttrsResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTypeAtts")]
+		public ISingleResult<GetTypeAttsResult> GetTypeAtts([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> docTypeID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), docTypeID);
+			return ((ISingleResult<GetTypeAttsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.getDocID")]
+		public int getDocID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string fileName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fileName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetAttTypeID")]
+		public int GetAttTypeID([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string attName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), attName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetExistingAttsfordoc")]
+		public ISingleResult<GetExistingAttsfordocResult> GetExistingAttsfordoc([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> docID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), docID);
+			return ((ISingleResult<GetExistingAttsfordocResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -680,6 +708,94 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._AttName != value))
 				{
 					this._AttName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTypeAttsResult
+	{
+		
+		private string _AttName;
+		
+		private string _Type;
+		
+		public GetTypeAttsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AttName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string AttName
+		{
+			get
+			{
+				return this._AttName;
+			}
+			set
+			{
+				if ((this._AttName != value))
+				{
+					this._AttName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Type", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Type
+		{
+			get
+			{
+				return this._Type;
+			}
+			set
+			{
+				if ((this._Type != value))
+				{
+					this._Type = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetExistingAttsfordocResult
+	{
+		
+		private string _Attribute_Name;
+		
+		private string _Attribute;
+		
+		public GetExistingAttsfordocResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Attribute Name]", Storage="_Attribute_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Attribute_Name
+		{
+			get
+			{
+				return this._Attribute_Name;
+			}
+			set
+			{
+				if ((this._Attribute_Name != value))
+				{
+					this._Attribute_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Attribute", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Attribute
+		{
+			get
+			{
+				return this._Attribute;
+			}
+			set
+			{
+				if ((this._Attribute != value))
+				{
+					this._Attribute = value;
 				}
 			}
 		}
