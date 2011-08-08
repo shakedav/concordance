@@ -165,5 +165,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AddExpression form = new AddExpression(this);
             form.Show();
         }
+
+        private void AddDocTypeLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
     }
 }

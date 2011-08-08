@@ -176,6 +176,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddDocTypeLbl.TabIndex = 12;
             this.AddDocTypeLbl.TabStop = true;
             this.AddDocTypeLbl.Text = "Add Document Type";
+            this.AddDocTypeLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddDocTypeLbl_LinkClicked);
             // 
             // AddTagLbl
             // 
@@ -437,7 +438,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 425);
+            this.ClientSize = new System.Drawing.Size(1004, 425);
             this.Controls.Add(this.Expressionslbl);
             this.Controls.Add(this.AddExpression);
             this.Controls.Add(this.Relationslbl);
@@ -470,6 +471,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.ArticlesCB);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.SearchBox);
+            this.MaximumSize = new System.Drawing.Size(1020, 463);
+            this.MinimumSize = new System.Drawing.Size(1020, 463);
             this.Name = "ConcordanceApp";
             this.Text = "Concordance";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
