@@ -215,10 +215,12 @@
     </None>
     <None Include="Properties\DataSources\GetDocAttrsResult.datasource" />
     <None Include="Properties\DataSources\GetDocsOfWordResult.datasource" />
+    <None Include="Properties\DataSources\GetExistingAttsfordocResult.datasource" />
     <None Include="Properties\DataSources\GetExpressionsOfWordResult.datasource" />
     <None Include="Properties\DataSources\GetExpressionsResult.datasource" />
     <None Include="Properties\DataSources\getRelationsOfWordResult.datasource" />
     <None Include="Properties\DataSources\GetTagsofWordResult.datasource" />
+    <None Include="Properties\DataSources\GetTypeAttsResult.datasource" />
     <None Include="Properties\DataSources\GetWordsResult.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

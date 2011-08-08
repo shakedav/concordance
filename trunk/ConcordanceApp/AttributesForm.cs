@@ -90,6 +90,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             myParent.LoadDocument(this.Author, this.DocumentName, this.DocType);
             this.Close();
+            AddAttributes form = new AddAttributes(this,this.DocType);
+            form.Show();
         }
 
         private void AttributesForm_Load(object sender, EventArgs e)
@@ -98,12 +100,5 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.documentTypesTableAdapter.Fill(this.concordationDataSet.DocumentTypes);
 
         }
-
-        private void MoreAttrs_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form form = new AddAttributes(this,this.DocType);
-            form.Show();
-        }
-
     }
 }

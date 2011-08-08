@@ -42,7 +42,6 @@
             this.documentTypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
             this.documentTypesTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.DocumentTypesTableAdapter();
-            this.MoreAttrs = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.NameError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ComposerError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorError)).BeginInit();
@@ -88,7 +87,7 @@
             // 
             // Nextbtn
             // 
-            this.Nextbtn.Location = new System.Drawing.Point(87, 132);
+            this.Nextbtn.Location = new System.Drawing.Point(151, 88);
             this.Nextbtn.Name = "Nextbtn";
             this.Nextbtn.Size = new System.Drawing.Size(75, 23);
             this.Nextbtn.TabIndex = 6;
@@ -143,26 +142,11 @@
             // 
             this.documentTypesTableAdapter.ClearBeforeFill = true;
             // 
-            // MoreAttrs
-            // 
-            this.MoreAttrs.ActiveLinkColor = System.Drawing.Color.Blue;
-            this.MoreAttrs.AutoSize = true;
-            this.MoreAttrs.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.MoreAttrs.Location = new System.Drawing.Point(105, 89);
-            this.MoreAttrs.Name = "MoreAttrs";
-            this.MoreAttrs.Size = new System.Drawing.Size(104, 13);
-            this.MoreAttrs.TabIndex = 9;
-            this.MoreAttrs.TabStop = true;
-            this.MoreAttrs.Text = "Add More Attributes";
-            this.MoreAttrs.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.MoreAttrs.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.MoreAttrs_LinkClicked);
-            // 
             // AttributesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 201);
-            this.Controls.Add(this.MoreAttrs);
             this.Controls.Add(this.DocTypeBox);
             this.Controls.Add(this.DocTypelbl);
             this.Controls.Add(this.Nextbtn);
@@ -200,6 +184,5 @@
         private ConcordationDataSet concordationDataSet;
         private System.Windows.Forms.BindingSource documentTypesBindingSource;
         private ConcordationDataSetTableAdapters.DocumentTypesTableAdapter documentTypesTableAdapter;
-        private System.Windows.Forms.LinkLabel MoreAttrs;
     }
 }

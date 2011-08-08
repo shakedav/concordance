@@ -13,7 +13,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
     {
         DBConDataContext DB = new DBConDataContext();
         int _doctype;
-        Form parent;
+        int docid;
+        AttributesForm parent;
 
         public AddAttributes()
         {
@@ -23,13 +24,29 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         public AddAttributes(AttributesForm myparent, int doctype)
         {
             // TODO: Complete member initialization
+            InitializeComponent();
             parent = myparent;
             _doctype = doctype;
+            docid = DB.getDocID(parent.DocumentName);
         }
 
         private void AddAttributes_Load(object sender, EventArgs e)
         {
-            AttNames.DataSource = DB.GetDocAttrs(_doctype);
+            AttNames.DataSource = DB.GetTypeAtts(_doctype);
+            if (docid == -1)
+                CurrentAttrs.Visible = false;
+            else
+            {
+                CurrentAttrs.DataSource = DB.GetExistingAttsfordoc(docid);
+                CurrentAttrs.Visible = true;
+            }
+        }
+
+        private void SaveAtt_Click(object sender, EventArgs e)
+        {
+            int attid = DB.GetAttTypeID(AttNames.Text);
+            DB.addAttributes(docid, AttValtxt.Text, attid);
+            CurrentAttrs.DataSource = DB.GetExistingAttsfordoc(docid);
         }
     }
 }
