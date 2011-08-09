@@ -72,8 +72,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-
             //dataGridView1.DataSource = DB.GetSearchWord(SearchBox.Text);
+            DB.AddSearchNumber(SearchBox.Text);
             dataGridView1.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
             dataGridView1.Visible = true;
             this.GetSearchNumbers();
@@ -172,10 +172,22 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             form.Show();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ShowAllWords_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AllWords form = new AllWords();
             form.Show();
+        }
+
+        private void AdvancedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdvancedSearch Form = new AdvancedSearch(this, SearchBox.Text);
+            Form.ShowDialog();
+        }
+
+        private void WordStats_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Wordstatistics form = new Wordstatistics(this, SearchBox.Text);
+            
         }
     }
 }
