@@ -172,4 +172,15 @@
     <Parameter Name="isDual" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.AddSearchNumber" Method="AddSearchNumber">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetWordStats" Method="GetWordStats">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetWordStatsResult">
+      <Column Name="TotalCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SearchNums" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

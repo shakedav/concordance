@@ -92,6 +92,12 @@
     <Compile Include="AddTag.Designer.cs">
       <DependentUpon>AddTag.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdvancedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdvancedSearch.Designer.cs">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllWords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,12 @@
     <Compile Include="WordRelation.Designer.cs">
       <DependentUpon>WordRelation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wordstatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Wordstatistics.Designer.cs">
+      <DependentUpon>Wordstatistics.cs</DependentUpon>
+    </Compile>
     <Compile Include="WordTags.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddTag.resx">
       <DependentUpon>AddTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdvancedSearch.resx">
+      <DependentUpon>AdvancedSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllWords.resx">
       <DependentUpon>AllWords.cs</DependentUpon>
@@ -222,6 +237,9 @@
     <EmbeddedResource Include="WordRelation.resx">
       <DependentUpon>WordRelation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wordstatistics.resx">
+      <DependentUpon>Wordstatistics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="WordTags.resx">
       <DependentUpon>WordTags.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +268,7 @@
       <LastGenOutput>DBCon.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\ContextWordsResult.datasource" />
     <None Include="Properties\DataSources\GetAllWordsResult.datasource" />
     <None Include="Properties\DataSources\GetDocAttrsResult.datasource" />
     <None Include="Properties\DataSources\GetDocsOfWordResult.datasource" />
@@ -260,6 +279,7 @@
     <None Include="Properties\DataSources\GetTagsofWordResult.datasource" />
     <None Include="Properties\DataSources\GetTypeAttsResult.datasource" />
     <None Include="Properties\DataSources\GetWordsResult.datasource" />
+    <None Include="Properties\DataSources\GetWordStatsResult.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

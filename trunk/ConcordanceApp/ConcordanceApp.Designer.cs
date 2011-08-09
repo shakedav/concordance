@@ -31,13 +31,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.SearchLabel = new System.Windows.Forms.Label();
-            this.ArticlesCB = new System.Windows.Forms.CheckBox();
+            this.StoryCB = new System.Windows.Forms.CheckBox();
             this.SongsCB = new System.Windows.Forms.CheckBox();
-            this.AuthorsCB = new System.Windows.Forms.CheckBox();
-            this.MedicalRecordsCB = new System.Windows.Forms.CheckBox();
-            this.ProgrammingCodeCB = new System.Windows.Forms.CheckBox();
             this.HLine = new System.Windows.Forms.GroupBox();
             this.VLine = new System.Windows.Forms.GroupBox();
             this.UpDocLbl = new System.Windows.Forms.LinkLabel();
@@ -64,8 +62,16 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Relationslbl = new System.Windows.Forms.Label();
             this.Expressionslbl = new System.Windows.Forms.Label();
             this.AddExpression = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.ShowAllWords = new System.Windows.Forms.LinkLabel();
+            this.AdvancedSearch = new System.Windows.Forms.LinkLabel();
+            this.contextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wordNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextWordsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.WordStats = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchBox
@@ -85,15 +91,15 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.SearchLabel.TabIndex = 1;
             this.SearchLabel.Text = "Search:";
             // 
-            // ArticlesCB
+            // StoryCB
             // 
-            this.ArticlesCB.AutoSize = true;
-            this.ArticlesCB.Location = new System.Drawing.Point(15, 38);
-            this.ArticlesCB.Name = "ArticlesCB";
-            this.ArticlesCB.Size = new System.Drawing.Size(60, 17);
-            this.ArticlesCB.TabIndex = 3;
-            this.ArticlesCB.Text = "Articles";
-            this.ArticlesCB.UseVisualStyleBackColor = true;
+            this.StoryCB.AutoSize = true;
+            this.StoryCB.Location = new System.Drawing.Point(15, 38);
+            this.StoryCB.Name = "StoryCB";
+            this.StoryCB.Size = new System.Drawing.Size(58, 17);
+            this.StoryCB.TabIndex = 3;
+            this.StoryCB.Text = "Stories";
+            this.StoryCB.UseVisualStyleBackColor = true;
             // 
             // SongsCB
             // 
@@ -105,39 +111,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.SongsCB.Text = "Songs";
             this.SongsCB.UseVisualStyleBackColor = true;
             // 
-            // AuthorsCB
-            // 
-            this.AuthorsCB.AutoSize = true;
-            this.AuthorsCB.Location = new System.Drawing.Point(15, 84);
-            this.AuthorsCB.Name = "AuthorsCB";
-            this.AuthorsCB.Size = new System.Drawing.Size(62, 17);
-            this.AuthorsCB.TabIndex = 5;
-            this.AuthorsCB.Text = "Authors";
-            this.AuthorsCB.UseVisualStyleBackColor = true;
-            // 
-            // MedicalRecordsCB
-            // 
-            this.MedicalRecordsCB.AutoSize = true;
-            this.MedicalRecordsCB.Location = new System.Drawing.Point(15, 107);
-            this.MedicalRecordsCB.Name = "MedicalRecordsCB";
-            this.MedicalRecordsCB.Size = new System.Drawing.Size(106, 17);
-            this.MedicalRecordsCB.TabIndex = 6;
-            this.MedicalRecordsCB.Text = "Medical Records";
-            this.MedicalRecordsCB.UseVisualStyleBackColor = true;
-            // 
-            // ProgrammingCodeCB
-            // 
-            this.ProgrammingCodeCB.AutoSize = true;
-            this.ProgrammingCodeCB.Location = new System.Drawing.Point(15, 130);
-            this.ProgrammingCodeCB.Name = "ProgrammingCodeCB";
-            this.ProgrammingCodeCB.Size = new System.Drawing.Size(115, 17);
-            this.ProgrammingCodeCB.TabIndex = 7;
-            this.ProgrammingCodeCB.Text = "Programming Code";
-            this.ProgrammingCodeCB.UseVisualStyleBackColor = true;
-            // 
             // HLine
             // 
-            this.HLine.Location = new System.Drawing.Point(3, 153);
+            this.HLine.Location = new System.Drawing.Point(3, 84);
             this.HLine.Name = "HLine";
             this.HLine.Size = new System.Drawing.Size(211, 10);
             this.HLine.TabIndex = 8;
@@ -157,7 +133,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.UpDocLbl.AutoSize = true;
             this.UpDocLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpDocLbl.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.UpDocLbl.Location = new System.Drawing.Point(12, 192);
+            this.UpDocLbl.Location = new System.Drawing.Point(12, 123);
             this.UpDocLbl.Name = "UpDocLbl";
             this.UpDocLbl.Size = new System.Drawing.Size(108, 13);
             this.UpDocLbl.TabIndex = 11;
@@ -171,7 +147,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddDocTypeLbl.AutoSize = true;
             this.AddDocTypeLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDocTypeLbl.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.AddDocTypeLbl.Location = new System.Drawing.Point(12, 215);
+            this.AddDocTypeLbl.Location = new System.Drawing.Point(12, 150);
             this.AddDocTypeLbl.Name = "AddDocTypeLbl";
             this.AddDocTypeLbl.Size = new System.Drawing.Size(123, 13);
             this.AddDocTypeLbl.TabIndex = 12;
@@ -183,7 +159,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.AddTagLbl.AutoSize = true;
             this.AddTagLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddTagLbl.Location = new System.Drawing.Point(12, 276);
+            this.AddTagLbl.Location = new System.Drawing.Point(12, 215);
             this.AddTagLbl.Name = "AddTagLbl";
             this.AddTagLbl.Size = new System.Drawing.Size(47, 13);
             this.AddTagLbl.TabIndex = 13;
@@ -196,7 +172,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.DocumentsLbl.AutoSize = true;
             this.DocumentsLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentsLbl.ForeColor = System.Drawing.Color.DimGray;
-            this.DocumentsLbl.Location = new System.Drawing.Point(12, 169);
+            this.DocumentsLbl.Location = new System.Drawing.Point(12, 100);
             this.DocumentsLbl.Name = "DocumentsLbl";
             this.DocumentsLbl.Size = new System.Drawing.Size(79, 13);
             this.DocumentsLbl.TabIndex = 14;
@@ -206,7 +182,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.TagsLbl.AutoSize = true;
             this.TagsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.TagsLbl.Location = new System.Drawing.Point(12, 253);
+            this.TagsLbl.Location = new System.Drawing.Point(12, 193);
             this.TagsLbl.Name = "TagsLbl";
             this.TagsLbl.Size = new System.Drawing.Size(30, 13);
             this.TagsLbl.TabIndex = 15;
@@ -216,7 +192,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.AddRelationsLbl.AutoSize = true;
             this.AddRelationsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddRelationsLbl.Location = new System.Drawing.Point(12, 337);
+            this.AddRelationsLbl.Location = new System.Drawing.Point(12, 276);
             this.AddRelationsLbl.Name = "AddRelationsLbl";
             this.AddRelationsLbl.Size = new System.Drawing.Size(68, 13);
             this.AddRelationsLbl.TabIndex = 18;
@@ -245,14 +221,22 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.contextDataGridViewTextBoxColumn,
+            this.lineDataGridViewTextBoxColumn,
+            this.wordNumberDataGridViewTextBoxColumn,
+            this.documentDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.contextWordsResultBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(236, 31);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(528, 382);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.Visible = false;
@@ -407,7 +391,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.Relationslbl.AutoSize = true;
             this.Relationslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Relationslbl.Location = new System.Drawing.Point(12, 315);
+            this.Relationslbl.Location = new System.Drawing.Point(12, 254);
             this.Relationslbl.Name = "Relationslbl";
             this.Relationslbl.Size = new System.Drawing.Size(51, 13);
             this.Relationslbl.TabIndex = 35;
@@ -417,7 +401,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.Expressionslbl.AutoSize = true;
             this.Expressionslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Expressionslbl.Location = new System.Drawing.Point(12, 377);
+            this.Expressionslbl.Location = new System.Drawing.Point(12, 314);
             this.Expressionslbl.Name = "Expressionslbl";
             this.Expressionslbl.Size = new System.Drawing.Size(64, 13);
             this.Expressionslbl.TabIndex = 37;
@@ -427,7 +411,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.AddExpression.AutoSize = true;
             this.AddExpression.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddExpression.Location = new System.Drawing.Point(12, 399);
+            this.AddExpression.Location = new System.Drawing.Point(10, 337);
             this.AddExpression.Name = "AddExpression";
             this.AddExpression.Size = new System.Drawing.Size(81, 13);
             this.AddExpression.TabIndex = 36;
@@ -435,23 +419,84 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddExpression.Text = "Add Expression";
             this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
             // 
-            // linkLabel1
+            // ShowAllWords
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(800, 337);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
-            this.linkLabel1.TabIndex = 38;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Show All Words";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.ShowAllWords.AutoSize = true;
+            this.ShowAllWords.Location = new System.Drawing.Point(800, 337);
+            this.ShowAllWords.Name = "ShowAllWords";
+            this.ShowAllWords.Size = new System.Drawing.Size(82, 13);
+            this.ShowAllWords.TabIndex = 38;
+            this.ShowAllWords.TabStop = true;
+            this.ShowAllWords.Text = "Show All Words";
+            this.ShowAllWords.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowAllWords_LinkClicked);
+            // 
+            // AdvancedSearch
+            // 
+            this.AdvancedSearch.AutoSize = true;
+            this.AdvancedSearch.Location = new System.Drawing.Point(121, 39);
+            this.AdvancedSearch.Name = "AdvancedSearch";
+            this.AdvancedSearch.Size = new System.Drawing.Size(93, 13);
+            this.AdvancedSearch.TabIndex = 39;
+            this.AdvancedSearch.TabStop = true;
+            this.AdvancedSearch.Text = "Advanced Search";
+            this.AdvancedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AdvancedSearch_LinkClicked);
+            // 
+            // contextDataGridViewTextBoxColumn
+            // 
+            this.contextDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.contextDataGridViewTextBoxColumn.DataPropertyName = "Context";
+            this.contextDataGridViewTextBoxColumn.HeaderText = "Context";
+            this.contextDataGridViewTextBoxColumn.Name = "contextDataGridViewTextBoxColumn";
+            this.contextDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lineDataGridViewTextBoxColumn
+            // 
+            this.lineDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.lineDataGridViewTextBoxColumn.DataPropertyName = "Line";
+            this.lineDataGridViewTextBoxColumn.HeaderText = "Line Number";
+            this.lineDataGridViewTextBoxColumn.Name = "lineDataGridViewTextBoxColumn";
+            this.lineDataGridViewTextBoxColumn.ReadOnly = true;
+            this.lineDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // wordNumberDataGridViewTextBoxColumn
+            // 
+            this.wordNumberDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.wordNumberDataGridViewTextBoxColumn.DataPropertyName = "Word_Number";
+            this.wordNumberDataGridViewTextBoxColumn.HeaderText = "Word Number";
+            this.wordNumberDataGridViewTextBoxColumn.Name = "wordNumberDataGridViewTextBoxColumn";
+            this.wordNumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // documentDataGridViewTextBoxColumn
+            // 
+            this.documentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.documentDataGridViewTextBoxColumn.DataPropertyName = "Document";
+            this.documentDataGridViewTextBoxColumn.HeaderText = "Document";
+            this.documentDataGridViewTextBoxColumn.Name = "documentDataGridViewTextBoxColumn";
+            this.documentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // contextWordsResultBindingSource
+            // 
+            this.contextWordsResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.ContextWordsResult);
+            // 
+            // WordStats
+            // 
+            this.WordStats.AutoSize = true;
+            this.WordStats.Location = new System.Drawing.Point(803, 365);
+            this.WordStats.Name = "WordStats";
+            this.WordStats.Size = new System.Drawing.Size(78, 13);
+            this.WordStats.TabIndex = 40;
+            this.WordStats.TabStop = true;
+            this.WordStats.Text = "Word Statistics";
+            this.WordStats.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.WordStats_LinkClicked);
             // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 425);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.WordStats);
+            this.Controls.Add(this.AdvancedSearch);
+            this.Controls.Add(this.ShowAllWords);
             this.Controls.Add(this.Expressionslbl);
             this.Controls.Add(this.AddExpression);
             this.Controls.Add(this.Relationslbl);
@@ -477,17 +522,15 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.UpDocLbl);
             this.Controls.Add(this.VLine);
             this.Controls.Add(this.HLine);
-            this.Controls.Add(this.ProgrammingCodeCB);
-            this.Controls.Add(this.MedicalRecordsCB);
-            this.Controls.Add(this.AuthorsCB);
             this.Controls.Add(this.SongsCB);
-            this.Controls.Add(this.ArticlesCB);
+            this.Controls.Add(this.StoryCB);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.SearchBox);
             this.MinimumSize = new System.Drawing.Size(1020, 463);
             this.Name = "ConcordanceApp";
             this.Text = "Concordance";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -497,11 +540,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         //public DBConDataContext DB = new DBConDataContext();
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Label SearchLabel;
-        private System.Windows.Forms.CheckBox ArticlesCB;
+        private System.Windows.Forms.CheckBox StoryCB;
         private System.Windows.Forms.CheckBox SongsCB;
-        private System.Windows.Forms.CheckBox AuthorsCB;
-        private System.Windows.Forms.CheckBox MedicalRecordsCB;
-        private System.Windows.Forms.CheckBox ProgrammingCodeCB;
         private GroupBox HLine;
         private GroupBox VLine;
         private LinkLabel UpDocLbl;
@@ -528,6 +568,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private Label Relationslbl;
         private Label Expressionslbl;
         private LinkLabel AddExpression;
-        private LinkLabel linkLabel1;
+        private LinkLabel ShowAllWords;
+        private DataGridViewTextBoxColumn contextDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lineDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn wordNumberDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn documentDataGridViewTextBoxColumn;
+        private BindingSource contextWordsResultBindingSource;
+        private LinkLabel AdvancedSearch;
+        private LinkLabel WordStats;
     }
 }
