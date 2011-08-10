@@ -176,11 +176,8 @@
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.GetWordStats" Method="GetWordStats">
+  <Function Name="dbo.GetWordSearches" Method="GetWordSearches">
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="GetWordStatsResult">
-      <Column Name="TotalCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="SearchNums" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
+    <Return Type="System.Int32" />
   </Function>
 </Database>

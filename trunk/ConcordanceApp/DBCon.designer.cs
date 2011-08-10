@@ -279,11 +279,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetWordStats")]
-		public ISingleResult<GetWordStatsResult> GetWordStats([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetWordSearches")]
+		public int GetWordSearches([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
-			return ((ISingleResult<GetWordStatsResult>)(result.ReturnValue));
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -864,50 +864,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Value != value))
 				{
 					this._Value = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetWordStatsResult
-	{
-		
-		private int _TotalCount;
-		
-		private int _SearchNums;
-		
-		public GetWordStatsResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalCount", DbType="Int NOT NULL")]
-		public int TotalCount
-		{
-			get
-			{
-				return this._TotalCount;
-			}
-			set
-			{
-				if ((this._TotalCount != value))
-				{
-					this._TotalCount = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SearchNums", DbType="Int NOT NULL")]
-		public int SearchNums
-		{
-			get
-			{
-				return this._SearchNums;
-			}
-			set
-			{
-				if ((this._SearchNums != value))
-				{
-					this._SearchNums = value;
 				}
 			}
 		}

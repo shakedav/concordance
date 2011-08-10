@@ -81,21 +81,34 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void GetSearchNumbers()
         {
-             TotAppeartxt.Text = DB.GetTotalAppearances(SearchBox.Text).ToString();
+            StatsGB.Visible = true;
+            TotAppeartxt.Text = DB.GetTotalAppearances(SearchBox.Text).ToString();
+            TotAppearances.Visible = true;
             TotAppeartxt.Visible = true;
             if (TotAppeartxt.Text.Equals("0"))
                 TotAppeartxt.Enabled = false;
             else
                 TotAppeartxt.Enabled = true;
+
+            NumOfSearchestxt.Text = DB.GetWordSearches(SearchBox.Text).ToString();
+            NumOfSearchlbl.Visible = true;
+            NumOfSearchestxt.Visible = true;
+            if (NumOfSearchestxt.Text.Equals("0"))
+                NumOfSearchestxt.Enabled = false;
+            else
+                NumOfSearchestxt.Enabled = true;
+
             Wordtxt.Text = SearchBox.Text;
             Wordtxt.Visible = true;
             ContainingDocsnum.Text = DB.GetContainingDocs(SearchBox.Text).ToString();
+            DocumentsLbl.Visible = true;
             ContainingDocsnum.Visible = true;
             if (ContainingDocsnum.Text.Equals("0"))
                 ContainingDocsnum.Enabled = false;
             else
                 ContainingDocsnum.Enabled = true;
             TagsNum.Text = DB.GetContainingTags(SearchBox.Text).ToString();
+            TagsLbl.Visible = true;
             TagsNum.Visible = true;
             if (TagsNum.Text.Equals("0"))
             {
@@ -105,6 +118,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             else
                 TagsNum.Enabled = true;
             RelationsNum.Text = DB.GetContainingRelations(SearchBox.Text).ToString();
+            Relationslbl.Visible = true;
             RelationsNum.Visible = true;
             if (RelationsNum.Text.Equals("0"))
             {
@@ -114,6 +128,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             else
                 RelationsNum.Enabled = true;
             ExpressionsNum.Text = DB.GetContainingExpressions(SearchBox.Text).ToString();
+            Expressionslbl.Visible = true;
             ExpressionsNum.Visible = true;
             if (ExpressionsNum.Text.Equals("0"))
             {
@@ -182,12 +197,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             AdvancedSearch Form = new AdvancedSearch(this, SearchBox.Text);
             Form.ShowDialog();
-        }
-
-        private void WordStats_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Wordstatistics form = new Wordstatistics(this, SearchBox.Text);
-            
         }
     }
 }

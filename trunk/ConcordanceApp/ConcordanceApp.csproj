@@ -176,12 +176,6 @@
     <Compile Include="WordRelation.Designer.cs">
       <DependentUpon>WordRelation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Wordstatistics.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Wordstatistics.Designer.cs">
-      <DependentUpon>Wordstatistics.cs</DependentUpon>
-    </Compile>
     <Compile Include="WordTags.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,9 +230,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WordRelation.resx">
       <DependentUpon>WordRelation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Wordstatistics.resx">
-      <DependentUpon>Wordstatistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WordTags.resx">
       <DependentUpon>WordTags.cs</DependentUpon>
