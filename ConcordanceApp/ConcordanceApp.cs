@@ -198,5 +198,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AdvancedSearch Form = new AdvancedSearch(this, SearchBox.Text);
             Form.ShowDialog();
         }
+
+        private void XMLExport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ExportForm form = new ExportForm();
+            form.Dia
+        }
     }
 }
