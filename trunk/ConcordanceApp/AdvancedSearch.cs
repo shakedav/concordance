@@ -24,8 +24,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             InitializeComponent();
             parent = myparent;
             _word = word;
-            label1.Text = _word;
-            label1.Visible = true;
+        }
+
+        private void SearchLinebtn_Click(object sender, EventArgs e)
+        {
+            parent.AdvancedSearchGrid.DataSource = DB.GetWordByLineAndNum(Convert.ToInt32(LineNumtxt.Text), Convert.ToInt32(WordNumtxt.Text));
+            parent.RegularSearchGrid.Visible = false;
+            parent.AdvancedSearchGrid.Visible = true;
+            parent.Wordtxt.Text = "You Searched for words in Line " + LineNumtxt.Text + " Which their word number is:" + WordNumtxt.Text;
+            parent.Wordtxt.Visible = true;
+            this.Close();
+        }
+
+        private void TagSearchbtn_Click(object sender, EventArgs e)
+        {
+            parent.TagSearchGrid.DataSource = DB.GetWordByTagName(Tagtxt.Text);
+            parent.RegularSearchGrid.Visible = false;
+            parent.AdvancedSearchGrid.Visible = false;
+            parent.TagSearchGrid.Visible = true;
+            parent.Wordtxt.Text = "You Searched for words with tag: " + Tagtxt.Text;
+            parent.Wordtxt.Visible = true;
+            this.Close();
         }
     }
 }

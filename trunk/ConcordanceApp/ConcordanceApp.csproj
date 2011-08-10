@@ -269,6 +269,8 @@
     <None Include="Properties\DataSources\getRelationsOfWordResult.datasource" />
     <None Include="Properties\DataSources\GetTagsofWordResult.datasource" />
     <None Include="Properties\DataSources\GetTypeAttsResult.datasource" />
+    <None Include="Properties\DataSources\GetWordByLineAndNumResult.datasource" />
+    <None Include="Properties\DataSources\GetWordByTagNameResult.datasource" />
     <None Include="Properties\DataSources\GetWordsResult.datasource" />
     <None Include="Properties\DataSources\GetWordStatsResult.datasource" />
     <None Include="Properties\Settings.settings">
