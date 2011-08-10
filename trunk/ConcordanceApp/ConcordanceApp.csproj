@@ -126,6 +126,12 @@
     <Compile Include="DocNames.Designer.cs">
       <DependentUpon>DocNames.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportForm.Designer.cs">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -216,6 +222,9 @@
     <EmbeddedResource Include="DocNames.resx">
       <DependentUpon>DocNames.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExportForm.resx">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RelateWords.resx">
       <DependentUpon>RelateWords.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,8 +280,6 @@
     <None Include="Properties\DataSources\GetTypeAttsResult.datasource" />
     <None Include="Properties\DataSources\GetWordByLineAndNumResult.datasource" />
     <None Include="Properties\DataSources\GetWordByTagNameResult.datasource" />
-    <None Include="Properties\DataSources\GetWordsResult.datasource" />
-    <None Include="Properties\DataSources\GetWordStatsResult.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

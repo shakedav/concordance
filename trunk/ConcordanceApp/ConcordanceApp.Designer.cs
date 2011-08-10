@@ -80,9 +80,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getWordByLineAndNumResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TagSearchGrid = new System.Windows.Forms.DataGridView();
-            this.getWordByTagNameResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tagNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getWordByTagNameResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.XMLExport = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
             this.StatsGB.SuspendLayout();
@@ -623,10 +624,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.TagSearchGrid.TabIndex = 47;
             this.TagSearchGrid.Visible = false;
             // 
-            // getWordByTagNameResultBindingSource
-            // 
-            this.getWordByTagNameResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetWordByTagNameResult);
-            // 
             // wordDataGridViewTextBoxColumn1
             // 
             this.wordDataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -643,11 +640,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.tagNameDataGridViewTextBoxColumn.Name = "tagNameDataGridViewTextBoxColumn";
             this.tagNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // getWordByTagNameResultBindingSource
+            // 
+            this.getWordByTagNameResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetWordByTagNameResult);
+            // 
+            // XMLExport
+            // 
+            this.XMLExport.AutoSize = true;
+            this.XMLExport.Location = new System.Drawing.Point(12, 432);
+            this.XMLExport.Name = "XMLExport";
+            this.XMLExport.Size = new System.Drawing.Size(104, 13);
+            this.XMLExport.TabIndex = 48;
+            this.XMLExport.TabStop = true;
+            this.XMLExport.Text = "Export Data To XML";
+            this.XMLExport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.XMLExport_LinkClicked);
+            // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 484);
+            this.Controls.Add(this.XMLExport);
             this.Controls.Add(this.TagSearchGrid);
             this.Controls.Add(this.AdvancedSearchGrid);
             this.Controls.Add(this.AdvancedSearch);
@@ -749,5 +762,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private DataGridViewTextBoxColumn wordDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn tagNameDataGridViewTextBoxColumn;
         private BindingSource getWordByTagNameResultBindingSource;
+        private LinkLabel XMLExport;
     }
 }
