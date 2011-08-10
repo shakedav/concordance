@@ -74,8 +74,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             //dataGridView1.DataSource = DB.GetSearchWord(SearchBox.Text);
             DB.AddSearchNumber(SearchBox.Text);
-            dataGridView1.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
-            dataGridView1.Visible = true;
+            RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
+            RegularSearchGrid.Visible = true;
             this.GetSearchNumbers();
         }
 
@@ -101,14 +101,14 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             Wordtxt.Text = SearchBox.Text;
             Wordtxt.Visible = true;
             ContainingDocsnum.Text = DB.GetContainingDocs(SearchBox.Text).ToString();
-            DocumentsLbl.Visible = true;
+            Documents.Visible = true;
             ContainingDocsnum.Visible = true;
             if (ContainingDocsnum.Text.Equals("0"))
                 ContainingDocsnum.Enabled = false;
             else
                 ContainingDocsnum.Enabled = true;
             TagsNum.Text = DB.GetContainingTags(SearchBox.Text).ToString();
-            TagsLbl.Visible = true;
+            Tags.Visible = true;
             TagsNum.Visible = true;
             if (TagsNum.Text.Equals("0"))
             {
@@ -118,7 +118,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             else
                 TagsNum.Enabled = true;
             RelationsNum.Text = DB.GetContainingRelations(SearchBox.Text).ToString();
-            Relationslbl.Visible = true;
+            RelationsNumlbl.Visible = true;
             RelationsNum.Visible = true;
             if (RelationsNum.Text.Equals("0"))
             {
@@ -128,7 +128,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             else
                 RelationsNum.Enabled = true;
             ExpressionsNum.Text = DB.GetContainingExpressions(SearchBox.Text).ToString();
-            Expressionslbl.Visible = true;
+            Expressions.Visible = true;
             ExpressionsNum.Visible = true;
             if (ExpressionsNum.Text.Equals("0"))
             {

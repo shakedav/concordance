@@ -285,6 +285,20 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetWordByLineAndNum")]
+		public ISingleResult<GetWordByLineAndNumResult> GetWordByLineAndNum([global::System.Data.Linq.Mapping.ParameterAttribute(Name="LineNum", DbType="Int")] System.Nullable<int> lineNum, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> wordNum)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), lineNum, wordNum);
+			return ((ISingleResult<GetWordByLineAndNumResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetWordByTagName")]
+		public ISingleResult<GetWordByTagNameResult> GetWordByTagName([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Tag", DbType="VarChar(50)")] string tag)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tag);
+			return ((ISingleResult<GetWordByTagNameResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -864,6 +878,130 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Value != value))
 				{
 					this._Value = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetWordByLineAndNumResult
+	{
+		
+		private string _word;
+		
+		private int _LineNum;
+		
+		private int _WordNum;
+		
+		private string _Value;
+		
+		public GetWordByLineAndNumResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LineNum", DbType="Int NOT NULL")]
+		public int LineNum
+		{
+			get
+			{
+				return this._LineNum;
+			}
+			set
+			{
+				if ((this._LineNum != value))
+				{
+					this._LineNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WordNum", DbType="Int NOT NULL")]
+		public int WordNum
+		{
+			get
+			{
+				return this._WordNum;
+			}
+			set
+			{
+				if ((this._WordNum != value))
+				{
+					this._WordNum = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Value", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Value
+		{
+			get
+			{
+				return this._Value;
+			}
+			set
+			{
+				if ((this._Value != value))
+				{
+					this._Value = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetWordByTagNameResult
+	{
+		
+		private string _word;
+		
+		private string _TagName;
+		
+		public GetWordByTagNameResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_word", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string word
+		{
+			get
+			{
+				return this._word;
+			}
+			set
+			{
+				if ((this._word != value))
+				{
+					this._word = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TagName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string TagName
+		{
+			get
+			{
+				return this._TagName;
+			}
+			set
+			{
+				if ((this._TagName != value))
+				{
+					this._TagName = value;
 				}
 			}
 		}
