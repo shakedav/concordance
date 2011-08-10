@@ -47,9 +47,12 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wordNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextWordsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.TotAppearances = new System.Windows.Forms.Label();
-            this.TotAppeartxt = new System.Windows.Forms.LinkLabel();
             this.Wordtxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ContainingDocsnum = new System.Windows.Forms.LinkLabel();
@@ -64,14 +67,15 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddExpression = new System.Windows.Forms.LinkLabel();
             this.ShowAllWords = new System.Windows.Forms.LinkLabel();
             this.AdvancedSearch = new System.Windows.Forms.LinkLabel();
-            this.contextDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wordNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.documentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextWordsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.WordStats = new System.Windows.Forms.LinkLabel();
+            this.Statslbl = new System.Windows.Forms.Label();
+            this.TotAppearances = new System.Windows.Forms.Label();
+            this.NumOfSearchlbl = new System.Windows.Forms.Label();
+            this.TotAppeartxt = new System.Windows.Forms.Label();
+            this.NumOfSearchestxt = new System.Windows.Forms.Label();
+            this.StatsGB = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
+            this.StatsGB.SuspendLayout();
             this.SuspendLayout();
             // 
             // SearchBox
@@ -123,7 +127,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.VLine.Location = new System.Drawing.Point(220, 12);
             this.VLine.Name = "VLine";
-            this.VLine.Size = new System.Drawing.Size(10, 408);
+            this.VLine.Size = new System.Drawing.Size(10, 461);
             this.VLine.TabIndex = 9;
             this.VLine.TabStop = false;
             // 
@@ -237,209 +241,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.dataGridView1.Location = new System.Drawing.Point(236, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(528, 382);
+            this.dataGridView1.Size = new System.Drawing.Size(528, 426);
             this.dataGridView1.TabIndex = 21;
             this.dataGridView1.Visible = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(784, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(10, 406);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            // 
-            // TotAppearances
-            // 
-            this.TotAppearances.AutoSize = true;
-            this.TotAppearances.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotAppearances.Location = new System.Drawing.Point(800, 39);
-            this.TotAppearances.Name = "TotAppearances";
-            this.TotAppearances.Size = new System.Drawing.Size(124, 14);
-            this.TotAppearances.TabIndex = 23;
-            this.TotAppearances.Text = "Total Appearances";
-            // 
-            // TotAppeartxt
-            // 
-            this.TotAppeartxt.ActiveLinkColor = System.Drawing.Color.DarkOrange;
-            this.TotAppeartxt.AutoSize = true;
-            this.TotAppeartxt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotAppeartxt.ForeColor = System.Drawing.Color.Orange;
-            this.TotAppeartxt.LinkBehavior = System.Windows.Forms.LinkBehavior.AlwaysUnderline;
-            this.TotAppeartxt.LinkColor = System.Drawing.Color.Orange;
-            this.TotAppeartxt.Location = new System.Drawing.Point(800, 16);
-            this.TotAppeartxt.Name = "TotAppeartxt";
-            this.TotAppeartxt.Size = new System.Drawing.Size(104, 16);
-            this.TotAppeartxt.TabIndex = 24;
-            this.TotAppeartxt.TabStop = true;
-            this.TotAppeartxt.Text = "TotAppeartxt";
-            this.TotAppeartxt.Visible = false;
-            this.TotAppeartxt.VisitedLinkColor = System.Drawing.Color.Red;
-            // 
-            // Wordtxt
-            // 
-            this.Wordtxt.AutoSize = true;
-            this.Wordtxt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Wordtxt.Location = new System.Drawing.Point(237, 9);
-            this.Wordtxt.Name = "Wordtxt";
-            this.Wordtxt.Size = new System.Drawing.Size(32, 16);
-            this.Wordtxt.TabIndex = 26;
-            this.Wordtxt.Text = "rrrr";
-            this.Wordtxt.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.label1.Location = new System.Drawing.Point(800, 106);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Documents";
-            // 
-            // ContainingDocsnum
-            // 
-            this.ContainingDocsnum.AutoSize = true;
-            this.ContainingDocsnum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ContainingDocsnum.LinkColor = System.Drawing.Color.Red;
-            this.ContainingDocsnum.Location = new System.Drawing.Point(800, 83);
-            this.ContainingDocsnum.Name = "ContainingDocsnum";
-            this.ContainingDocsnum.Size = new System.Drawing.Size(95, 16);
-            this.ContainingDocsnum.TabIndex = 28;
-            this.ContainingDocsnum.TabStop = true;
-            this.ContainingDocsnum.Text = "ContainingDocs";
-            this.ContainingDocsnum.Visible = false;
-            this.ContainingDocsnum.VisitedLinkColor = System.Drawing.Color.Red;
-            this.ContainingDocsnum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ContainingDocsnum_LinkClicked);
-            // 
-            // TagsNum
-            // 
-            this.TagsNum.AutoSize = true;
-            this.TagsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.TagsNum.LinkColor = System.Drawing.Color.Red;
-            this.TagsNum.Location = new System.Drawing.Point(800, 147);
-            this.TagsNum.Name = "TagsNum";
-            this.TagsNum.Size = new System.Drawing.Size(62, 16);
-            this.TagsNum.TabIndex = 30;
-            this.TagsNum.TabStop = true;
-            this.TagsNum.Text = "TagsNum";
-            this.TagsNum.Visible = false;
-            this.TagsNum.VisitedLinkColor = System.Drawing.Color.Red;
-            this.TagsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TagsNum_LinkClicked);
-            // 
-            // Tags
-            // 
-            this.Tags.AutoSize = true;
-            this.Tags.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.Tags.Location = new System.Drawing.Point(800, 170);
-            this.Tags.Name = "Tags";
-            this.Tags.Size = new System.Drawing.Size(36, 16);
-            this.Tags.TabIndex = 29;
-            this.Tags.Text = "Tags";
-            // 
-            // RelationsNum
-            // 
-            this.RelationsNum.AutoSize = true;
-            this.RelationsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.RelationsNum.LinkColor = System.Drawing.Color.Red;
-            this.RelationsNum.Location = new System.Drawing.Point(800, 212);
-            this.RelationsNum.Name = "RelationsNum";
-            this.RelationsNum.Size = new System.Drawing.Size(86, 16);
-            this.RelationsNum.TabIndex = 32;
-            this.RelationsNum.TabStop = true;
-            this.RelationsNum.Text = "RelationsNum";
-            this.RelationsNum.Visible = false;
-            this.RelationsNum.VisitedLinkColor = System.Drawing.Color.Red;
-            this.RelationsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RelationsNum_LinkClicked);
-            // 
-            // RelationsNumlbl
-            // 
-            this.RelationsNumlbl.AutoSize = true;
-            this.RelationsNumlbl.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.RelationsNumlbl.Location = new System.Drawing.Point(800, 235);
-            this.RelationsNumlbl.Name = "RelationsNumlbl";
-            this.RelationsNumlbl.Size = new System.Drawing.Size(60, 16);
-            this.RelationsNumlbl.TabIndex = 31;
-            this.RelationsNumlbl.Text = "Relations";
-            // 
-            // ExpressionsNum
-            // 
-            this.ExpressionsNum.AutoSize = true;
-            this.ExpressionsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.ExpressionsNum.LinkColor = System.Drawing.Color.Red;
-            this.ExpressionsNum.Location = new System.Drawing.Point(800, 276);
-            this.ExpressionsNum.Name = "ExpressionsNum";
-            this.ExpressionsNum.Size = new System.Drawing.Size(101, 16);
-            this.ExpressionsNum.TabIndex = 34;
-            this.ExpressionsNum.TabStop = true;
-            this.ExpressionsNum.Text = "ExpressionsNum";
-            this.ExpressionsNum.Visible = false;
-            this.ExpressionsNum.VisitedLinkColor = System.Drawing.Color.Red;
-            this.ExpressionsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ExpressionsNum_LinkClicked);
-            // 
-            // Expressions
-            // 
-            this.Expressions.AutoSize = true;
-            this.Expressions.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.Expressions.Location = new System.Drawing.Point(800, 299);
-            this.Expressions.Name = "Expressions";
-            this.Expressions.Size = new System.Drawing.Size(75, 16);
-            this.Expressions.TabIndex = 33;
-            this.Expressions.Text = "Expressions";
-            // 
-            // Relationslbl
-            // 
-            this.Relationslbl.AutoSize = true;
-            this.Relationslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Relationslbl.Location = new System.Drawing.Point(12, 254);
-            this.Relationslbl.Name = "Relationslbl";
-            this.Relationslbl.Size = new System.Drawing.Size(51, 13);
-            this.Relationslbl.TabIndex = 35;
-            this.Relationslbl.Text = "Relations";
-            // 
-            // Expressionslbl
-            // 
-            this.Expressionslbl.AutoSize = true;
-            this.Expressionslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Expressionslbl.Location = new System.Drawing.Point(12, 314);
-            this.Expressionslbl.Name = "Expressionslbl";
-            this.Expressionslbl.Size = new System.Drawing.Size(64, 13);
-            this.Expressionslbl.TabIndex = 37;
-            this.Expressionslbl.Text = "Expressions";
-            // 
-            // AddExpression
-            // 
-            this.AddExpression.AutoSize = true;
-            this.AddExpression.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddExpression.Location = new System.Drawing.Point(10, 337);
-            this.AddExpression.Name = "AddExpression";
-            this.AddExpression.Size = new System.Drawing.Size(81, 13);
-            this.AddExpression.TabIndex = 36;
-            this.AddExpression.TabStop = true;
-            this.AddExpression.Text = "Add Expression";
-            this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
-            // 
-            // ShowAllWords
-            // 
-            this.ShowAllWords.AutoSize = true;
-            this.ShowAllWords.Location = new System.Drawing.Point(800, 337);
-            this.ShowAllWords.Name = "ShowAllWords";
-            this.ShowAllWords.Size = new System.Drawing.Size(82, 13);
-            this.ShowAllWords.TabIndex = 38;
-            this.ShowAllWords.TabStop = true;
-            this.ShowAllWords.Text = "Show All Words";
-            this.ShowAllWords.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowAllWords_LinkClicked);
-            // 
-            // AdvancedSearch
-            // 
-            this.AdvancedSearch.AutoSize = true;
-            this.AdvancedSearch.Location = new System.Drawing.Point(121, 39);
-            this.AdvancedSearch.Name = "AdvancedSearch";
-            this.AdvancedSearch.Size = new System.Drawing.Size(93, 13);
-            this.AdvancedSearch.TabIndex = 39;
-            this.AdvancedSearch.TabStop = true;
-            this.AdvancedSearch.Text = "Advanced Search";
-            this.AdvancedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AdvancedSearch_LinkClicked);
             // 
             // contextDataGridViewTextBoxColumn
             // 
@@ -478,23 +282,259 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.contextWordsResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.ContextWordsResult);
             // 
-            // WordStats
+            // groupBox1
             // 
-            this.WordStats.AutoSize = true;
-            this.WordStats.Location = new System.Drawing.Point(803, 365);
-            this.WordStats.Name = "WordStats";
-            this.WordStats.Size = new System.Drawing.Size(78, 13);
-            this.WordStats.TabIndex = 40;
-            this.WordStats.TabStop = true;
-            this.WordStats.Text = "Word Statistics";
-            this.WordStats.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.WordStats_LinkClicked);
+            this.groupBox1.Location = new System.Drawing.Point(784, 14);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(10, 459);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            // 
+            // Wordtxt
+            // 
+            this.Wordtxt.AutoSize = true;
+            this.Wordtxt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Wordtxt.Location = new System.Drawing.Point(237, 9);
+            this.Wordtxt.Name = "Wordtxt";
+            this.Wordtxt.Size = new System.Drawing.Size(32, 16);
+            this.Wordtxt.TabIndex = 26;
+            this.Wordtxt.Text = "rrrr";
+            this.Wordtxt.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.label1.Location = new System.Drawing.Point(797, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Documents";
+            this.label1.Visible = false;
+            // 
+            // ContainingDocsnum
+            // 
+            this.ContainingDocsnum.AutoSize = true;
+            this.ContainingDocsnum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ContainingDocsnum.LinkColor = System.Drawing.Color.Red;
+            this.ContainingDocsnum.Location = new System.Drawing.Point(797, 178);
+            this.ContainingDocsnum.Name = "ContainingDocsnum";
+            this.ContainingDocsnum.Size = new System.Drawing.Size(95, 16);
+            this.ContainingDocsnum.TabIndex = 28;
+            this.ContainingDocsnum.TabStop = true;
+            this.ContainingDocsnum.Text = "ContainingDocs";
+            this.ContainingDocsnum.Visible = false;
+            this.ContainingDocsnum.VisitedLinkColor = System.Drawing.Color.Red;
+            this.ContainingDocsnum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ContainingDocsnum_LinkClicked);
+            // 
+            // TagsNum
+            // 
+            this.TagsNum.AutoSize = true;
+            this.TagsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.TagsNum.LinkColor = System.Drawing.Color.Red;
+            this.TagsNum.Location = new System.Drawing.Point(797, 242);
+            this.TagsNum.Name = "TagsNum";
+            this.TagsNum.Size = new System.Drawing.Size(62, 16);
+            this.TagsNum.TabIndex = 30;
+            this.TagsNum.TabStop = true;
+            this.TagsNum.Text = "TagsNum";
+            this.TagsNum.Visible = false;
+            this.TagsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            this.TagsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TagsNum_LinkClicked);
+            // 
+            // Tags
+            // 
+            this.Tags.AutoSize = true;
+            this.Tags.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Tags.Location = new System.Drawing.Point(797, 265);
+            this.Tags.Name = "Tags";
+            this.Tags.Size = new System.Drawing.Size(36, 16);
+            this.Tags.TabIndex = 29;
+            this.Tags.Text = "Tags";
+            this.Tags.Visible = false;
+            // 
+            // RelationsNum
+            // 
+            this.RelationsNum.AutoSize = true;
+            this.RelationsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.RelationsNum.LinkColor = System.Drawing.Color.Red;
+            this.RelationsNum.Location = new System.Drawing.Point(797, 307);
+            this.RelationsNum.Name = "RelationsNum";
+            this.RelationsNum.Size = new System.Drawing.Size(86, 16);
+            this.RelationsNum.TabIndex = 32;
+            this.RelationsNum.TabStop = true;
+            this.RelationsNum.Text = "RelationsNum";
+            this.RelationsNum.Visible = false;
+            this.RelationsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            this.RelationsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RelationsNum_LinkClicked);
+            // 
+            // RelationsNumlbl
+            // 
+            this.RelationsNumlbl.AutoSize = true;
+            this.RelationsNumlbl.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.RelationsNumlbl.Location = new System.Drawing.Point(797, 330);
+            this.RelationsNumlbl.Name = "RelationsNumlbl";
+            this.RelationsNumlbl.Size = new System.Drawing.Size(60, 16);
+            this.RelationsNumlbl.TabIndex = 31;
+            this.RelationsNumlbl.Text = "Relations";
+            this.RelationsNumlbl.Visible = false;
+            // 
+            // ExpressionsNum
+            // 
+            this.ExpressionsNum.AutoSize = true;
+            this.ExpressionsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ExpressionsNum.LinkColor = System.Drawing.Color.Red;
+            this.ExpressionsNum.Location = new System.Drawing.Point(797, 371);
+            this.ExpressionsNum.Name = "ExpressionsNum";
+            this.ExpressionsNum.Size = new System.Drawing.Size(101, 16);
+            this.ExpressionsNum.TabIndex = 34;
+            this.ExpressionsNum.TabStop = true;
+            this.ExpressionsNum.Text = "ExpressionsNum";
+            this.ExpressionsNum.Visible = false;
+            this.ExpressionsNum.VisitedLinkColor = System.Drawing.Color.Red;
+            this.ExpressionsNum.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ExpressionsNum_LinkClicked);
+            // 
+            // Expressions
+            // 
+            this.Expressions.AutoSize = true;
+            this.Expressions.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Expressions.Location = new System.Drawing.Point(797, 394);
+            this.Expressions.Name = "Expressions";
+            this.Expressions.Size = new System.Drawing.Size(75, 16);
+            this.Expressions.TabIndex = 33;
+            this.Expressions.Text = "Expressions";
+            this.Expressions.Visible = false;
+            // 
+            // Relationslbl
+            // 
+            this.Relationslbl.AutoSize = true;
+            this.Relationslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Relationslbl.Location = new System.Drawing.Point(12, 254);
+            this.Relationslbl.Name = "Relationslbl";
+            this.Relationslbl.Size = new System.Drawing.Size(51, 13);
+            this.Relationslbl.TabIndex = 35;
+            this.Relationslbl.Text = "Relations";
+            // 
+            // Expressionslbl
+            // 
+            this.Expressionslbl.AutoSize = true;
+            this.Expressionslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Expressionslbl.Location = new System.Drawing.Point(12, 314);
+            this.Expressionslbl.Name = "Expressionslbl";
+            this.Expressionslbl.Size = new System.Drawing.Size(64, 13);
+            this.Expressionslbl.TabIndex = 37;
+            this.Expressionslbl.Text = "Expressions";
+            // 
+            // AddExpression
+            // 
+            this.AddExpression.AutoSize = true;
+            this.AddExpression.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.AddExpression.Location = new System.Drawing.Point(10, 337);
+            this.AddExpression.Name = "AddExpression";
+            this.AddExpression.Size = new System.Drawing.Size(81, 13);
+            this.AddExpression.TabIndex = 36;
+            this.AddExpression.TabStop = true;
+            this.AddExpression.Text = "Add Expression";
+            this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
+            // 
+            // ShowAllWords
+            // 
+            this.ShowAllWords.AutoSize = true;
+            this.ShowAllWords.Location = new System.Drawing.Point(797, 432);
+            this.ShowAllWords.Name = "ShowAllWords";
+            this.ShowAllWords.Size = new System.Drawing.Size(82, 13);
+            this.ShowAllWords.TabIndex = 38;
+            this.ShowAllWords.TabStop = true;
+            this.ShowAllWords.Text = "Show All Words";
+            this.ShowAllWords.Visible = false;
+            this.ShowAllWords.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowAllWords_LinkClicked);
+            // 
+            // AdvancedSearch
+            // 
+            this.AdvancedSearch.AutoSize = true;
+            this.AdvancedSearch.Location = new System.Drawing.Point(121, 39);
+            this.AdvancedSearch.Name = "AdvancedSearch";
+            this.AdvancedSearch.Size = new System.Drawing.Size(93, 13);
+            this.AdvancedSearch.TabIndex = 39;
+            this.AdvancedSearch.TabStop = true;
+            this.AdvancedSearch.Text = "Advanced Search";
+            this.AdvancedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AdvancedSearch_LinkClicked);
+            // 
+            // Statslbl
+            // 
+            this.Statslbl.AutoSize = true;
+            this.Statslbl.ForeColor = System.Drawing.Color.Blue;
+            this.Statslbl.Location = new System.Drawing.Point(6, 10);
+            this.Statslbl.Name = "Statslbl";
+            this.Statslbl.Size = new System.Drawing.Size(49, 13);
+            this.Statslbl.TabIndex = 41;
+            this.Statslbl.Text = "Statistics";
+            // 
+            // TotAppearances
+            // 
+            this.TotAppearances.AutoSize = true;
+            this.TotAppearances.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotAppearances.Location = new System.Drawing.Point(6, 55);
+            this.TotAppearances.Name = "TotAppearances";
+            this.TotAppearances.Size = new System.Drawing.Size(124, 14);
+            this.TotAppearances.TabIndex = 23;
+            this.TotAppearances.Text = "Total Appearances";
+            this.TotAppearances.Visible = false;
+            // 
+            // NumOfSearchlbl
+            // 
+            this.NumOfSearchlbl.AutoSize = true;
+            this.NumOfSearchlbl.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumOfSearchlbl.Location = new System.Drawing.Point(7, 116);
+            this.NumOfSearchlbl.Name = "NumOfSearchlbl";
+            this.NumOfSearchlbl.Size = new System.Drawing.Size(136, 14);
+            this.NumOfSearchlbl.TabIndex = 42;
+            this.NumOfSearchlbl.Text = "Number Of Searches";
+            this.NumOfSearchlbl.Visible = false;
+            // 
+            // TotAppeartxt
+            // 
+            this.TotAppeartxt.AutoSize = true;
+            this.TotAppeartxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.TotAppeartxt.ForeColor = System.Drawing.Color.Red;
+            this.TotAppeartxt.Location = new System.Drawing.Point(6, 33);
+            this.TotAppeartxt.Name = "TotAppeartxt";
+            this.TotAppeartxt.Size = new System.Drawing.Size(97, 13);
+            this.TotAppeartxt.TabIndex = 43;
+            this.TotAppeartxt.Text = "Total Appearances";
+            this.TotAppeartxt.Visible = false;
+            // 
+            // NumOfSearchestxt
+            // 
+            this.NumOfSearchestxt.AutoSize = true;
+            this.NumOfSearchestxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.NumOfSearchestxt.ForeColor = System.Drawing.Color.Red;
+            this.NumOfSearchestxt.Location = new System.Drawing.Point(7, 91);
+            this.NumOfSearchestxt.Name = "NumOfSearchestxt";
+            this.NumOfSearchestxt.Size = new System.Drawing.Size(106, 13);
+            this.NumOfSearchestxt.TabIndex = 44;
+            this.NumOfSearchestxt.Text = "Number Of Searches";
+            this.NumOfSearchestxt.Visible = false;
+            // 
+            // StatsGB
+            // 
+            this.StatsGB.Controls.Add(this.NumOfSearchestxt);
+            this.StatsGB.Controls.Add(this.TotAppearances);
+            this.StatsGB.Controls.Add(this.TotAppeartxt);
+            this.StatsGB.Controls.Add(this.Statslbl);
+            this.StatsGB.Controls.Add(this.NumOfSearchlbl);
+            this.StatsGB.Location = new System.Drawing.Point(800, 9);
+            this.StatsGB.Name = "StatsGB";
+            this.StatsGB.Size = new System.Drawing.Size(200, 154);
+            this.StatsGB.TabIndex = 45;
+            this.StatsGB.TabStop = false;
+            this.StatsGB.Visible = false;
             // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 425);
-            this.Controls.Add(this.WordStats);
+            this.ClientSize = new System.Drawing.Size(1004, 484);
             this.Controls.Add(this.AdvancedSearch);
             this.Controls.Add(this.ShowAllWords);
             this.Controls.Add(this.Expressionslbl);
@@ -509,8 +549,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.ContainingDocsnum);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Wordtxt);
-            this.Controls.Add(this.TotAppeartxt);
-            this.Controls.Add(this.TotAppearances);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.SearchBtn);
@@ -526,11 +564,14 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.StoryCB);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.SearchBox);
+            this.Controls.Add(this.StatsGB);
             this.MinimumSize = new System.Drawing.Size(1020, 463);
             this.Name = "ConcordanceApp";
             this.Text = "Concordance";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).EndInit();
+            this.StatsGB.ResumeLayout(false);
+            this.StatsGB.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,8 +595,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private Button SearchBtn;
         private DataGridView dataGridView1;
         private GroupBox groupBox1;
-        private Label TotAppearances;
-        private LinkLabel TotAppeartxt;
         private Label Wordtxt;
         private Label label1;
         private LinkLabel ContainingDocsnum;
@@ -575,6 +614,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private DataGridViewTextBoxColumn documentDataGridViewTextBoxColumn;
         private BindingSource contextWordsResultBindingSource;
         private LinkLabel AdvancedSearch;
-        private LinkLabel WordStats;
+        private Label Statslbl;
+        private Label TotAppearances;
+        private Label NumOfSearchlbl;
+        private Label TotAppeartxt;
+        private Label NumOfSearchestxt;
+        private GroupBox StatsGB;
     }
 }
