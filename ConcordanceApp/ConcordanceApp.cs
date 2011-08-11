@@ -202,7 +202,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private void XMLExport_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ExportForm form = new ExportForm();
-            form.Dia
+            form.ShowDialog();
         }
     }
 }
