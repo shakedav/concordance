@@ -42,6 +42,8 @@
             this.WordRelationsCB = new System.Windows.Forms.CheckBox();
             this.WordsCB = new System.Windows.Forms.CheckBox();
             this.WordTagsCB = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // Exportbtn
@@ -183,11 +185,35 @@
             this.WordTagsCB.Text = "Word Tags";
             this.WordTagsCB.UseVisualStyleBackColor = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(16, 318);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(51, 13);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Select All";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(72, 318);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(65, 13);
+            this.linkLabel2.TabIndex = 15;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "DeSelect All";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
             // ExportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(611, 393);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.WordTagsCB);
             this.Controls.Add(this.WordsCB);
             this.Controls.Add(this.WordRelationsCB);
@@ -225,5 +251,7 @@
         private System.Windows.Forms.CheckBox WordRelationsCB;
         private System.Windows.Forms.CheckBox WordsCB;
         private System.Windows.Forms.CheckBox WordTagsCB;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
