@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -49,9 +49,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Synchronization, Version=1.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.Server, Version=2.0.0.0" />
+    <Reference Include="Microsoft.Synchronization.Data.SqlServerCe, Version=2.0.0.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -109,6 +115,11 @@
     </Compile>
     <Compile Include="AttributesForm.Designer.cs">
       <DependentUpon>AttributesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConcordationCache.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConcordationCache.sync</DependentUpon>
     </Compile>
     <Compile Include="ConcordationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -243,6 +254,11 @@
     <EmbeddedResource Include="WordTags.resx">
       <DependentUpon>WordTags.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ConcordationCache.sync">
+      <Generator>MSDataSyncGenerator</Generator>
+      <LastGenOutput>ConcordationCache.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ConcordationDataSet.xsc">
       <DependentUpon>ConcordationDataSet.xsd</DependentUpon>
     </None>
@@ -301,6 +317,11 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
       <ProductName>Windows Installer 3.1</ProductName>
@@ -309,6 +330,27 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Concordation.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLScripts\ConcordationCache.Concordation.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.AttributeTypes.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.Documents.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.DocumentTypes.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.Expressions.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.Relations.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.Tags.sql" />
+    <Content Include="SQLScripts\ConcordationCache.dbo.Words.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.Concordation.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.AttributeTypes.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.Documents.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.DocumentTypes.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.Expressions.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.Relations.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.Tags.disable.sql" />
+    <Content Include="SQLUndoScripts\ConcordationCache.dbo.Words.disable.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
