@@ -22,16 +22,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //ContactDataContext db = new ContactDataContext();
+            ConcordationDataSet DB = new ConcordationDataSet();
 
-            // create the data adapter 
-            SqlDataAdapter dataAdapter = new SqlDataAdapter ("SELECT userId,username FROM users ORDER BY username", sqlConn); 
-            // create the DataSet 
-            DataSet dataSet = new DataSet(); 
-            // fill the DataSet using our DataAdapter 
-            dataAdapter.Fill (dataSet);
+            XElement xmlDoc = new XElement("Words", 
+                                from w in DB.Words 
+                                orderby w.ID 
+                                select new XElement("word",
+                                        new XElement( "Word", w.Word), 
+                                        new XElement( "ID", w.ID),
+                                        new XElement("TotalAppearances",w.TotalCount),
+                                        new XElement("SearchNums",w.SearchNums)));
+            xmlDoc.Save("c:\\tmp\\wordsExport");
 
-
-            DataTable Word = new DataTable()
+            /*XElement xmlDoc = new XElement("Contacts", 
+                              from c in db.Contacts
+                              orderby c.ContactID
+                              select new XElement("Contact",
+                                     new XElement("ContactID", c.ContactID),
+                                     new XElement("FirstName", c.FirstName),
+                                     new XElement("LastName", c.LastName)));
+            xmlDoc.Save(Server.MapPath(@"~/export.xml"));*/
 
         }
     }

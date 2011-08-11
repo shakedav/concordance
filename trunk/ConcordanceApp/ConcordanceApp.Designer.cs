@@ -84,6 +84,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.tagNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getWordByTagNameResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.XMLExport = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
             this.StatsGB.SuspendLayout();
@@ -95,27 +96,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // SearchBox
             // 
-            this.SearchBox.Location = new System.Drawing.Point(62, 12);
+            this.SearchBox.Location = new System.Drawing.Point(72, 12);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(82, 20);
+            this.SearchBox.Size = new System.Drawing.Size(95, 21);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.Text = "Word / Term";
             // 
             // SearchLabel
             // 
             this.SearchLabel.AutoSize = true;
-            this.SearchLabel.Location = new System.Drawing.Point(12, 15);
+            this.SearchLabel.Location = new System.Drawing.Point(14, 15);
             this.SearchLabel.Name = "SearchLabel";
-            this.SearchLabel.Size = new System.Drawing.Size(44, 13);
+            this.SearchLabel.Size = new System.Drawing.Size(52, 13);
             this.SearchLabel.TabIndex = 1;
             this.SearchLabel.Text = "Search:";
             // 
             // StoryCB
             // 
             this.StoryCB.AutoSize = true;
-            this.StoryCB.Location = new System.Drawing.Point(15, 38);
+            this.StoryCB.Location = new System.Drawing.Point(17, 38);
             this.StoryCB.Name = "StoryCB";
-            this.StoryCB.Size = new System.Drawing.Size(58, 17);
+            this.StoryCB.Size = new System.Drawing.Size(66, 17);
             this.StoryCB.TabIndex = 3;
             this.StoryCB.Text = "Stories";
             this.StoryCB.UseVisualStyleBackColor = true;
@@ -123,9 +124,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // SongsCB
             // 
             this.SongsCB.AutoSize = true;
-            this.SongsCB.Location = new System.Drawing.Point(15, 61);
+            this.SongsCB.Location = new System.Drawing.Point(17, 61);
             this.SongsCB.Name = "SongsCB";
-            this.SongsCB.Size = new System.Drawing.Size(56, 17);
+            this.SongsCB.Size = new System.Drawing.Size(61, 17);
             this.SongsCB.TabIndex = 4;
             this.SongsCB.Text = "Songs";
             this.SongsCB.UseVisualStyleBackColor = true;
@@ -134,13 +135,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.HLine.Location = new System.Drawing.Point(3, 84);
             this.HLine.Name = "HLine";
-            this.HLine.Size = new System.Drawing.Size(211, 10);
+            this.HLine.Size = new System.Drawing.Size(246, 10);
             this.HLine.TabIndex = 8;
             this.HLine.TabStop = false;
             // 
             // VLine
             // 
-            this.VLine.Location = new System.Drawing.Point(220, 12);
+            this.VLine.Location = new System.Drawing.Point(257, 12);
             this.VLine.Name = "VLine";
             this.VLine.Size = new System.Drawing.Size(10, 461);
             this.VLine.TabIndex = 9;
@@ -152,12 +153,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.UpDocLbl.AutoSize = true;
             this.UpDocLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpDocLbl.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.UpDocLbl.Location = new System.Drawing.Point(12, 123);
+            this.UpDocLbl.Location = new System.Drawing.Point(14, 123);
             this.UpDocLbl.Name = "UpDocLbl";
             this.UpDocLbl.Size = new System.Drawing.Size(108, 13);
             this.UpDocLbl.TabIndex = 11;
             this.UpDocLbl.TabStop = true;
             this.UpDocLbl.Text = "Upload Document";
+            this.UpDocLbl.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.UpDocLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UpDocLbl_LinkClicked);
             // 
             // AddDocTypeLbl
@@ -166,24 +168,28 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddDocTypeLbl.AutoSize = true;
             this.AddDocTypeLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddDocTypeLbl.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.AddDocTypeLbl.Location = new System.Drawing.Point(12, 150);
+            this.AddDocTypeLbl.Location = new System.Drawing.Point(14, 150);
             this.AddDocTypeLbl.Name = "AddDocTypeLbl";
             this.AddDocTypeLbl.Size = new System.Drawing.Size(123, 13);
             this.AddDocTypeLbl.TabIndex = 12;
             this.AddDocTypeLbl.TabStop = true;
             this.AddDocTypeLbl.Text = "Add Document Type";
+            this.AddDocTypeLbl.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddDocTypeLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddDocTypeLbl_LinkClicked);
             // 
             // AddTagLbl
             // 
             this.AddTagLbl.AutoSize = true;
-            this.AddTagLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddTagLbl.Location = new System.Drawing.Point(12, 215);
+            this.AddTagLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTagLbl.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.AddTagLbl.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.AddTagLbl.Location = new System.Drawing.Point(14, 215);
             this.AddTagLbl.Name = "AddTagLbl";
-            this.AddTagLbl.Size = new System.Drawing.Size(47, 13);
+            this.AddTagLbl.Size = new System.Drawing.Size(54, 13);
             this.AddTagLbl.TabIndex = 13;
             this.AddTagLbl.TabStop = true;
             this.AddTagLbl.Text = "Add Tag";
+            this.AddTagLbl.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTagLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddTagLbl_LinkClicked);
             // 
             // DocumentsLbl
@@ -191,7 +197,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.DocumentsLbl.AutoSize = true;
             this.DocumentsLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentsLbl.ForeColor = System.Drawing.Color.DimGray;
-            this.DocumentsLbl.Location = new System.Drawing.Point(12, 100);
+            this.DocumentsLbl.Location = new System.Drawing.Point(14, 100);
             this.DocumentsLbl.Name = "DocumentsLbl";
             this.DocumentsLbl.Size = new System.Drawing.Size(79, 13);
             this.DocumentsLbl.TabIndex = 14;
@@ -200,23 +206,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // TagsLbl
             // 
             this.TagsLbl.AutoSize = true;
-            this.TagsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.TagsLbl.Location = new System.Drawing.Point(12, 193);
+            this.TagsLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TagsLbl.ForeColor = System.Drawing.Color.DimGray;
+            this.TagsLbl.Location = new System.Drawing.Point(14, 193);
             this.TagsLbl.Name = "TagsLbl";
-            this.TagsLbl.Size = new System.Drawing.Size(30, 13);
+            this.TagsLbl.Size = new System.Drawing.Size(38, 13);
             this.TagsLbl.TabIndex = 15;
             this.TagsLbl.Text = "Tags";
             // 
             // AddRelationsLbl
             // 
             this.AddRelationsLbl.AutoSize = true;
-            this.AddRelationsLbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddRelationsLbl.Location = new System.Drawing.Point(12, 276);
+            this.AddRelationsLbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRelationsLbl.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.AddRelationsLbl.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.AddRelationsLbl.Location = new System.Drawing.Point(14, 276);
             this.AddRelationsLbl.Name = "AddRelationsLbl";
-            this.AddRelationsLbl.Size = new System.Drawing.Size(68, 13);
+            this.AddRelationsLbl.Size = new System.Drawing.Size(79, 13);
             this.AddRelationsLbl.TabIndex = 18;
             this.AddRelationsLbl.TabStop = true;
             this.AddRelationsLbl.Text = "Add Relation";
+            this.AddRelationsLbl.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddRelationsLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddRelationsLbl_LinkClicked);
             // 
             // openFileDialog1
@@ -226,9 +236,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // SearchBtn
             // 
-            this.SearchBtn.Location = new System.Drawing.Point(150, 10);
+            this.SearchBtn.Location = new System.Drawing.Point(175, 10);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(64, 22);
+            this.SearchBtn.Size = new System.Drawing.Size(75, 22);
             this.SearchBtn.TabIndex = 20;
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
@@ -253,10 +263,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.wordNumberDataGridViewTextBoxColumn,
             this.documentDataGridViewTextBoxColumn});
             this.RegularSearchGrid.DataSource = this.contextWordsResultBindingSource;
-            this.RegularSearchGrid.Location = new System.Drawing.Point(236, 31);
+            this.RegularSearchGrid.Location = new System.Drawing.Point(275, 38);
             this.RegularSearchGrid.Name = "RegularSearchGrid";
             this.RegularSearchGrid.ReadOnly = true;
-            this.RegularSearchGrid.Size = new System.Drawing.Size(528, 426);
+            this.RegularSearchGrid.Size = new System.Drawing.Size(616, 419);
             this.RegularSearchGrid.TabIndex = 21;
             this.RegularSearchGrid.Visible = false;
             // 
@@ -299,19 +309,19 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // groupBox1
             // 
-            this.groupBox1.Location = new System.Drawing.Point(784, 14);
+            this.groupBox1.Location = new System.Drawing.Point(915, 14);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(10, 459);
+            this.groupBox1.Size = new System.Drawing.Size(12, 459);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
             // Wordtxt
             // 
             this.Wordtxt.AutoSize = true;
-            this.Wordtxt.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Wordtxt.Location = new System.Drawing.Point(237, 9);
+            this.Wordtxt.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Wordtxt.Location = new System.Drawing.Point(276, 10);
             this.Wordtxt.Name = "Wordtxt";
-            this.Wordtxt.Size = new System.Drawing.Size(32, 16);
+            this.Wordtxt.Size = new System.Drawing.Size(61, 29);
             this.Wordtxt.TabIndex = 26;
             this.Wordtxt.Text = "rrrr";
             this.Wordtxt.Visible = false;
@@ -319,10 +329,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // Documents
             // 
             this.Documents.AutoSize = true;
-            this.Documents.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.Documents.Location = new System.Drawing.Point(797, 201);
+            this.Documents.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Documents.Location = new System.Drawing.Point(930, 201);
             this.Documents.Name = "Documents";
-            this.Documents.Size = new System.Drawing.Size(71, 16);
+            this.Documents.Size = new System.Drawing.Size(71, 13);
             this.Documents.TabIndex = 27;
             this.Documents.Text = "Documents";
             this.Documents.Visible = false;
@@ -330,11 +340,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // ContainingDocsnum
             // 
             this.ContainingDocsnum.AutoSize = true;
-            this.ContainingDocsnum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ContainingDocsnum.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ContainingDocsnum.LinkColor = System.Drawing.Color.Red;
-            this.ContainingDocsnum.Location = new System.Drawing.Point(797, 178);
+            this.ContainingDocsnum.Location = new System.Drawing.Point(930, 178);
             this.ContainingDocsnum.Name = "ContainingDocsnum";
-            this.ContainingDocsnum.Size = new System.Drawing.Size(95, 16);
+            this.ContainingDocsnum.Size = new System.Drawing.Size(96, 13);
             this.ContainingDocsnum.TabIndex = 28;
             this.ContainingDocsnum.TabStop = true;
             this.ContainingDocsnum.Text = "ContainingDocs";
@@ -345,11 +355,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // TagsNum
             // 
             this.TagsNum.AutoSize = true;
-            this.TagsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.TagsNum.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TagsNum.LinkColor = System.Drawing.Color.Red;
-            this.TagsNum.Location = new System.Drawing.Point(797, 242);
+            this.TagsNum.Location = new System.Drawing.Point(930, 242);
             this.TagsNum.Name = "TagsNum";
-            this.TagsNum.Size = new System.Drawing.Size(62, 16);
+            this.TagsNum.Size = new System.Drawing.Size(60, 13);
             this.TagsNum.TabIndex = 30;
             this.TagsNum.TabStop = true;
             this.TagsNum.Text = "TagsNum";
@@ -360,10 +370,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // Tags
             // 
             this.Tags.AutoSize = true;
-            this.Tags.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.Tags.Location = new System.Drawing.Point(797, 265);
+            this.Tags.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tags.Location = new System.Drawing.Point(930, 265);
             this.Tags.Name = "Tags";
-            this.Tags.Size = new System.Drawing.Size(36, 16);
+            this.Tags.Size = new System.Drawing.Size(34, 13);
             this.Tags.TabIndex = 29;
             this.Tags.Text = "Tags";
             this.Tags.Visible = false;
@@ -371,11 +381,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // RelationsNum
             // 
             this.RelationsNum.AutoSize = true;
-            this.RelationsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.RelationsNum.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RelationsNum.LinkColor = System.Drawing.Color.Red;
-            this.RelationsNum.Location = new System.Drawing.Point(797, 307);
+            this.RelationsNum.Location = new System.Drawing.Point(930, 307);
             this.RelationsNum.Name = "RelationsNum";
-            this.RelationsNum.Size = new System.Drawing.Size(86, 16);
+            this.RelationsNum.Size = new System.Drawing.Size(85, 13);
             this.RelationsNum.TabIndex = 32;
             this.RelationsNum.TabStop = true;
             this.RelationsNum.Text = "RelationsNum";
@@ -386,10 +396,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // RelationsNumlbl
             // 
             this.RelationsNumlbl.AutoSize = true;
-            this.RelationsNumlbl.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.RelationsNumlbl.Location = new System.Drawing.Point(797, 330);
+            this.RelationsNumlbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RelationsNumlbl.Location = new System.Drawing.Point(930, 330);
             this.RelationsNumlbl.Name = "RelationsNumlbl";
-            this.RelationsNumlbl.Size = new System.Drawing.Size(60, 16);
+            this.RelationsNumlbl.Size = new System.Drawing.Size(59, 13);
             this.RelationsNumlbl.TabIndex = 31;
             this.RelationsNumlbl.Text = "Relations";
             this.RelationsNumlbl.Visible = false;
@@ -397,11 +407,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // ExpressionsNum
             // 
             this.ExpressionsNum.AutoSize = true;
-            this.ExpressionsNum.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.ExpressionsNum.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpressionsNum.LinkColor = System.Drawing.Color.Red;
-            this.ExpressionsNum.Location = new System.Drawing.Point(797, 371);
+            this.ExpressionsNum.Location = new System.Drawing.Point(930, 371);
             this.ExpressionsNum.Name = "ExpressionsNum";
-            this.ExpressionsNum.Size = new System.Drawing.Size(101, 16);
+            this.ExpressionsNum.Size = new System.Drawing.Size(101, 13);
             this.ExpressionsNum.TabIndex = 34;
             this.ExpressionsNum.TabStop = true;
             this.ExpressionsNum.Text = "ExpressionsNum";
@@ -412,10 +422,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // Expressions
             // 
             this.Expressions.AutoSize = true;
-            this.Expressions.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.Expressions.Location = new System.Drawing.Point(797, 394);
+            this.Expressions.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expressions.Location = new System.Drawing.Point(930, 394);
             this.Expressions.Name = "Expressions";
-            this.Expressions.Size = new System.Drawing.Size(75, 16);
+            this.Expressions.Size = new System.Drawing.Size(75, 13);
             this.Expressions.TabIndex = 33;
             this.Expressions.Text = "Expressions";
             this.Expressions.Visible = false;
@@ -423,53 +433,59 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // Relationslbl
             // 
             this.Relationslbl.AutoSize = true;
-            this.Relationslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Relationslbl.Location = new System.Drawing.Point(12, 254);
+            this.Relationslbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Relationslbl.ForeColor = System.Drawing.Color.DimGray;
+            this.Relationslbl.Location = new System.Drawing.Point(14, 254);
             this.Relationslbl.Name = "Relationslbl";
-            this.Relationslbl.Size = new System.Drawing.Size(51, 13);
+            this.Relationslbl.Size = new System.Drawing.Size(67, 13);
             this.Relationslbl.TabIndex = 35;
             this.Relationslbl.Text = "Relations";
             // 
             // Expressionslbl
             // 
             this.Expressionslbl.AutoSize = true;
-            this.Expressionslbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Expressionslbl.Location = new System.Drawing.Point(12, 314);
+            this.Expressionslbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expressionslbl.ForeColor = System.Drawing.Color.DimGray;
+            this.Expressionslbl.Location = new System.Drawing.Point(14, 314);
             this.Expressionslbl.Name = "Expressionslbl";
-            this.Expressionslbl.Size = new System.Drawing.Size(64, 13);
+            this.Expressionslbl.Size = new System.Drawing.Size(86, 13);
             this.Expressionslbl.TabIndex = 37;
             this.Expressionslbl.Text = "Expressions";
             // 
             // AddExpression
             // 
             this.AddExpression.AutoSize = true;
-            this.AddExpression.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddExpression.Location = new System.Drawing.Point(10, 337);
+            this.AddExpression.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddExpression.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.AddExpression.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.AddExpression.Location = new System.Drawing.Point(12, 337);
             this.AddExpression.Name = "AddExpression";
-            this.AddExpression.Size = new System.Drawing.Size(81, 13);
+            this.AddExpression.Size = new System.Drawing.Size(95, 13);
             this.AddExpression.TabIndex = 36;
             this.AddExpression.TabStop = true;
             this.AddExpression.Text = "Add Expression";
+            this.AddExpression.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
             // 
             // ShowAllWords
             // 
             this.ShowAllWords.AutoSize = true;
-            this.ShowAllWords.Location = new System.Drawing.Point(797, 432);
+            this.ShowAllWords.LinkColor = System.Drawing.Color.SlateGray;
+            this.ShowAllWords.Location = new System.Drawing.Point(12, 394);
             this.ShowAllWords.Name = "ShowAllWords";
-            this.ShowAllWords.Size = new System.Drawing.Size(82, 13);
+            this.ShowAllWords.Size = new System.Drawing.Size(96, 13);
             this.ShowAllWords.TabIndex = 38;
             this.ShowAllWords.TabStop = true;
             this.ShowAllWords.Text = "Show All Words";
-            this.ShowAllWords.Visible = false;
+            this.ShowAllWords.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.ShowAllWords.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowAllWords_LinkClicked);
             // 
             // AdvancedSearch
             // 
             this.AdvancedSearch.AutoSize = true;
-            this.AdvancedSearch.Location = new System.Drawing.Point(121, 39);
+            this.AdvancedSearch.Location = new System.Drawing.Point(141, 39);
             this.AdvancedSearch.Name = "AdvancedSearch";
-            this.AdvancedSearch.Size = new System.Drawing.Size(93, 13);
+            this.AdvancedSearch.Size = new System.Drawing.Size(107, 13);
             this.AdvancedSearch.TabIndex = 39;
             this.AdvancedSearch.TabStop = true;
             this.AdvancedSearch.Text = "Advanced Search";
@@ -478,20 +494,21 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // Statslbl
             // 
             this.Statslbl.AutoSize = true;
+            this.Statslbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Statslbl.ForeColor = System.Drawing.Color.Blue;
-            this.Statslbl.Location = new System.Drawing.Point(6, 10);
+            this.Statslbl.Location = new System.Drawing.Point(7, 10);
             this.Statslbl.Name = "Statslbl";
-            this.Statslbl.Size = new System.Drawing.Size(49, 13);
+            this.Statslbl.Size = new System.Drawing.Size(58, 13);
             this.Statslbl.TabIndex = 41;
             this.Statslbl.Text = "Statistics";
             // 
             // TotAppearances
             // 
             this.TotAppearances.AutoSize = true;
-            this.TotAppearances.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotAppearances.Location = new System.Drawing.Point(6, 55);
+            this.TotAppearances.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotAppearances.Location = new System.Drawing.Point(7, 55);
             this.TotAppearances.Name = "TotAppearances";
-            this.TotAppearances.Size = new System.Drawing.Size(124, 14);
+            this.TotAppearances.Size = new System.Drawing.Size(113, 13);
             this.TotAppearances.TabIndex = 23;
             this.TotAppearances.Text = "Total Appearances";
             this.TotAppearances.Visible = false;
@@ -499,10 +516,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // NumOfSearchlbl
             // 
             this.NumOfSearchlbl.AutoSize = true;
-            this.NumOfSearchlbl.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumOfSearchlbl.Location = new System.Drawing.Point(7, 116);
+            this.NumOfSearchlbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumOfSearchlbl.Location = new System.Drawing.Point(8, 116);
             this.NumOfSearchlbl.Name = "NumOfSearchlbl";
-            this.NumOfSearchlbl.Size = new System.Drawing.Size(136, 14);
+            this.NumOfSearchlbl.Size = new System.Drawing.Size(126, 13);
             this.NumOfSearchlbl.TabIndex = 42;
             this.NumOfSearchlbl.Text = "Number Of Searches";
             this.NumOfSearchlbl.Visible = false;
@@ -510,11 +527,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // TotAppeartxt
             // 
             this.TotAppeartxt.AutoSize = true;
-            this.TotAppeartxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.TotAppeartxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotAppeartxt.ForeColor = System.Drawing.Color.Red;
-            this.TotAppeartxt.Location = new System.Drawing.Point(6, 33);
+            this.TotAppeartxt.Location = new System.Drawing.Point(7, 33);
             this.TotAppeartxt.Name = "TotAppeartxt";
-            this.TotAppeartxt.Size = new System.Drawing.Size(97, 13);
+            this.TotAppeartxt.Size = new System.Drawing.Size(113, 13);
             this.TotAppeartxt.TabIndex = 43;
             this.TotAppeartxt.Text = "Total Appearances";
             this.TotAppeartxt.Visible = false;
@@ -522,11 +539,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // NumOfSearchestxt
             // 
             this.NumOfSearchestxt.AutoSize = true;
-            this.NumOfSearchestxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.NumOfSearchestxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumOfSearchestxt.ForeColor = System.Drawing.Color.Red;
-            this.NumOfSearchestxt.Location = new System.Drawing.Point(7, 91);
+            this.NumOfSearchestxt.Location = new System.Drawing.Point(8, 91);
             this.NumOfSearchestxt.Name = "NumOfSearchestxt";
-            this.NumOfSearchestxt.Size = new System.Drawing.Size(106, 13);
+            this.NumOfSearchestxt.Size = new System.Drawing.Size(126, 13);
             this.NumOfSearchestxt.TabIndex = 44;
             this.NumOfSearchestxt.Text = "Number Of Searches";
             this.NumOfSearchestxt.Visible = false;
@@ -538,9 +555,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.StatsGB.Controls.Add(this.TotAppeartxt);
             this.StatsGB.Controls.Add(this.Statslbl);
             this.StatsGB.Controls.Add(this.NumOfSearchlbl);
-            this.StatsGB.Location = new System.Drawing.Point(800, 9);
+            this.StatsGB.Location = new System.Drawing.Point(933, 9);
             this.StatsGB.Name = "StatsGB";
-            this.StatsGB.Size = new System.Drawing.Size(200, 154);
+            this.StatsGB.Size = new System.Drawing.Size(233, 154);
             this.StatsGB.TabIndex = 45;
             this.StatsGB.TabStop = false;
             this.StatsGB.Visible = false;
@@ -562,10 +579,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.valueDataGridViewTextBoxColumn});
             this.AdvancedSearchGrid.DataSource = this.getWordByLineAndNumResultBindingSource;
             this.AdvancedSearchGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.AdvancedSearchGrid.Location = new System.Drawing.Point(236, 31);
+            this.AdvancedSearchGrid.Location = new System.Drawing.Point(275, 38);
             this.AdvancedSearchGrid.Name = "AdvancedSearchGrid";
             this.AdvancedSearchGrid.ReadOnly = true;
-            this.AdvancedSearchGrid.Size = new System.Drawing.Size(528, 441);
+            this.AdvancedSearchGrid.Size = new System.Drawing.Size(616, 434);
             this.AdvancedSearchGrid.TabIndex = 46;
             this.AdvancedSearchGrid.Visible = false;
             // 
@@ -617,10 +634,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.wordDataGridViewTextBoxColumn1,
             this.tagNameDataGridViewTextBoxColumn});
             this.TagSearchGrid.DataSource = this.getWordByTagNameResultBindingSource;
-            this.TagSearchGrid.Location = new System.Drawing.Point(236, 31);
+            this.TagSearchGrid.Location = new System.Drawing.Point(275, 38);
             this.TagSearchGrid.Name = "TagSearchGrid";
             this.TagSearchGrid.ReadOnly = true;
-            this.TagSearchGrid.Size = new System.Drawing.Size(528, 441);
+            this.TagSearchGrid.Size = new System.Drawing.Size(616, 434);
             this.TagSearchGrid.TabIndex = 47;
             this.TagSearchGrid.Visible = false;
             // 
@@ -647,19 +664,31 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // XMLExport
             // 
             this.XMLExport.AutoSize = true;
-            this.XMLExport.Location = new System.Drawing.Point(12, 432);
+            this.XMLExport.Location = new System.Drawing.Point(14, 432);
             this.XMLExport.Name = "XMLExport";
-            this.XMLExport.Size = new System.Drawing.Size(104, 13);
+            this.XMLExport.Size = new System.Drawing.Size(120, 13);
             this.XMLExport.TabIndex = 48;
             this.XMLExport.TabStop = true;
             this.XMLExport.Text = "Export Data To XML";
             this.XMLExport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.XMLExport_LinkClicked);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.Location = new System.Drawing.Point(14, 371);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Words";
+            // 
             // ConcordanceApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 484);
+            this.ClientSize = new System.Drawing.Size(1171, 484);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.XMLExport);
             this.Controls.Add(this.TagSearchGrid);
             this.Controls.Add(this.AdvancedSearchGrid);
@@ -693,7 +722,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.StatsGB);
-            this.MinimumSize = new System.Drawing.Size(1020, 463);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimumSize = new System.Drawing.Size(1187, 463);
             this.Name = "ConcordanceApp";
             this.Text = "Concordance";
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).EndInit();
@@ -763,5 +793,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private DataGridViewTextBoxColumn tagNameDataGridViewTextBoxColumn;
         private BindingSource getWordByTagNameResultBindingSource;
         private LinkLabel XMLExport;
+        private Label label1;
     }
 }

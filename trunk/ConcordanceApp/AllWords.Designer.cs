@@ -30,11 +30,11 @@
 		{
             this.components = new System.ComponentModel.Container();
             this.WordsGrid = new System.Windows.Forms.DataGridView();
-            this.getAllWordsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.wordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lineNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wordNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getAllWordsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.WordsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllWordsResultBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -52,15 +52,11 @@
             this.wordNumDataGridViewTextBoxColumn,
             this.valueDataGridViewTextBoxColumn});
             this.WordsGrid.DataSource = this.getAllWordsResultBindingSource;
-            this.WordsGrid.Location = new System.Drawing.Point(13, 13);
+            this.WordsGrid.Location = new System.Drawing.Point(15, 13);
             this.WordsGrid.Name = "WordsGrid";
             this.WordsGrid.ReadOnly = true;
-            this.WordsGrid.Size = new System.Drawing.Size(645, 470);
+            this.WordsGrid.Size = new System.Drawing.Size(752, 470);
             this.WordsGrid.TabIndex = 0;
-            // 
-            // getAllWordsResultBindingSource
-            // 
-            this.getAllWordsResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetAllWordsResult);
             // 
             // wordDataGridViewTextBoxColumn
             // 
@@ -94,14 +90,20 @@
             this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
             this.valueDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // getAllWordsResultBindingSource
+            // 
+            this.getAllWordsResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetAllWordsResult);
+            // 
             // AllWords
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 495);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(782, 495);
             this.Controls.Add(this.WordsGrid);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AllWords";
-            this.Text = "AllWords";
+            this.Text = "All Words";
             ((System.ComponentModel.ISupportInitialize)(this.WordsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllWordsResultBindingSource)).EndInit();
             this.ResumeLayout(false);
