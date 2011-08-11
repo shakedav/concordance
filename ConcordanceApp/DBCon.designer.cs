@@ -33,7 +33,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
     #endregion
 		
 		public DBConDataContext() : 
-				base(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString3, mappingSource)
+				base(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -298,6 +298,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tag);
 			return ((ISingleResult<GetWordByTagNameResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ExportTable")]
+		public ISingleResult<ExportTableResult> ExportTable([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TableName", DbType="VarChar(50)")] string tableName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tableName);
+			return ((ISingleResult<ExportTableResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1002,6 +1009,32 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._TagName != value))
 				{
 					this._TagName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ExportTableResult
+	{
+		
+		private System.Xml.Linq.XElement _XMLResult;
+		
+		public ExportTableResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_XMLResult", DbType="Xml")]
+		public System.Xml.Linq.XElement XMLResult
+		{
+			get
+			{
+				return this._XMLResult;
+			}
+			set
+			{
+				if ((this._XMLResult != value))
+				{
+					this._XMLResult = value;
 				}
 			}
 		}

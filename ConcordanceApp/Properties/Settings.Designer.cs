@@ -26,7 +26,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\CONCORDATION;Initial Catalog=Concordation;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SHAKEDAV-PC\\CONCORDATION;Initial Catalog=Concordation;Integrated Secu" +
+            "rity=True")]
         public string ConcordationConnectionString {
             get {
                 return ((string)(this["ConcordationConnectionString"]));
@@ -36,23 +37,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\CONCORDATION;AttachDbFilename=|DataDirectory|\\Concordation.mdf;Inte" +
-            "grated Security=True;Connect Timeout=30;User Instance=True")]
-        public string ConcordationConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=|DataDirectory|\\Concordation.sdf;Max Database Size=2047")]
+        public string ClientConcordationConnectionString {
             get {
-                return ((string)(this["ConcordationConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\CONCORDATION;AttachDbFilename=\"C:\\Program Files\\Microsoft SQL Serve" +
-            "r\\MSSQL10_50.CONCORDATION\\MSSQL\\DATA\\Concordation.mdf\";Integrated Security=True;" +
-            "Connect Timeout=30;User Instance=True")]
-        public string ConcordationConnectionString2 {
-            get {
-                return ((string)(this["ConcordationConnectionString2"]));
+                return ((string)(this["ClientConcordationConnectionString"]));
             }
         }
         
