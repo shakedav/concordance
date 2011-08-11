@@ -50,17 +50,43 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             if (WordTagsCB.Checked)
                 tables.Add("WordTags");
 
-            /*
-            ConcordationDataSet DS = new ConcordationDataSet();
-            DS.WriteXml("C:\\tmp\\ds.xml");*/
-            /*
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\tmp\Export.xml",true);
-            string result = "";
             foreach (string table in tables)
             {
-                result = DB.ExportTable(table).ToString();
-                file.WriteLine(result);
-            }*/
+                string filename = table + ".xml"; 
+                DB.ExportTable(table, filename);
+            }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AttributeTypesCB.Checked = true;
+            AttributeValuesCB.Checked = true;
+            DocAttributesCB.Checked = true;
+            DocumentsCB.Checked = true;
+            DocumentTypesCB.Checked = true;
+            ExpressionsCB.Checked = true;
+            RelationsCB.Checked = true;
+            TagsCB.Checked = true;
+            WordApperancesCB.Checked = true;
+            WordRelationsCB.Checked = true;
+            WordsCB.Checked = true;
+            WordTagsCB.Checked = true;
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AttributeTypesCB.Checked = false;
+            AttributeValuesCB.Checked = false;
+            DocAttributesCB.Checked = false;
+            DocumentsCB.Checked = false;
+            DocumentTypesCB.Checked = false;
+            ExpressionsCB.Checked = false;
+            RelationsCB.Checked = false;
+            TagsCB.Checked = false;
+            WordApperancesCB.Checked = false;
+            WordRelationsCB.Checked = false;
+            WordsCB.Checked = false;
+            WordTagsCB.Checked = false;
         }
     }
 }

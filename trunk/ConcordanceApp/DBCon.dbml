@@ -199,8 +199,7 @@
   </Function>
   <Function Name="dbo.ExportTable" Method="ExportTable">
     <Parameter Name="TableName" Parameter="tableName" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="ExportTableResult">
-      <Column Name="XMLResult" Type="System.Xml.Linq.XElement" DbType="Xml" CanBeNull="true" />
-    </ElementType>
+    <Parameter Name="filename" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
