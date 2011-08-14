@@ -31,8 +31,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 tables.Add("DocAttributes");
             if (DocumentsCB.Checked)
                 tables.Add("Documents");
-            if (DocumentTypesCB.Checked)
-                tables.Add("DocumentTypes");
             if (ExpressionsCB.Checked)
                 tables.Add("Expressions");
             if (RelationsCB.Checked)
@@ -60,7 +58,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AttributeValuesCB.Checked = true;
             DocAttributesCB.Checked = true;
             DocumentsCB.Checked = true;
-            DocumentTypesCB.Checked = true;
             ExpressionsCB.Checked = true;
             RelationsCB.Checked = true;
             TagsCB.Checked = true;
@@ -75,7 +72,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AttributeValuesCB.Checked = false;
             DocAttributesCB.Checked = false;
             DocumentsCB.Checked = false;
-            DocumentTypesCB.Checked = false;
             ExpressionsCB.Checked = false;
             RelationsCB.Checked = false;
             TagsCB.Checked = false;

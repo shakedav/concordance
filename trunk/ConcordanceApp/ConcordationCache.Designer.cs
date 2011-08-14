@@ -175,6 +175,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp {
             [System.Diagnostics.DebuggerNonUserCodeAttribute()]
             private void InitializeTableOptions() {
                 this.TableName = "AttributeTypes";
+                this.SyncDirection = Microsoft.Synchronization.Data.SyncDirection.Snapshot;
                 this.CreationOption = Microsoft.Synchronization.Data.TableCreationOption.DropExistingOrCreateNewTable;
             }
         }
@@ -293,77 +294,38 @@ namespace concordanceapConcordationDataSetTableAdaptersp {
         private void InitializeCommands() {
             // AttributeTypesSyncTableInsertCommand command.
             this.InsertCommand = new System.Data.SqlClient.SqlCommand();
-            this.InsertCommand.CommandText = @" SET IDENTITY_INSERT dbo.AttributeTypes ON ;WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) INSERT INTO dbo.AttributeTypes ([AttID], [AttName]) VALUES (@AttID, @AttName) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.AttributeTypes')) > @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.AttributeTypes')  SET IDENTITY_INSERT dbo.AttributeTypes OFF ";
+            this.InsertCommand.CommandText = " SET IDENTITY_INSERT dbo.AttributeTypes ON INSERT INTO dbo.AttributeTypes ([AttID" +
+                "], [AttName]) VALUES (@AttID, @AttName) SET @sync_row_count = @@rowcount SET IDE" +
+                "NTITY_INSERT dbo.AttributeTypes OFF ";
             this.InsertCommand.CommandType = System.Data.CommandType.Text;
-            this.InsertCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_client_id_binary", System.Data.SqlDbType.VarBinary));
             this.InsertCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttID", System.Data.SqlDbType.Int));
             this.InsertCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttName", System.Data.SqlDbType.VarChar));
             System.Data.SqlClient.SqlParameter insertcommand_sync_row_countParameter = new System.Data.SqlClient.SqlParameter("@sync_row_count", System.Data.SqlDbType.Int);
             insertcommand_sync_row_countParameter.Direction = System.Data.ParameterDirection.Output;
             this.InsertCommand.Parameters.Add(insertcommand_sync_row_countParameter);
-            this.InsertCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
             // AttributeTypesSyncTableDeleteCommand command.
             this.DeleteCommand = new System.Data.SqlClient.SqlCommand();
-            this.DeleteCommand.CommandText = @";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) DELETE dbo.AttributeTypes FROM dbo.AttributeTypes JOIN CHANGETABLE(VERSION dbo.AttributeTypes, ([AttID]), (@AttID)) CT  ON CT.[AttID] = dbo.AttributeTypes.[AttID] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION <= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.AttributeTypes')) > @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.AttributeTypes') ";
+            this.DeleteCommand.CommandText = "DELETE FROM dbo.AttributeTypes WHERE ([AttID] = @AttID) SET @sync_row_count = @@r" +
+                "owcount";
             this.DeleteCommand.CommandType = System.Data.CommandType.Text;
-            this.DeleteCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_client_id_binary", System.Data.SqlDbType.VarBinary));
             this.DeleteCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttID", System.Data.SqlDbType.Int));
-            this.DeleteCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_force_write", System.Data.SqlDbType.Bit));
-            this.DeleteCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
             System.Data.SqlClient.SqlParameter deletecommand_sync_row_countParameter = new System.Data.SqlClient.SqlParameter("@sync_row_count", System.Data.SqlDbType.Int);
             deletecommand_sync_row_countParameter.Direction = System.Data.ParameterDirection.Output;
             this.DeleteCommand.Parameters.Add(deletecommand_sync_row_countParameter);
             // AttributeTypesSyncTableUpdateCommand command.
             this.UpdateCommand = new System.Data.SqlClient.SqlCommand();
-            this.UpdateCommand.CommandText = @";WITH CHANGE_TRACKING_CONTEXT (@sync_client_id_binary) UPDATE dbo.AttributeTypes SET [AttName] = @AttName FROM dbo.AttributeTypes  JOIN CHANGETABLE(VERSION dbo.AttributeTypes, ([AttID]), (@AttID)) CT  ON CT.[AttID] = dbo.AttributeTypes.[AttID] WHERE (@sync_force_write = 1 OR CT.SYS_CHANGE_VERSION IS NULL OR CT.SYS_CHANGE_VERSION <= @sync_last_received_anchor OR (CT.SYS_CHANGE_CONTEXT IS NOT NULL AND CT.SYS_CHANGE_CONTEXT = @sync_client_id_binary)) SET @sync_row_count = @@rowcount; IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.AttributeTypes')) > @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.AttributeTypes') ";
+            this.UpdateCommand.CommandText = "UPDATE dbo.AttributeTypes SET [AttName] = @AttName WHERE ([AttID] = @AttID) SET @" +
+                "sync_row_count = @@rowcount";
             this.UpdateCommand.CommandType = System.Data.CommandType.Text;
             this.UpdateCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttName", System.Data.SqlDbType.VarChar));
             this.UpdateCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttID", System.Data.SqlDbType.Int));
-            this.UpdateCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_force_write", System.Data.SqlDbType.Bit));
-            this.UpdateCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
-            this.UpdateCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_client_id_binary", System.Data.SqlDbType.VarBinary));
             System.Data.SqlClient.SqlParameter updatecommand_sync_row_countParameter = new System.Data.SqlClient.SqlParameter("@sync_row_count", System.Data.SqlDbType.Int);
             updatecommand_sync_row_countParameter.Direction = System.Data.ParameterDirection.Output;
             this.UpdateCommand.Parameters.Add(updatecommand_sync_row_countParameter);
-            // AttributeTypesSyncTableSelectConflictDeletedRowsCommand command.
-            this.SelectConflictDeletedRowsCommand = new System.Data.SqlClient.SqlCommand();
-            this.SelectConflictDeletedRowsCommand.CommandText = "SELECT CT.[AttID], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANGE_VERSION FROM CHANGETABLE(" +
-                "CHANGES dbo.AttributeTypes, @sync_last_received_anchor) CT WHERE (CT.[AttID] = @" +
-                "AttID AND CT.SYS_CHANGE_OPERATION = \'D\')";
-            this.SelectConflictDeletedRowsCommand.CommandType = System.Data.CommandType.Text;
-            this.SelectConflictDeletedRowsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
-            this.SelectConflictDeletedRowsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttID", System.Data.SqlDbType.Int));
-            // AttributeTypesSyncTableSelectConflictUpdatedRowsCommand command.
-            this.SelectConflictUpdatedRowsCommand = new System.Data.SqlClient.SqlCommand();
-            this.SelectConflictUpdatedRowsCommand.CommandText = "SELECT dbo.AttributeTypes.[AttID], [AttName], CT.SYS_CHANGE_CONTEXT, CT.SYS_CHANG" +
-                "E_VERSION FROM dbo.AttributeTypes JOIN CHANGETABLE(VERSION dbo.AttributeTypes, (" +
-                "[AttID]), (@AttID)) CT  ON CT.[AttID] = dbo.AttributeTypes.[AttID]";
-            this.SelectConflictUpdatedRowsCommand.CommandType = System.Data.CommandType.Text;
-            this.SelectConflictUpdatedRowsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@AttID", System.Data.SqlDbType.Int));
-            // AttributeTypesSyncTableSelectIncrementalInsertsCommand command.
+            // selectIncrementalInsertsCommand command.
             this.SelectIncrementalInsertsCommand = new System.Data.SqlClient.SqlCommand();
-            this.SelectIncrementalInsertsCommand.CommandText = @"IF @sync_initialized = 0 SELECT dbo.AttributeTypes.[AttID], [AttName] FROM dbo.AttributeTypes LEFT OUTER JOIN CHANGETABLE(CHANGES dbo.AttributeTypes, @sync_last_received_anchor) CT ON CT.[AttID] = dbo.AttributeTypes.[AttID] WHERE (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT <> @sync_client_id_binary) ELSE  BEGIN SELECT dbo.AttributeTypes.[AttID], [AttName] FROM dbo.AttributeTypes JOIN CHANGETABLE(CHANGES dbo.AttributeTypes, @sync_last_received_anchor) CT ON CT.[AttID] = dbo.AttributeTypes.[AttID] WHERE (CT.SYS_CHANGE_OPERATION = 'I' AND CT.SYS_CHANGE_CREATION_VERSION  <= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT <> @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.AttributeTypes')) > @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.AttributeTypes')  END ";
+            this.SelectIncrementalInsertsCommand.CommandText = "SELECT * FROM dbo.AttributeTypes";
             this.SelectIncrementalInsertsCommand.CommandType = System.Data.CommandType.Text;
-            this.SelectIncrementalInsertsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_initialized", System.Data.SqlDbType.Bit));
-            this.SelectIncrementalInsertsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
-            this.SelectIncrementalInsertsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_client_id_binary", System.Data.SqlDbType.VarBinary));
-            this.SelectIncrementalInsertsCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_new_received_anchor", System.Data.SqlDbType.BigInt));
-            // AttributeTypesSyncTableSelectIncrementalDeletesCommand command.
-            this.SelectIncrementalDeletesCommand = new System.Data.SqlClient.SqlCommand();
-            this.SelectIncrementalDeletesCommand.CommandText = @"IF @sync_initialized > 0  BEGIN SELECT CT.[AttID] FROM CHANGETABLE(CHANGES dbo.AttributeTypes, @sync_last_received_anchor) CT WHERE (CT.SYS_CHANGE_OPERATION = 'D' AND CT.SYS_CHANGE_VERSION <= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT <> @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.AttributeTypes')) > @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.AttributeTypes')  END ";
-            this.SelectIncrementalDeletesCommand.CommandType = System.Data.CommandType.Text;
-            this.SelectIncrementalDeletesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_initialized", System.Data.SqlDbType.Bit));
-            this.SelectIncrementalDeletesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
-            this.SelectIncrementalDeletesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_new_received_anchor", System.Data.SqlDbType.BigInt));
-            this.SelectIncrementalDeletesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_client_id_binary", System.Data.SqlDbType.VarBinary));
-            // AttributeTypesSyncTableSelectIncrementalUpdatesCommand command.
-            this.SelectIncrementalUpdatesCommand = new System.Data.SqlClient.SqlCommand();
-            this.SelectIncrementalUpdatesCommand.CommandText = @"IF @sync_initialized > 0  BEGIN SELECT dbo.AttributeTypes.[AttID], [AttName] FROM dbo.AttributeTypes JOIN CHANGETABLE(CHANGES dbo.AttributeTypes, @sync_last_received_anchor) CT ON CT.[AttID] = dbo.AttributeTypes.[AttID] WHERE (CT.SYS_CHANGE_OPERATION = 'U' AND CT.SYS_CHANGE_VERSION <= @sync_new_received_anchor AND (CT.SYS_CHANGE_CONTEXT IS NULL OR CT.SYS_CHANGE_CONTEXT <> @sync_client_id_binary)); IF CHANGE_TRACKING_MIN_VALID_VERSION(object_id(N'dbo.AttributeTypes')) > @sync_last_received_anchor RAISERROR (N'SQL Server Change Tracking has cleaned up tracking information for table ''%s''. To recover from this error, the client must reinitialize its local database and try again',16,3,N'dbo.AttributeTypes')  END ";
-            this.SelectIncrementalUpdatesCommand.CommandType = System.Data.CommandType.Text;
-            this.SelectIncrementalUpdatesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_initialized", System.Data.SqlDbType.Bit));
-            this.SelectIncrementalUpdatesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_last_received_anchor", System.Data.SqlDbType.BigInt));
-            this.SelectIncrementalUpdatesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_new_received_anchor", System.Data.SqlDbType.BigInt));
-            this.SelectIncrementalUpdatesCommand.Parameters.Add(new System.Data.SqlClient.SqlParameter("@sync_client_id_binary", System.Data.SqlDbType.VarBinary));
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]

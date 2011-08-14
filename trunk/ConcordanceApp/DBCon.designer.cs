@@ -327,6 +327,69 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), docID, attID, value);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_DocAtts")]
+		public int Import_DocAtts([global::System.Data.Linq.Mapping.ParameterAttribute(Name="AttID", DbType="Int")] System.Nullable<int> attID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocTypeID", DbType="Int")] System.Nullable<int> docTypeID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), attID, docTypeID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_Docs")]
+		public int Import_Docs([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), typeID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_DocTypes")]
+		public int Import_DocTypes([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Type", DbType="VarChar(50)")] string type)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), type);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_expressions")]
+		public int Import_expressions([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string expression, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordID", DbType="Int")] System.Nullable<int> wordID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordNum", DbType="Int")] System.Nullable<int> wordNum)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), expression, wordID, wordNum);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_Relations")]
+		public int Import_Relations([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RelationName", DbType="VarChar(50)")] string relationName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), relationName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_WordAppearances")]
+		public int Import_WordAppearances([global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordID", DbType="Int")] System.Nullable<int> wordID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocID", DbType="Int")] System.Nullable<int> docID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LineNum", DbType="Int")] System.Nullable<int> lineNum, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordNum", DbType="Int")] System.Nullable<int> wordNum, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Frequency", DbType="Int")] System.Nullable<int> frequency)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), wordID, docID, lineNum, wordNum, frequency);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_WordRelations")]
+		public int Import_WordRelations([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word1ID", DbType="Int")] System.Nullable<int> word1ID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="RelationID", DbType="Int")] System.Nullable<int> relationID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word2ID", DbType="Int")] System.Nullable<int> word2ID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word1ID, relationID, word2ID);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_Words")]
+		public int Import_Words([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word", DbType="VarChar(50)")] string word, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TotalCount", DbType="Int")] System.Nullable<int> totalCount, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SearchNums", DbType="Int")] System.Nullable<int> searchNums)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word, totalCount, searchNums);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_WordTags")]
+		public int Import_WordTags([global::System.Data.Linq.Mapping.ParameterAttribute(Name="WordID", DbType="Int")] System.Nullable<int> wordID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TagID", DbType="Int")] System.Nullable<int> tagID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), wordID, tagID);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult

@@ -96,6 +96,117 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             public int WordID { get; set; }
             public int TagID { get; set; }
         }
+        
+        /* protected void ImportAttTypes()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "AttributeTypes.xml");
+
+            List<AttributeType> AttTypes =
+                (from type in xdoc.Descendants("AttributeType")
+                 select new AttributeType
+                 {
+                     AttID = Int32.Parse(type.Element("AttID").Value),
+                     AttName = type.Element("AttName").Value,
+                 }).ToList<AttributeType>();
+
+            foreach (AttributeType type in AttTypes)
+                DB.Import_AttType(type.AttName);
+        }*/
+        protected void ImportAttValues()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "AttributeValues.xml");
+
+            List<AttributeValues> AttVals =
+                (from attval in xdoc.Descendants("AttributeValue")
+                 select new AttributeValues
+                 {
+                     DocID = Int32.Parse(attval.Element("DocID").Value),
+                     AttID = Int32.Parse(attval.Element("AttID").Value),
+                     Value = attval.Element("Value").Value,
+                 }).ToList<AttributeValues>();
+            foreach (AttributeValues attval in AttVals)
+                DB.Import_AttValue(attval.DocID, attval.AttID, attval.Value);
+        }
+
+        protected void ImportDocAttributes()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "DocAttributes.xml");
+
+            List<DocAttributes> DocAtts =
+                (from docatt in xdoc.Descendants("DocAttribute")
+                 select new DocAttributes
+                 {
+                     AttID = Int32.Parse(docatt.Element("AttID").Value),
+                     DocTypeID = Int32.Parse(docatt.Element("DocTypeID").Value),
+                 }).ToList<DocAttributes>();
+            foreach (DocAttributes docatt in DocAtts)
+                DB.Import_DocAtts(docatt.AttID, docatt.DocTypeID);
+        }
+
+        protected void ImportDocuments()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "Documents.xml");
+
+            List<Documents> Docs =
+                (from doc in xdoc.Descendants("Document")
+                 select new Documents
+                 {
+                     DocID = Int32.Parse(doc.Element("ID").Value),
+                     DocType = Int32.Parse(doc.Element("TypeID").Value),
+                 }).ToList<Documents>();
+
+            foreach (Documents doc in Docs)
+                DB.Import_Docs(doc.DocType);
+        }
+
+        protected void ImportDocumentTypes()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "DocumentTypes.xml");
+
+            List<DocumentTypes> DocTypes =
+                (from DocType in xdoc.Descendants("DocumentType")
+                 select new DocumentTypes
+                 {
+                     Type = DocType.Element("Type").Value,
+                 }).ToList<DocumentTypes>();
+
+            foreach (DocumentTypes DocType in DocTypes)
+                DB.Import_DocTypes(DocType.Type);
+        }
+
+        protected void ImportExpressions()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "Expressions.xml");
+
+            List<Expressions> expressions =
+                (from exp in xdoc.Descendants("MyExpression")
+                 select new Expressions
+                 {
+                     ExpID = Int32.Parse(exp.Element("ExpID").Value),
+                     Expression = exp.Element("Expression").Value,
+                     WordID = Int32.Parse(exp.Element("WordID").Value),
+                     WordNum = Int32.Parse(exp.Element("WordNum").Value),
+                 }).ToList<Expressions>();
+
+            foreach (Expressions exp in expressions)
+                DB.Import_expressions(exp.Expression, exp.WordID, exp.WordNum);
+        }
+
+        protected void ImportRelations()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "Relations.xml");
+
+            List<Relations> relations =
+                (from exp in xdoc.Descendants("Relation")
+                 select new Relations
+                 {
+                     ID = Int32.Parse(exp.Element("ID").Value),
+                     RelationName = exp.Element("RelationName").Value,
+                 }).ToList<Relations>();
+
+            foreach (Relations rel in relations)
+                DB.Import_Relations(rel.RelationName);
+        }
 
         protected void ImportTags()
         {
@@ -113,36 +224,77 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 DB.Import_Tag(tag.TagName);
         }
 
-        protected void ImportAttValues()
+        protected void ImportWordAppearances()
         {
-            XDocument xdoc = XDocument.Load(ImportPath + "AttributeValues.xml");
+            XDocument xdoc = XDocument.Load(ImportPath + "WordApperances.xml");
 
-            List<AttributeValues> AttVals =
-                (from attval in xdoc.Descendants("AttributeValue")
-                 select new AttributeValues
+            List<WordAppearances> WordAppearances =
+                (from wordAppearance in xdoc.Descendants("WordApperance")
+                 select new WordAppearances
                  {
-                     DocID = Int32.Parse(attval.Element("DocID").Value),
-                     AttID = Int32.Parse(attval.Element("AttID").Value),
-                     Value = attval.Element("Value").Value,
-                 }).ToList<AttributeValues>();
-            foreach (AttributeValues attval in AttVals)
-                DB.Import_AttValue(attval.DocID, attval.AttID, attval.Value);
+                     WordID = Int32.Parse(wordAppearance.Element("WordID").Value),
+                     DocID = Int32.Parse(wordAppearance.Element("DocID").Value),
+                     LineNum = Int32.Parse(wordAppearance.Element("LineNum").Value),
+                     WordNum = Int32.Parse(wordAppearance.Element("WordNum").Value),
+                     Frequency = Int32.Parse(wordAppearance.Element("Frequency").Value),
+                 }).ToList<WordAppearances>();
+
+            foreach (WordAppearances wordAppearance in WordAppearances)
+                DB.Import_WordAppearances(wordAppearance.WordID, wordAppearance.DocID, wordAppearance.LineNum, wordAppearance.WordNum, wordAppearance.Frequency);
         }
-       /* protected void ImportAttTypes()
+
+        protected void ImportWordRelations()
         {
-            XDocument xdoc = XDocument.Load(ImportPath + "AttributeTypes.xml");
+            XDocument xdoc = XDocument.Load(ImportPath + "WordRelations.xml");
 
-            List<AttributeType> AttTypes =
-                (from type in xdoc.Descendants("AttributeType")
-                 select new AttributeType
+            List<WordRelations> WordRelations =
+                (from WordRelation in xdoc.Descendants("WordRelation")
+                 select new WordRelations
                  {
-                     AttID = Int32.Parse(type.Element("AttID").Value),
-                     AttName = type.Element("AttName").Value,
-                 }).ToList<AttributeType>();
+                     Word1ID = Int32.Parse(WordRelation.Element("Word1ID").Value),
+                     RelationID = Int32.Parse(WordRelation.Element("RelationID").Value),
+                     Word2ID = Int32.Parse(WordRelation.Element("Word2ID").Value),
+                 }).ToList<WordRelations>();
 
-            foreach (AttributeType type in AttTypes)
-                DB.Import_AttType(type.AttName);
-        }*/
+            foreach (WordRelations WordRelation in WordRelations)
+                DB.Import_WordRelations(WordRelation.Word1ID, WordRelation.RelationID, WordRelation.Word2ID);
+        }
+
+        protected void ImportWords()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "Words.xml");
+
+            List<Words> words =
+                (from word in xdoc.Descendants("MyWord")
+                 select new Words
+                 {
+                     ID = Int32.Parse(word.Element("ID").Value),
+                     Word = word.Element("Word").Value,
+                     TotalCount = Int32.Parse(word.Element("TotalCount").Value),
+                     SearchNums = Int32.Parse(word.Element("SearchNums").Value),
+                 }).ToList<Words>();
+
+            foreach (Words word in words)
+                DB.Import_Words(word.Word, word.TotalCount, word.SearchNums);
+        }
+
+        protected void ImportWordTags()
+        {
+            XDocument xdoc = XDocument.Load(ImportPath + "WordTags.xml");
+
+            List<WordTags> Wordtags =
+                (from Wordtag in xdoc.Descendants("WordTag")
+                 select new WordTags
+                 {
+                     WordID = Int32.Parse(Wordtag.Element("WordID").Value),
+                     TagID = Int32.Parse(Wordtag.Element("TagID").Value),
+                 }).ToList<WordTags>();
+
+            foreach (WordTags WordTag in Wordtags)
+                DB.Import_WordTags(WordTag.WordID, WordTag.TagID);
+        }
+
+       
 
         public ImportForm()
         {
@@ -152,27 +304,25 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private void Importbtn_Click(object sender, EventArgs e)
         {
              if (AttributeValuesCB.Checked)
-                 ImportAttValues();/*
+                 ImportAttValues();
              if (DocAttributesCB.Checked)
-                 tables.Add("DocAttributes");
+                 ImportDocAttributes();
              if (DocumentsCB.Checked)
-                 tables.Add("Documents");
-             if (DocumentTypesCB.Checked)
-                 tables.Add("DocumentTypes");
+                 ImportDocuments();
              if (ExpressionsCB.Checked)
-                 tables.Add("Expressions");
+                 ImportExpressions();
              if (RelationsCB.Checked)
-                 tables.Add("Relations");*/
+                 ImportRelations();
              if (TagsCB.Checked)
-                    ImportTags();/*
+                    ImportTags();
+            if (WordsCB.Checked)
+                 ImportWords();
              if (WordApperancesCB.Checked)
-                 tables.Add("WordApperances");
+                 ImportWordAppearances();
              if (WordRelationsCB.Checked)
-                 tables.Add("WordRelations");
-             if (WordsCB.Checked)
-                 tables.Add("Words");
+                 ImportWordRelations();
              if (WordTagsCB.Checked)
-                 tables.Add("WordTags");*/
+                 ImportWordTags();
          }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -180,7 +330,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AttributeValuesCB.Checked = true;
             DocAttributesCB.Checked = true;
             DocumentsCB.Checked = true;
-            DocumentTypesCB.Checked = true;
             ExpressionsCB.Checked = true;
             RelationsCB.Checked = true;
             TagsCB.Checked = true;
@@ -195,7 +344,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             AttributeValuesCB.Checked = false;
             DocAttributesCB.Checked = false;
             DocumentsCB.Checked = false;
-            DocumentTypesCB.Checked = false;
             ExpressionsCB.Checked = false;
             RelationsCB.Checked = false;
             TagsCB.Checked = false;

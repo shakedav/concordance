@@ -33,7 +33,6 @@
             this.AttributeValuesCB = new System.Windows.Forms.CheckBox();
             this.DocAttributesCB = new System.Windows.Forms.CheckBox();
             this.DocumentsCB = new System.Windows.Forms.CheckBox();
-            this.DocumentTypesCB = new System.Windows.Forms.CheckBox();
             this.ExpressionsCB = new System.Windows.Forms.CheckBox();
             this.RelationsCB = new System.Windows.Forms.CheckBox();
             this.TagsCB = new System.Windows.Forms.CheckBox();
@@ -67,7 +66,7 @@
             // AttributeValuesCB
             // 
             this.AttributeValuesCB.AutoSize = true;
-            this.AttributeValuesCB.Location = new System.Drawing.Point(16, 64);
+            this.AttributeValuesCB.Location = new System.Drawing.Point(16, 40);
             this.AttributeValuesCB.Name = "AttributeValuesCB";
             this.AttributeValuesCB.Size = new System.Drawing.Size(100, 17);
             this.AttributeValuesCB.TabIndex = 3;
@@ -77,7 +76,7 @@
             // DocAttributesCB
             // 
             this.DocAttributesCB.AutoSize = true;
-            this.DocAttributesCB.Location = new System.Drawing.Point(16, 87);
+            this.DocAttributesCB.Location = new System.Drawing.Point(16, 63);
             this.DocAttributesCB.Name = "DocAttributesCB";
             this.DocAttributesCB.Size = new System.Drawing.Size(93, 17);
             this.DocAttributesCB.TabIndex = 4;
@@ -87,27 +86,17 @@
             // DocumentsCB
             // 
             this.DocumentsCB.AutoSize = true;
-            this.DocumentsCB.Location = new System.Drawing.Point(16, 110);
+            this.DocumentsCB.Location = new System.Drawing.Point(16, 86);
             this.DocumentsCB.Name = "DocumentsCB";
             this.DocumentsCB.Size = new System.Drawing.Size(80, 17);
             this.DocumentsCB.TabIndex = 5;
             this.DocumentsCB.Text = "Documents";
             this.DocumentsCB.UseVisualStyleBackColor = true;
             // 
-            // DocumentTypesCB
-            // 
-            this.DocumentTypesCB.AutoSize = true;
-            this.DocumentTypesCB.Location = new System.Drawing.Point(16, 133);
-            this.DocumentTypesCB.Name = "DocumentTypesCB";
-            this.DocumentTypesCB.Size = new System.Drawing.Size(107, 17);
-            this.DocumentTypesCB.TabIndex = 6;
-            this.DocumentTypesCB.Text = "Document Types";
-            this.DocumentTypesCB.UseVisualStyleBackColor = true;
-            // 
             // ExpressionsCB
             // 
             this.ExpressionsCB.AutoSize = true;
-            this.ExpressionsCB.Location = new System.Drawing.Point(16, 156);
+            this.ExpressionsCB.Location = new System.Drawing.Point(16, 109);
             this.ExpressionsCB.Name = "ExpressionsCB";
             this.ExpressionsCB.Size = new System.Drawing.Size(82, 17);
             this.ExpressionsCB.TabIndex = 7;
@@ -117,7 +106,7 @@
             // RelationsCB
             // 
             this.RelationsCB.AutoSize = true;
-            this.RelationsCB.Location = new System.Drawing.Point(16, 179);
+            this.RelationsCB.Location = new System.Drawing.Point(16, 132);
             this.RelationsCB.Name = "RelationsCB";
             this.RelationsCB.Size = new System.Drawing.Size(70, 17);
             this.RelationsCB.TabIndex = 8;
@@ -127,7 +116,7 @@
             // TagsCB
             // 
             this.TagsCB.AutoSize = true;
-            this.TagsCB.Location = new System.Drawing.Point(16, 202);
+            this.TagsCB.Location = new System.Drawing.Point(16, 155);
             this.TagsCB.Name = "TagsCB";
             this.TagsCB.Size = new System.Drawing.Size(50, 17);
             this.TagsCB.TabIndex = 9;
@@ -137,7 +126,7 @@
             // WordApperancesCB
             // 
             this.WordApperancesCB.AutoSize = true;
-            this.WordApperancesCB.Location = new System.Drawing.Point(16, 225);
+            this.WordApperancesCB.Location = new System.Drawing.Point(16, 178);
             this.WordApperancesCB.Name = "WordApperancesCB";
             this.WordApperancesCB.Size = new System.Drawing.Size(112, 17);
             this.WordApperancesCB.TabIndex = 10;
@@ -147,7 +136,7 @@
             // WordRelationsCB
             // 
             this.WordRelationsCB.AutoSize = true;
-            this.WordRelationsCB.Location = new System.Drawing.Point(16, 248);
+            this.WordRelationsCB.Location = new System.Drawing.Point(16, 201);
             this.WordRelationsCB.Name = "WordRelationsCB";
             this.WordRelationsCB.Size = new System.Drawing.Size(99, 17);
             this.WordRelationsCB.TabIndex = 11;
@@ -157,7 +146,7 @@
             // WordsCB
             // 
             this.WordsCB.AutoSize = true;
-            this.WordsCB.Location = new System.Drawing.Point(16, 271);
+            this.WordsCB.Location = new System.Drawing.Point(16, 224);
             this.WordsCB.Name = "WordsCB";
             this.WordsCB.Size = new System.Drawing.Size(57, 17);
             this.WordsCB.TabIndex = 12;
@@ -167,7 +156,7 @@
             // WordTagsCB
             // 
             this.WordTagsCB.AutoSize = true;
-            this.WordTagsCB.Location = new System.Drawing.Point(16, 294);
+            this.WordTagsCB.Location = new System.Drawing.Point(16, 247);
             this.WordTagsCB.Name = "WordTagsCB";
             this.WordTagsCB.Size = new System.Drawing.Size(79, 17);
             this.WordTagsCB.TabIndex = 13;
@@ -177,7 +166,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(16, 318);
+            this.linkLabel1.Location = new System.Drawing.Point(16, 271);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(51, 13);
             this.linkLabel1.TabIndex = 14;
@@ -188,7 +177,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(72, 318);
+            this.linkLabel2.Location = new System.Drawing.Point(72, 271);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(45, 13);
             this.linkLabel2.TabIndex = 15;
@@ -210,7 +199,6 @@
             this.Controls.Add(this.TagsCB);
             this.Controls.Add(this.RelationsCB);
             this.Controls.Add(this.ExpressionsCB);
-            this.Controls.Add(this.DocumentTypesCB);
             this.Controls.Add(this.DocumentsCB);
             this.Controls.Add(this.DocAttributesCB);
             this.Controls.Add(this.AttributeValuesCB);
@@ -230,7 +218,6 @@
         private System.Windows.Forms.CheckBox AttributeValuesCB;
         private System.Windows.Forms.CheckBox DocAttributesCB;
         private System.Windows.Forms.CheckBox DocumentsCB;
-        private System.Windows.Forms.CheckBox DocumentTypesCB;
         private System.Windows.Forms.CheckBox ExpressionsCB;
         private System.Windows.Forms.CheckBox RelationsCB;
         private System.Windows.Forms.CheckBox TagsCB;
