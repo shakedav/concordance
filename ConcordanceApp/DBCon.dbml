@@ -216,4 +216,52 @@
     <Parameter Name="Value" Parameter="value" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Import_DocAtts" Method="Import_DocAtts">
+    <Parameter Name="AttID" Parameter="attID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocTypeID" Parameter="docTypeID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_Docs" Method="Import_Docs">
+    <Parameter Name="TypeID" Parameter="typeID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_DocTypes" Method="Import_DocTypes">
+    <Parameter Name="Type" Parameter="type" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_expressions" Method="Import_expressions">
+    <Parameter Name="expression" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="WordID" Parameter="wordID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WordNum" Parameter="wordNum" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_Relations" Method="Import_Relations">
+    <Parameter Name="RelationName" Parameter="relationName" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_WordAppearances" Method="Import_WordAppearances">
+    <Parameter Name="WordID" Parameter="wordID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DocID" Parameter="docID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LineNum" Parameter="lineNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="WordNum" Parameter="wordNum" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Frequency" Parameter="frequency" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_WordRelations" Method="Import_WordRelations">
+    <Parameter Name="Word1ID" Parameter="word1ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RelationID" Parameter="relationID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Word2ID" Parameter="word2ID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_Words" Method="Import_Words">
+    <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="TotalCount" Parameter="totalCount" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SearchNums" Parameter="searchNums" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_WordTags" Method="Import_WordTags">
+    <Parameter Name="WordID" Parameter="wordID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TagID" Parameter="tagID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
