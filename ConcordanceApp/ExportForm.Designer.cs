@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Exportbtn = new System.Windows.Forms.Button();
-            this.AttributeTypesCB = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AttributeValuesCB = new System.Windows.Forms.CheckBox();
             this.DocAttributesCB = new System.Windows.Forms.CheckBox();
@@ -55,16 +54,6 @@
             this.Exportbtn.Text = "Export";
             this.Exportbtn.UseVisualStyleBackColor = true;
             this.Exportbtn.Click += new System.EventHandler(this.Exportbtn_Click);
-            // 
-            // AttributeTypesCB
-            // 
-            this.AttributeTypesCB.AutoSize = true;
-            this.AttributeTypesCB.Location = new System.Drawing.Point(16, 41);
-            this.AttributeTypesCB.Name = "AttributeTypesCB";
-            this.AttributeTypesCB.Size = new System.Drawing.Size(97, 17);
-            this.AttributeTypesCB.TabIndex = 1;
-            this.AttributeTypesCB.Text = "Attribute Types";
-            this.AttributeTypesCB.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -201,10 +190,10 @@
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Location = new System.Drawing.Point(72, 318);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(65, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(45, 13);
             this.linkLabel2.TabIndex = 15;
             this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "DeSelect All";
+            this.linkLabel2.Text = "Clear All";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // ExportForm
@@ -226,10 +215,9 @@
             this.Controls.Add(this.DocAttributesCB);
             this.Controls.Add(this.AttributeValuesCB);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.AttributeTypesCB);
             this.Controls.Add(this.Exportbtn);
             this.Name = "ExportForm";
-            this.Text = "ExportForm";
+            this.Text = "Export Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,7 +226,6 @@
         #endregion
 
         private System.Windows.Forms.Button Exportbtn;
-        private System.Windows.Forms.CheckBox AttributeTypesCB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox AttributeValuesCB;
         private System.Windows.Forms.CheckBox DocAttributesCB;

@@ -202,4 +202,18 @@
     <Parameter Name="filename" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Import_Tag" Method="Import_Tag">
+    <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_AttType" Method="Import_AttType">
+    <Parameter Name="AttName" Parameter="attName" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Import_AttValue" Method="Import_AttValue">
+    <Parameter Name="DocID" Parameter="docID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AttID" Parameter="attID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Value" Parameter="value" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

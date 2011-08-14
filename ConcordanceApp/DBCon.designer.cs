@@ -306,6 +306,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tableName, filename);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_Tag")]
+		public int Import_Tag([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TagName", DbType="VarChar(50)")] string tagName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tagName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_AttType")]
+		public int Import_AttType([global::System.Data.Linq.Mapping.ParameterAttribute(Name="AttName", DbType="VarChar(50)")] string attName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), attName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Import_AttValue")]
+		public int Import_AttValue([global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocID", DbType="Int")] System.Nullable<int> docID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AttID", DbType="Int")] System.Nullable<int> attID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Value", DbType="VarChar(50)")] string value)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), docID, attID, value);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
