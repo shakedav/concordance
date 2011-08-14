@@ -25,8 +25,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private void Exportbtn_Click(object sender, EventArgs e)
         {
             ArrayList tables = new ArrayList();
-            if (AttributeTypesCB.Checked)
-                tables.Add("AttributeTypes");
             if (AttributeValuesCB.Checked)
                 tables.Add("AttributeValues");
             if (DocAttributesCB.Checked)
@@ -59,7 +57,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AttributeTypesCB.Checked = true;
             AttributeValuesCB.Checked = true;
             DocAttributesCB.Checked = true;
             DocumentsCB.Checked = true;
@@ -75,7 +72,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AttributeTypesCB.Checked = false;
             AttributeValuesCB.Checked = false;
             DocAttributesCB.Checked = false;
             DocumentsCB.Checked = false;

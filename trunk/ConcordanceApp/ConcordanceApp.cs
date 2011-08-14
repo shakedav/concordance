@@ -204,5 +204,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             ExportForm form = new ExportForm();
             form.ShowDialog();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ImportForm form = new ImportForm();
+            form.ShowDialog();
+        }
     }
 }

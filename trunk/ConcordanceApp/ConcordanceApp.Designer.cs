@@ -85,6 +85,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.getWordByTagNameResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.XMLExport = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
             this.StatsGB.SuspendLayout();
@@ -683,11 +684,23 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.label1.TabIndex = 49;
             this.label1.Text = "Words";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(14, 459);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(137, 13);
+            this.linkLabel1.TabIndex = 50;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Import Data From XML";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 484);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.XMLExport);
             this.Controls.Add(this.TagSearchGrid);
@@ -794,5 +807,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private BindingSource getWordByTagNameResultBindingSource;
         private LinkLabel XMLExport;
         private Label label1;
+        private LinkLabel linkLabel1;
     }
 }
