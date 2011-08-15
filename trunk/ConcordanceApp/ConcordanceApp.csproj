@@ -122,11 +122,6 @@
     <Compile Include="Bacup_Restore.Designer.cs">
       <DependentUpon>Bacup_Restore.cs</DependentUpon>
     </Compile>
-    <Compile Include="ConcordationCache.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ConcordationCache.sync</DependentUpon>
-    </Compile>
     <Compile Include="ConcordationDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -254,11 +249,6 @@
     <EmbeddedResource Include="WordTags.resx">
       <DependentUpon>WordTags.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ConcordationCache.sync">
-      <Generator>MSDataSyncGenerator</Generator>
-      <LastGenOutput>ConcordationCache.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="ConcordationDataSet.xsc">
       <DependentUpon>ConcordationDataSet.xsd</DependentUpon>
     </None>
@@ -332,9 +322,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Concordation.sdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="SQLScripts\ConcordationCache.Concordation.sql" />
     <Content Include="SQLScripts\ConcordationCache.dbo.AttributeTypes.sql" />
     <Content Include="SQLScripts\ConcordationCache.dbo.Documents.sql" />
