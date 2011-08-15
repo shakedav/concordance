@@ -83,9 +83,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.wordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tagNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.getWordByTagNameResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.XMLExport = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.BackupRestore = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
             this.StatsGB.SuspendLayout();
@@ -662,17 +662,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.getWordByTagNameResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetWordByTagNameResult);
             // 
-            // XMLExport
-            // 
-            this.XMLExport.AutoSize = true;
-            this.XMLExport.Location = new System.Drawing.Point(14, 432);
-            this.XMLExport.Name = "XMLExport";
-            this.XMLExport.Size = new System.Drawing.Size(120, 13);
-            this.XMLExport.TabIndex = 48;
-            this.XMLExport.TabStop = true;
-            this.XMLExport.Text = "Export Data To XML";
-            this.XMLExport.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.XMLExport_LinkClicked);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -684,25 +673,37 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.label1.TabIndex = 49;
             this.label1.Text = "Words";
             // 
-            // linkLabel1
+            // BackupRestore
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(14, 459);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(137, 13);
-            this.linkLabel1.TabIndex = 50;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Import Data From XML";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.BackupRestore.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
+            this.BackupRestore.AutoSize = true;
+            this.BackupRestore.Location = new System.Drawing.Point(14, 444);
+            this.BackupRestore.Name = "BackupRestore";
+            this.BackupRestore.Size = new System.Drawing.Size(106, 13);
+            this.BackupRestore.TabIndex = 50;
+            this.BackupRestore.TabStop = true;
+            this.BackupRestore.Text = "Backup / Restore";
+            this.BackupRestore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BackupRestore_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(14, 420);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 51;
+            this.label2.Text = "Maintenance";
             // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 484);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.BackupRestore);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.XMLExport);
             this.Controls.Add(this.TagSearchGrid);
             this.Controls.Add(this.AdvancedSearchGrid);
             this.Controls.Add(this.AdvancedSearch);
@@ -805,8 +806,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private DataGridViewTextBoxColumn wordDataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn tagNameDataGridViewTextBoxColumn;
         private BindingSource getWordByTagNameResultBindingSource;
-        private LinkLabel XMLExport;
         private Label label1;
-        private LinkLabel linkLabel1;
+        private LinkLabel BackupRestore;
+        private Label label2;
     }
 }
