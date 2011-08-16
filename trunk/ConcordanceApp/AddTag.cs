@@ -43,5 +43,14 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             parent.Invalidate();
         }
+
+        private void Delbtn_Click(object sender, EventArgs e)
+        {
+            int result = DB.DeleteTag(AddTagTxtBox.Text);
+            if (result == -2 )
+                MessageBox.Show("Tag Name Does Not Exist");
+            this.tagsTableAdapter.Fill(this.concordationDataSet.Tags);
+
+        }
     }
 }

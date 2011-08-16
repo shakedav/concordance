@@ -30,19 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Tags = new System.Windows.Forms.DataGridView();
-            this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
-            this.getTagsofWordBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.getTagsofWordTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.GetTagsofWordTableAdapter();
             this.tagNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getTagsofWordBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
+            this.getTagsofWordTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.GetTagsofWordTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tagsList = new System.Windows.Forms.Label();
             this.AddTag = new System.Windows.Forms.Button();
             this.AddTaglnk = new System.Windows.Forms.LinkLabel();
-            this.tagsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tagsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.TagsTableAdapter();
+            this.Removebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Tags)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.getTagsofWordBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,22 +60,8 @@
             this.Tags.Location = new System.Drawing.Point(12, 12);
             this.Tags.Name = "Tags";
             this.Tags.ReadOnly = true;
-            this.Tags.Size = new System.Drawing.Size(358, 194);
+            this.Tags.Size = new System.Drawing.Size(475, 194);
             this.Tags.TabIndex = 0;
-            // 
-            // concordationDataSet
-            // 
-            this.concordationDataSet.DataSetName = "ConcordationDataSet";
-            this.concordationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // getTagsofWordBindingSource
-            // 
-            this.getTagsofWordBindingSource.DataMember = "GetTagsofWord";
-            this.getTagsofWordBindingSource.DataSource = this.concordationDataSet;
-            // 
-            // getTagsofWordTableAdapter
-            // 
-            this.getTagsofWordTableAdapter.ClearBeforeFill = true;
             // 
             // tagNameDataGridViewTextBoxColumn
             // 
@@ -83,6 +70,20 @@
             this.tagNameDataGridViewTextBoxColumn.HeaderText = "TagName";
             this.tagNameDataGridViewTextBoxColumn.Name = "tagNameDataGridViewTextBoxColumn";
             this.tagNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getTagsofWordBindingSource
+            // 
+            this.getTagsofWordBindingSource.DataMember = "GetTagsofWord";
+            this.getTagsofWordBindingSource.DataSource = this.concordationDataSet;
+            // 
+            // concordationDataSet
+            // 
+            this.concordationDataSet.DataSetName = "ConcordationDataSet";
+            this.concordationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // getTagsofWordTableAdapter
+            // 
+            this.getTagsofWordTableAdapter.ClearBeforeFill = true;
             // 
             // comboBox1
             // 
@@ -95,6 +96,11 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "TagName";
             this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
+            // 
+            // tagsBindingSource
+            // 
+            this.tagsBindingSource.DataMember = "Tags";
+            this.tagsBindingSource.DataSource = this.concordationDataSet;
             // 
             // tagsList
             // 
@@ -109,9 +115,9 @@
             // 
             this.AddTag.Location = new System.Drawing.Point(309, 210);
             this.AddTag.Name = "AddTag";
-            this.AddTag.Size = new System.Drawing.Size(60, 23);
+            this.AddTag.Size = new System.Drawing.Size(86, 23);
             this.AddTag.TabIndex = 3;
-            this.AddTag.Text = "Tag";
+            this.AddTag.Text = "Tag Word";
             this.AddTag.UseVisualStyleBackColor = true;
             this.AddTag.Click += new System.EventHandler(this.AddTag_Click);
             // 
@@ -126,20 +132,26 @@
             this.AddTaglnk.Text = "Add A New Tag";
             this.AddTaglnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddTaglnk_LinkClicked);
             // 
-            // tagsBindingSource
-            // 
-            this.tagsBindingSource.DataMember = "Tags";
-            this.tagsBindingSource.DataSource = this.concordationDataSet;
-            // 
             // tagsTableAdapter
             // 
             this.tagsTableAdapter.ClearBeforeFill = true;
+            // 
+            // Removebtn
+            // 
+            this.Removebtn.Location = new System.Drawing.Point(401, 210);
+            this.Removebtn.Name = "Removebtn";
+            this.Removebtn.Size = new System.Drawing.Size(86, 23);
+            this.Removebtn.TabIndex = 5;
+            this.Removebtn.Text = "Remove Tag";
+            this.Removebtn.UseVisualStyleBackColor = true;
+            this.Removebtn.Click += new System.EventHandler(this.Removebtn_Click);
             // 
             // WordTags
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 248);
+            this.ClientSize = new System.Drawing.Size(498, 248);
+            this.Controls.Add(this.Removebtn);
             this.Controls.Add(this.AddTaglnk);
             this.Controls.Add(this.AddTag);
             this.Controls.Add(this.tagsList);
@@ -149,8 +161,8 @@
             this.Text = "Word Tags";
             this.Load += new System.EventHandler(this.WordTags_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tags)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getTagsofWordBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,5 +182,6 @@
         private System.Windows.Forms.LinkLabel AddTaglnk;
         private System.Windows.Forms.BindingSource tagsBindingSource;
         private ConcordationDataSetTableAdapters.TagsTableAdapter tagsTableAdapter;
+        private System.Windows.Forms.Button Removebtn;
     }
 }

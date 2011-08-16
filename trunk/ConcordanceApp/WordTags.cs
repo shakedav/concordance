@@ -50,5 +50,15 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             this.tagsTableAdapter.Fill(this.concordationDataSet.Tags);
         }
+
+        private void Removebtn_Click(object sender, EventArgs e)
+        {
+            int result = DB.RemoveTag(comboBox1.Text, _word);
+            if (result == -2)
+                MessageBox.Show("Tag Name Does Not Exist");
+            if (result == -3)
+                MessageBox.Show("Word Tag Does Not Exist");
+            Tags.DataSource = DB.GetTagsofWord(_word).ToList<GetTagsofWordResult>();
+        }
     }
 }
