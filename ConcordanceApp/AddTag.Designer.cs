@@ -38,6 +38,7 @@
             this.AddTagTagNamelbl = new System.Windows.Forms.Label();
             this.AddTagTxtBox = new System.Windows.Forms.TextBox();
             this.AddTagbtn = new System.Windows.Forms.Button();
+            this.Delbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AddTagDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tagsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
@@ -104,7 +105,7 @@
             // 
             // AddTagbtn
             // 
-            this.AddTagbtn.Location = new System.Drawing.Point(354, 290);
+            this.AddTagbtn.Location = new System.Drawing.Point(184, 290);
             this.AddTagbtn.Name = "AddTagbtn";
             this.AddTagbtn.Size = new System.Drawing.Size(75, 34);
             this.AddTagbtn.TabIndex = 3;
@@ -112,11 +113,22 @@
             this.AddTagbtn.UseVisualStyleBackColor = true;
             this.AddTagbtn.Click += new System.EventHandler(this.AddTagbtn_Click);
             // 
+            // Delbtn
+            // 
+            this.Delbtn.Location = new System.Drawing.Point(265, 290);
+            this.Delbtn.Name = "Delbtn";
+            this.Delbtn.Size = new System.Drawing.Size(75, 34);
+            this.Delbtn.TabIndex = 4;
+            this.Delbtn.Text = "Delete Tag";
+            this.Delbtn.UseVisualStyleBackColor = true;
+            this.Delbtn.Click += new System.EventHandler(this.Delbtn_Click);
+            // 
             // AddTag
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 336);
+            this.Controls.Add(this.Delbtn);
             this.Controls.Add(this.AddTagbtn);
             this.Controls.Add(this.AddTagTxtBox);
             this.Controls.Add(this.AddTagTagNamelbl);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.TextBox AddTagTxtBox;
         private System.Windows.Forms.Button AddTagbtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tagNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button Delbtn;
     }
 }

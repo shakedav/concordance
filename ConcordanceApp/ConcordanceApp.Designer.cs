@@ -186,10 +186,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AddTagLbl.LinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTagLbl.Location = new System.Drawing.Point(14, 215);
             this.AddTagLbl.Name = "AddTagLbl";
-            this.AddTagLbl.Size = new System.Drawing.Size(54, 13);
+            this.AddTagLbl.Size = new System.Drawing.Size(114, 13);
             this.AddTagLbl.TabIndex = 13;
             this.AddTagLbl.TabStop = true;
-            this.AddTagLbl.Text = "Add Tag";
+            this.AddTagLbl.Text = "Add / Remove Tag";
             this.AddTagLbl.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTagLbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddTagLbl_LinkClicked);
             // 

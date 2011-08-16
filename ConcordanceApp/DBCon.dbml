@@ -267,4 +267,13 @@
   <Function Name="dbo.Clean" Method="Clean">
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.DeleteTag" Method="DeleteTag">
+    <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveTag" Method="RemoveTag">
+    <Parameter Name="TagName" Parameter="tagName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

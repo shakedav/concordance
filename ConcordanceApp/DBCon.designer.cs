@@ -397,6 +397,20 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteTag")]
+		public int DeleteTag([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TagName", DbType="VarChar(50)")] string tagName)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tagName);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.RemoveTag")]
+		public int RemoveTag([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TagName", DbType="VarChar(50)")] string tagName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Word", DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tagName, word);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
