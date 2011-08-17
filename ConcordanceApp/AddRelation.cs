@@ -45,5 +45,20 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             parent.Invalidate();
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            AddRelationTxtBox.Text = dataGridView1[dataGridView1.CurrentCellAddress.X, dataGridView1.CurrentCellAddress.Y].Value.ToString();
+        }
+
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(AddRelationTxtBox.Text)))
+            {
+                DB.DeleteRelation(AddRelationTxtBox.Text);
+                this.relationsTableAdapter.Fill(this.concordationDataSet._Relations);
+                AddRelationTxtBox.Clear();
+            }
+        }
     }
 }

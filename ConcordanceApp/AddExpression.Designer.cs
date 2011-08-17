@@ -36,8 +36,9 @@
             this.Expressiontxt = new System.Windows.Forms.TextBox();
             this.Expressionbtn = new System.Windows.Forms.Button();
             this.ExpressionsGrid = new System.Windows.Forms.DataGridView();
-            this.getExpressionsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expressionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getExpressionsResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Deletebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.expressionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExpressionsGrid)).BeginInit();
@@ -102,10 +103,7 @@
             this.ExpressionsGrid.ReadOnly = true;
             this.ExpressionsGrid.Size = new System.Drawing.Size(479, 173);
             this.ExpressionsGrid.TabIndex = 0;
-            // 
-            // getExpressionsResultBindingSource
-            // 
-            this.getExpressionsResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetExpressionsResult);
+            this.ExpressionsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExpressionsGrid_CellDoubleClick);
             // 
             // expressionDataGridViewTextBoxColumn
             // 
@@ -115,17 +113,33 @@
             this.expressionDataGridViewTextBoxColumn.Name = "expressionDataGridViewTextBoxColumn";
             this.expressionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // getExpressionsResultBindingSource
+            // 
+            this.getExpressionsResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetExpressionsResult);
+            // 
+            // Deletebtn
+            // 
+            this.Deletebtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Deletebtn.Location = new System.Drawing.Point(291, 200);
+            this.Deletebtn.Name = "Deletebtn";
+            this.Deletebtn.Size = new System.Drawing.Size(112, 23);
+            this.Deletebtn.TabIndex = 4;
+            this.Deletebtn.Text = "Delete Expression";
+            this.Deletebtn.UseVisualStyleBackColor = true;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
+            // 
             // AddExpression
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 262);
+            this.Controls.Add(this.Deletebtn);
             this.Controls.Add(this.Expressionbtn);
             this.Controls.Add(this.Expressiontxt);
             this.Controls.Add(this.AddExpressionlbl);
             this.Controls.Add(this.ExpressionsGrid);
             this.Name = "AddExpression";
-            this.Text = "Add Expression";
+            this.Text = "Add / Delete Expression";
             this.Load += new System.EventHandler(this.AddExpression_Load);
             ((System.ComponentModel.ISupportInitialize)(this.expressionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
@@ -147,5 +161,6 @@
         private System.Windows.Forms.DataGridView ExpressionsGrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn expressionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource getExpressionsResultBindingSource;
+        private System.Windows.Forms.Button Deletebtn;
     }
 }

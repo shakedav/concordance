@@ -30,16 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
-            this.relationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.relationsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.RelationsTableAdapter();
             this.relationNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.relationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
+            this.relationsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.RelationsTableAdapter();
             this.AddRelationlbl = new System.Windows.Forms.Label();
             this.AddRelationbtn = new System.Windows.Forms.Button();
             this.AddRelationTxtBox = new System.Windows.Forms.TextBox();
+            this.Deletebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.relationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -57,20 +58,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(408, 269);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // concordationDataSet
-            // 
-            this.concordationDataSet.DataSetName = "ConcordationDataSet";
-            this.concordationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // relationsBindingSource
-            // 
-            this.relationsBindingSource.DataMember = "Relations";
-            this.relationsBindingSource.DataSource = this.concordationDataSet;
-            // 
-            // relationsTableAdapter
-            // 
-            this.relationsTableAdapter.ClearBeforeFill = true;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // relationNameDataGridViewTextBoxColumn
             // 
@@ -79,6 +67,20 @@
             this.relationNameDataGridViewTextBoxColumn.HeaderText = "Relation Name";
             this.relationNameDataGridViewTextBoxColumn.Name = "relationNameDataGridViewTextBoxColumn";
             this.relationNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // relationsBindingSource
+            // 
+            this.relationsBindingSource.DataMember = "Relations";
+            this.relationsBindingSource.DataSource = this.concordationDataSet;
+            // 
+            // concordationDataSet
+            // 
+            this.concordationDataSet.DataSetName = "ConcordationDataSet";
+            this.concordationDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // relationsTableAdapter
+            // 
+            this.relationsTableAdapter.ClearBeforeFill = true;
             // 
             // AddRelationlbl
             // 
@@ -93,7 +95,7 @@
             // AddRelationbtn
             // 
             this.AddRelationbtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRelationbtn.Location = new System.Drawing.Point(334, 289);
+            this.AddRelationbtn.Location = new System.Drawing.Point(205, 286);
             this.AddRelationbtn.Name = "AddRelationbtn";
             this.AddRelationbtn.Size = new System.Drawing.Size(87, 38);
             this.AddRelationbtn.TabIndex = 5;
@@ -108,11 +110,23 @@
             this.AddRelationTxtBox.Size = new System.Drawing.Size(100, 20);
             this.AddRelationTxtBox.TabIndex = 4;
             // 
+            // Deletebtn
+            // 
+            this.Deletebtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebtn.Location = new System.Drawing.Point(298, 286);
+            this.Deletebtn.Name = "Deletebtn";
+            this.Deletebtn.Size = new System.Drawing.Size(92, 38);
+            this.Deletebtn.TabIndex = 6;
+            this.Deletebtn.Text = "Delete Relation";
+            this.Deletebtn.UseVisualStyleBackColor = true;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
+            // 
             // AddRelation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 336);
+            this.Controls.Add(this.Deletebtn);
             this.Controls.Add(this.AddRelationbtn);
             this.Controls.Add(this.AddRelationTxtBox);
             this.Controls.Add(this.AddRelationlbl);
@@ -124,8 +138,8 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddRelation_FormClosed);
             this.Load += new System.EventHandler(this.AddRelation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.relationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,5 +155,6 @@
         private System.Windows.Forms.Label AddRelationlbl;
         private System.Windows.Forms.Button AddRelationbtn;
         private System.Windows.Forms.TextBox AddRelationTxtBox;
+        private System.Windows.Forms.Button Deletebtn;
     }
 }

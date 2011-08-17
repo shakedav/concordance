@@ -33,9 +33,8 @@
             this.expressionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expressionsTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.ExpressionsTableAdapter();
             this.WordExpressionDG = new System.Windows.Forms.DataGridView();
-            this.getExpressionsOfWordResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.expressionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddExpression = new System.Windows.Forms.LinkLabel();
+            this.getExpressionsOfWordResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expressionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WordExpressionDG)).BeginInit();
@@ -72,10 +71,6 @@
             this.WordExpressionDG.Size = new System.Drawing.Size(390, 204);
             this.WordExpressionDG.TabIndex = 0;
             // 
-            // getExpressionsOfWordResultBindingSource
-            // 
-            this.getExpressionsOfWordResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetExpressionsOfWordResult);
-            // 
             // expressionDataGridViewTextBoxColumn
             // 
             this.expressionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -84,26 +79,15 @@
             this.expressionDataGridViewTextBoxColumn.Name = "expressionDataGridViewTextBoxColumn";
             this.expressionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // AddExpression
+            // getExpressionsOfWordResultBindingSource
             // 
-            this.AddExpression.AutoSize = true;
-            this.AddExpression.LinkColor = System.Drawing.Color.Blue;
-            this.AddExpression.Location = new System.Drawing.Point(12, 232);
-            this.AddExpression.MaximumSize = new System.Drawing.Size(398, 286);
-            this.AddExpression.Name = "AddExpression";
-            this.AddExpression.Size = new System.Drawing.Size(115, 13);
-            this.AddExpression.TabIndex = 9;
-            this.AddExpression.TabStop = true;
-            this.AddExpression.Text = "Add A New Expression";
-            this.AddExpression.VisitedLinkColor = System.Drawing.Color.Blue;
-            this.AddExpression.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddExpression_LinkClicked);
+            this.getExpressionsOfWordResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetExpressionsOfWordResult);
             // 
             // WordExpression
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 265);
-            this.Controls.Add(this.AddExpression);
+            this.ClientSize = new System.Drawing.Size(415, 234);
             this.Controls.Add(this.WordExpressionDG);
             this.Name = "WordExpression";
             this.Text = "Word Expression";
@@ -113,7 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.WordExpressionDG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getExpressionsOfWordResultBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -125,6 +108,5 @@
         private System.Windows.Forms.DataGridView WordExpressionDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn expressionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource getExpressionsOfWordResultBindingSource;
-        private System.Windows.Forms.LinkLabel AddExpression;
     }
 }
