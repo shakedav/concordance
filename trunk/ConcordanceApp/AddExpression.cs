@@ -52,5 +52,21 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
             ExpressionsGrid.DataSource = DB.GetExpressions();
         }
+
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(Expressiontxt.Text)))
+            {
+                DB.DeleteExpression(Expressiontxt.Text);
+                ExpressionsGrid.DataSource = DB.GetExpressions();
+                Expressiontxt.Clear();
+            }
+        }
+
+        private void ExpressionsGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Expressiontxt.Text = ExpressionsGrid[ExpressionsGrid.CurrentCellAddress.X, ExpressionsGrid.CurrentCellAddress.Y].Value.ToString();
+        }
+
     }
 }

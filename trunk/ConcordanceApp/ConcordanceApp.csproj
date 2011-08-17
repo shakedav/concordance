@@ -68,12 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddAttributes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddAttributes.Designer.cs">
-      <DependentUpon>AddAttributes.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddDocType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,9 +188,6 @@
     <Compile Include="WordTags.Designer.cs">
       <DependentUpon>WordTags.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddAttributes.resx">
-      <DependentUpon>AddAttributes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddDocType.resx">
       <DependentUpon>AddDocType.cs</DependentUpon>
     </EmbeddedResource>

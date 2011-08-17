@@ -12,7 +12,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
     public partial class RelateWords : Form
     {
         DBConDataContext DB = new DBConDataContext();
-        Form parent;
+        WordRelation parent;
         int isDual;
         public RelateWords()
         {
@@ -20,7 +20,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.relationsTableAdapter.Fill(this.concordationDataSet._Relations);
         }
 
-        public RelateWords(Form myparent)
+        public RelateWords(WordRelation myparent)
         {
             InitializeComponent();
             parent = myparent;
@@ -52,8 +52,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 int result = DB.RelateWords(Word1Box.Text, RelationBox.Text, Word2Box.Text, isDual);
                 if (result == -1)
                     MessageBox.Show("Relation Already Exists");
-                this.Close();
-                
+                this.Close();                
             }
             else
                 MessageBox.Show("Relation Name is mandatory, Click the \"add Relation\" Link");

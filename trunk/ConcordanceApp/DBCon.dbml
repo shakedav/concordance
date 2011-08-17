@@ -276,4 +276,12 @@
     <Parameter Name="Word" Parameter="word" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.DeleteExpression" Method="DeleteExpression">
+    <Parameter Name="Expression" Parameter="expression" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteRelation" Method="DeleteRelation">
+    <Parameter Name="Relation" Parameter="relation" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
