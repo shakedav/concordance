@@ -7,6 +7,7 @@ using System.Collections;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
 using concordanceapConcordationDataSetTableAdaptersp;
+using System.Windows.Forms;
 
 namespace concordanceapConcordationDataSetTableAdaptersp
 {
@@ -28,14 +29,16 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             int wordNum = 0;
             using (StreamReader reader = new StreamReader(fileName))
             {
-                /*while not end of file */ 
-                while (!reader.EndOfStream)
+                /*while not end of file */
+                while ((line = reader.ReadLine()) != null) 
                 {
                     /* start of a new line */
                     lineNum++;
                     wordNum = 0;
-                    line = reader.ReadLine();
+                    //line = reader.ReadLine();
                     if (line == "") continue;
+                    line = Regex.Replace(line, @"\s+", " ");
+                    line = line.Trim();
                     String[] words = line.Split(' ');
                     /* go through the words in line */
                     foreach (String word in words)
@@ -46,6 +49,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                         wordsList.Add(item);
                     }
                 }
+                
+
                 /* Finished reading the file
                  * return the arraylist */
                 return wordsList;
