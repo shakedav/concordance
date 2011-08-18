@@ -38,6 +38,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             RelateWords form = new RelateWords(this);
             form.ShowDialog();
+            WordRelationsGrid.DataSource = DB.getRelationsOfWord(_word);
         }
     }
 }

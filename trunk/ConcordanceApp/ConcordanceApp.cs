@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace concordanceapConcordationDataSetTableAdaptersp
 {
@@ -46,8 +47,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         public void LoadDocument(string author, string name, int DocID)
         {
             ArrayList words = new ArrayList();
-            //ArrayList Attrib = new ArrayList();
-            /* TODO: Write the SP and get the name in the other class */
 
             /* Select the file and load it */
             OpenFileDialog fDialog = new OpenFileDialog();
@@ -62,17 +61,24 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 DocID = DB.InsertDocument(DocID, fileName, filePath);
                 /* insert the attributes to the DB */
                 DB.addAttributes(DocID, author, (int)AttributeTypes.AUTHOR);
-                //DB.addAttributes(DocID, composer, (int)AttributeTypes.COMPOSER);
                 DB.addAttributes(DocID, name, (int)AttributeTypes.NAME);
+                ProgressBar pbar = new ProgressBar(fileName);
+                pbar.Show();
+                pbar.Medium();
                 words = FileHandler.ParseFile(filePath + fileName);
                 foreach (WordItem word in words)
+                {
+                    pbar.AdvancedStep();
                     DB.InsertWord2(word.word, word.lineNum, word.wordNum, DocID);
+                }
+                pbar.Fill();
+                pbar.Close();
+                MessageBox.Show("Document Loading Finished");
             }
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            //dataGridView1.DataSource = DB.GetSearchWord(SearchBox.Text);
             DB.AddSearchNumber(SearchBox.Text);
             RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
             RegularSearchGrid.Visible = true;

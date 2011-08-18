@@ -56,6 +56,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
             else
                 MessageBox.Show("Relation Name is mandatory, Click the \"add Relation\" Link");
+            parent.Invalidate();
             
         }
 
