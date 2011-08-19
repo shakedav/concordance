@@ -14,13 +14,31 @@ namespace concordanceapConcordationDataSetTableAdaptersp
     class FileHandler
     {
         //remove special characters from string
-        public static string RemoveSpecialCharacters(string input)
+        /*public static string RemoveSpecialCharacters(string input)
         {
             Regex r = new Regex("(?:[^a-z0-9 ]|(?<=['\"])s)", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
             return r.Replace(input, String.Empty);
+        }*/
+
+        public static string RemoveSpecialCharacters(string str)
+        {
+            char[] buffer = new char[str.Length];
+            int idx = 0;
+
+            foreach (char c in str)
+            {
+                if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
+                    || (c >= 'a' && c <= 'z')|| (c == ' '))
+                {
+                    buffer[idx] = c;
+                    idx++;
+                }
+            }
+
+            return new string(buffer, 0, idx);
         }
 
-        public static ArrayList ParseFile(string fileName)
+        public static void ParseFile(string fileName,int DocID)
         {
             String line;
             ArrayList wordsList = new ArrayList();
@@ -36,6 +54,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                     lineNum++;
                     wordNum = 0;
                     //line = reader.ReadLine();
+                    line = RemoveSpecialCharacters(line);
                     if (line == "") continue;
                     line = Regex.Replace(line, @"\s+", " ");
                     line = line.Trim();
@@ -43,17 +62,22 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                     /* go through the words in line */
                     foreach (String word in words)
                     {
-                        wordNum++;
-                        string cleanWord = RemoveSpecialCharacters(word);
-                        WordItem item = new WordItem(cleanWord,wordNum,lineNum);
-                        wordsList.Add(item);
+                        if (word != "")
+                        {
+                            wordNum++;
+
+                            //string cleanWord = RemoveSpecialCharacters(word);
+                            DB.InsertWord2(word, lineNum, wordNum, DocID);
+                            /*WordItem item = new WordItem(cleanWord,wordNum,lineNum);
+                            wordsList.Add(item);*/
+                        }
                     }
                 }
                 
 
                 /* Finished reading the file
                  * return the arraylist */
-                return wordsList;
+                //return wordsList;
             }
         }
     }
