@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.getDocsOfWordResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DocNamesGrid = new System.Windows.Forms.DataGridView();
-            this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.getDocsOfWordResultBindingSource)).BeginInit();
+            this.docNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docPAthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.getDocsOfWordResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DocNamesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getDocsOfWordResultBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // getDocsOfWordResultBindingSource
-            // 
-            this.getDocsOfWordResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetDocsOfWordResult);
             // 
             // DocNamesGrid
             // 
@@ -51,41 +48,55 @@
             this.DocNamesGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DocNamesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DocNamesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.valueDataGridViewTextBoxColumn});
+            this.docNameDataGridViewTextBoxColumn,
+            this.docPAthDataGridViewTextBoxColumn});
             this.DocNamesGrid.DataSource = this.getDocsOfWordResultBindingSource;
             this.DocNamesGrid.Location = new System.Drawing.Point(12, 12);
             this.DocNamesGrid.Name = "DocNamesGrid";
             this.DocNamesGrid.ReadOnly = true;
             this.DocNamesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.DocNamesGrid.Size = new System.Drawing.Size(245, 180);
+            this.DocNamesGrid.Size = new System.Drawing.Size(266, 180);
             this.DocNamesGrid.TabIndex = 1;
             // 
-            // valueDataGridViewTextBoxColumn
+            // docNameDataGridViewTextBoxColumn
             // 
-            this.valueDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.valueDataGridViewTextBoxColumn.DataPropertyName = "value";
-            this.valueDataGridViewTextBoxColumn.HeaderText = "Document Name";
-            this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
-            this.valueDataGridViewTextBoxColumn.ReadOnly = true;
+            this.docNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.docNameDataGridViewTextBoxColumn.DataPropertyName = "Doc_Name";
+            this.docNameDataGridViewTextBoxColumn.HeaderText = "Document Name";
+            this.docNameDataGridViewTextBoxColumn.Name = "docNameDataGridViewTextBoxColumn";
+            this.docNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // docPAthDataGridViewTextBoxColumn
+            // 
+            this.docPAthDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.docPAthDataGridViewTextBoxColumn.DataPropertyName = "Doc_PAth";
+            this.docPAthDataGridViewTextBoxColumn.HeaderText = "Document Path";
+            this.docPAthDataGridViewTextBoxColumn.Name = "docPAthDataGridViewTextBoxColumn";
+            this.docPAthDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // getDocsOfWordResultBindingSource
+            // 
+            this.getDocsOfWordResultBindingSource.DataSource = typeof(concordanceapConcordationDataSetTableAdaptersp.GetDocsOfWordResult);
             // 
             // DocNames
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(266, 204);
+            this.ClientSize = new System.Drawing.Size(287, 204);
             this.Controls.Add(this.DocNamesGrid);
             this.Name = "DocNames";
             this.Text = "Document Names";
-            ((System.ComponentModel.ISupportInitialize)(this.getDocsOfWordResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocNamesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.getDocsOfWordResultBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.BindingSource getDocsOfWordResultBindingSource;
         private System.Windows.Forms.DataGridView DocNamesGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docPAthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource getDocsOfWordResultBindingSource;
     }
 }

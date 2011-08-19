@@ -20,7 +20,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-	
+
+
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Concordation")]
 	public partial class DBConDataContext : System.Data.Linq.DataContext
@@ -29,6 +30,10 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
+        partial void OnCreated()
+        {
+            this.CommandTimeout = 3600;
+        }
     partial void OnCreated();
     #endregion
 		
@@ -123,13 +128,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDocsOfWord")]
-		public ISingleResult<GetDocsOfWordResult> GetDocsOfWord([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
-			return ((ISingleResult<GetDocsOfWordResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTagsofWord")]
@@ -425,6 +423,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), relation);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDocsOfWord")]
+		public ISingleResult<GetDocsOfWordResult> GetDocsOfWord([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
+			return ((ISingleResult<GetDocsOfWordResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -626,32 +631,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._TagName != value))
 				{
 					this._TagName = value;
-				}
-			}
-		}
-	}
-	
-	public partial class GetDocsOfWordResult
-	{
-		
-		private string _value;
-		
-		public GetDocsOfWordResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_value", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string value
-		{
-			get
-			{
-				return this._value;
-			}
-			set
-			{
-				if ((this._value != value))
-				{
-					this._value = value;
 				}
 			}
 		}
@@ -1128,6 +1107,50 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._TagName != value))
 				{
 					this._TagName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDocsOfWordResult
+	{
+		
+		private string _Doc_Name;
+		
+		private string _Doc_PAth;
+		
+		public GetDocsOfWordResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Doc Name]", Storage="_Doc_Name", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Doc_Name
+		{
+			get
+			{
+				return this._Doc_Name;
+			}
+			set
+			{
+				if ((this._Doc_Name != value))
+				{
+					this._Doc_Name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Doc PAth]", Storage="_Doc_PAth", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Doc_PAth
+		{
+			get
+			{
+				return this._Doc_PAth;
+			}
+			set
+			{
+				if ((this._Doc_PAth != value))
+				{
+					this._Doc_PAth = value;
 				}
 			}
 		}

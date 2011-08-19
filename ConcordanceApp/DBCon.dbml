@@ -53,12 +53,6 @@
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.GetDocsOfWord" Method="GetDocsOfWord">
-    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="GetDocsOfWordResult">
-      <Column Name="value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.GetTagsofWord" Method="GetTagsofWord">
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="GetTagsofWordResult">
@@ -283,5 +277,12 @@
   <Function Name="dbo.DeleteRelation" Method="DeleteRelation">
     <Parameter Name="Relation" Parameter="relation" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetDocsOfWord" Method="GetDocsOfWord">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetDocsOfWordResult">
+      <Column Name="[Doc Name]" Member="Doc_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Doc PAth]" Member="Doc_PAth" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

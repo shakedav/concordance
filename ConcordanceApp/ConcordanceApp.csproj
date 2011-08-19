@@ -196,6 +196,7 @@
     </Compile>
     <EmbeddedResource Include="AddDocType.resx">
       <DependentUpon>AddDocType.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AddExpression.resx">
       <DependentUpon>AddExpression.cs</DependentUpon>
@@ -227,6 +228,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DocNames.resx">
       <DependentUpon>DocNames.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ProgressBar.resx">
       <DependentUpon>ProgressBar.cs</DependentUpon>

@@ -65,20 +65,21 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 ProgressBar pbar = new ProgressBar(fileName);
                 pbar.Show();
                 pbar.Medium();
-                words = FileHandler.ParseFile(filePath + fileName);
-                foreach (WordItem word in words)
+                FileHandler.ParseFile(filePath + fileName, DocID);
+                /*foreach (WordItem word in words)
                 {
                     pbar.AdvancedStep();
                     DB.InsertWord2(word.word, word.lineNum, word.wordNum, DocID);
-                }
+                }*/
                 pbar.Fill();
-                pbar.Close();
                 MessageBox.Show("Document Loading Finished");
+                pbar.Close();
             }
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
+            //DB.CommandTimeout = 3600;
             DB.AddSearchNumber(SearchBox.Text);
             RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
             RegularSearchGrid.Visible = true;
