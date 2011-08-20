@@ -20,8 +20,16 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-	
-	
+
+
+    public partial class DBConDataContext : System.Data.Linq.DataContext
+    {
+        partial void OnCreated()
+        {
+            this.CommandTimeout = 3600;
+        }
+    }
+
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Concordation")]
 	public partial class DBConDataContext : System.Data.Linq.DataContext
 	{

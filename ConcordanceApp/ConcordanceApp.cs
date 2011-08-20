@@ -80,7 +80,12 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private void SearchBtn_Click(object sender, EventArgs e)
         {
             //DB.CommandTimeout = 3600;
-            DB.AddSearchNumber(SearchBox.Text);
+            RegularSearchGrid.Visible = false;
+            StatsGB.Visible = false;
+            NumbersGB.Visible = false;            
+            Wordtxt.Text = "Searching...";
+            Wordtxt.Visible = true;
+            Application.DoEvents();
             if ((!StoryCB.Checked) && (!SongsCB.Checked) || (StoryCB.Checked) && (SongsCB.Checked))
                 RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text, null).ToList<ContextWordsResult>();
             if ((StoryCB.Checked) && (!SongsCB.Checked))
@@ -88,12 +93,14 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             if ((!StoryCB.Checked) && (SongsCB.Checked))
                 RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text, 2).ToList<ContextWordsResult>();
             RegularSearchGrid.Visible = true;
+            DB.AddSearchNumber(SearchBox.Text);
             this.GetSearchNumbers();
         }
 
         private void GetSearchNumbers()
         {
             StatsGB.Visible = true;
+            NumbersGB.Visible = true;
             TotAppeartxt.Text = DB.GetTotalAppearances(SearchBox.Text).ToString();
             TotAppearances.Visible = true;
             TotAppeartxt.Visible = true;
