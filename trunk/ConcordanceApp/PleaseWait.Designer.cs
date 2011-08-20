@@ -1,6 +1,6 @@
 ﻿namespace concordanceapConcordationDataSetTableAdaptersp
 {
-    partial class ProgressBar
+    partial class PleaseWait
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.pbar = new System.Windows.Forms.ProgressBar();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // pbar
+            // label1
             // 
-            this.pbar.Location = new System.Drawing.Point(12, 12);
-            this.pbar.Name = "pbar";
-            this.pbar.Size = new System.Drawing.Size(260, 23);
-            this.pbar.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(128, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // ProgressBar
+            // PleaseWait
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 50);
-            this.Controls.Add(this.pbar);
-            this.Name = "ProgressBar";
-            this.Text = "ProgressBar";
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.label1);
+            this.Name = "PleaseWait";
+            this.Text = "PleaseWait";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar pbar;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
