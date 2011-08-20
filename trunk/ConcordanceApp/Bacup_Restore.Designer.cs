@@ -60,6 +60,7 @@
             this.Controls.Add(this.Restorebtn);
             this.Controls.Add(this.Backupbtn);
             this.Name = "Bacup_Restore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maintenance";
             this.ResumeLayout(false);
 

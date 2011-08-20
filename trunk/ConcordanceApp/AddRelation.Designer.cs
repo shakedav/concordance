@@ -134,6 +134,7 @@
             this.MaximumSize = new System.Drawing.Size(449, 374);
             this.MinimumSize = new System.Drawing.Size(449, 374);
             this.Name = "AddRelation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Word Relation";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddRelation_FormClosed);
             this.Load += new System.EventHandler(this.AddRelation_Load);

@@ -139,6 +139,7 @@
             this.Controls.Add(this.AddExpressionlbl);
             this.Controls.Add(this.ExpressionsGrid);
             this.Name = "AddExpression";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add / Delete Expression";
             this.Load += new System.EventHandler(this.AddExpression_Load);
             ((System.ComponentModel.ISupportInitialize)(this.expressionsBindingSource)).EndInit();

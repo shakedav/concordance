@@ -15,7 +15,11 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         public AllWords()
         {
             InitializeComponent();
+            PleaseWait form = new PleaseWait();
+            form.Show();
+            Application.DoEvents();
             WordsGrid.DataSource = DB.GetAllWords().ToList<GetAllWordsResult>();
+            form.Close();
             WordsGrid.Visible = true;
         }
     }

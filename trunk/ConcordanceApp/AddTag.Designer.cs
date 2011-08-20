@@ -109,7 +109,7 @@
             this.AddTagbtn.Name = "AddTagbtn";
             this.AddTagbtn.Size = new System.Drawing.Size(75, 34);
             this.AddTagbtn.TabIndex = 3;
-            this.AddTagbtn.Text = "Tag Word";
+            this.AddTagbtn.Text = "Add Tag";
             this.AddTagbtn.UseVisualStyleBackColor = true;
             this.AddTagbtn.Click += new System.EventHandler(this.AddTagbtn_Click);
             // 
@@ -136,6 +136,7 @@
             this.MaximumSize = new System.Drawing.Size(449, 374);
             this.MinimumSize = new System.Drawing.Size(449, 374);
             this.Name = "AddTag";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Tag";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTag_FormClosed);
             this.Load += new System.EventHandler(this.AddTag_Load);

@@ -90,7 +90,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Publishdatelbl);
             this.Name = "StoryAttrs";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Story Attributes";
             this.ResumeLayout(false);
             this.PerformLayout();

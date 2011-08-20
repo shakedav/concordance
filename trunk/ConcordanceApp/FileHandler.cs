@@ -73,8 +73,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                         }
                     }
                 }
-                
-
                 /* Finished reading the file
                  * return the arraylist */
                 //return wordsList;
