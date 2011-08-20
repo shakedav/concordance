@@ -121,6 +121,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ConcordationDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DBCon.cs">
+      <DependentUpon>DBCon.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DBCon.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -81,7 +81,12 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             //DB.CommandTimeout = 3600;
             DB.AddSearchNumber(SearchBox.Text);
-            RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text).ToList<ContextWordsResult>();
+            if ((!StoryCB.Checked) && (!SongsCB.Checked) || (StoryCB.Checked) && (SongsCB.Checked))
+                RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text, null).ToList<ContextWordsResult>();
+            if ((StoryCB.Checked) && (!SongsCB.Checked))
+                RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text, 1).ToList<ContextWordsResult>();
+            if ((!StoryCB.Checked) && (SongsCB.Checked))
+                RegularSearchGrid.DataSource = DB.ContextWords(SearchBox.Text, 2).ToList<ContextWordsResult>();
             RegularSearchGrid.Visible = true;
             this.GetSearchNumbers();
         }

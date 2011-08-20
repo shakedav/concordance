@@ -22,15 +22,6 @@
     <Parameter Name="DocID" Parameter="docID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.ContextWords" Method="ContextWords">
-    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="ContextWordsResult">
-      <Column Name="Context" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Line" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Word Number" Member="Word_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Document" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.GetTaggedWords" Method="GetTaggedWords">
     <ElementType Name="GetTaggedWordsResult">
       <Column Name="Word" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -283,6 +274,16 @@
     <ElementType Name="GetDocsOfWordResult">
       <Column Name="[Doc Name]" Member="Doc_Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="[Doc PAth]" Member="Doc_PAth" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ContextWords" Method="ContextWords">
+    <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DocTypeID" Parameter="docTypeID" Type="System.Int32" DbType="Int" />
+	<ElementType Name="ContextWordsResult">
+      <Column Name="Context" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Line" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Word Number" Member="Word_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Document" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

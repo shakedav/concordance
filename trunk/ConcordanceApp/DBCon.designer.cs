@@ -20,8 +20,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-
-
+	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Concordation")]
 	public partial class DBConDataContext : System.Data.Linq.DataContext
@@ -30,10 +29,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
-        partial void OnCreated()
-        {
-            this.CommandTimeout = 3600;
-        }
     partial void OnCreated();
     #endregion
 		
@@ -86,13 +81,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word, line, wordNum, docID);
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ContextWords")]
-		public ISingleResult<ContextWordsResult> ContextWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
-			return ((ISingleResult<ContextWordsResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTaggedWords")]
@@ -430,6 +418,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word);
 			return ((ISingleResult<GetDocsOfWordResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ContextWords")]
+		public ISingleResult<ContextWordsResult> ContextWords([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string word, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DocTypeID", DbType="Int")] System.Nullable<int> docTypeID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word, docTypeID);
+			return ((ISingleResult<ContextWordsResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class GetSearchWordResult
@@ -507,86 +502,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Value != value))
 				{
 					this._Value = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ContextWordsResult
-	{
-		
-		private string _Context;
-		
-		private System.Nullable<int> _Line;
-		
-		private System.Nullable<int> _Word_Number;
-		
-		private string _Document;
-		
-		public ContextWordsResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Context", DbType="VarChar(50)")]
-		public string Context
-		{
-			get
-			{
-				return this._Context;
-			}
-			set
-			{
-				if ((this._Context != value))
-				{
-					this._Context = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Line", DbType="Int")]
-		public System.Nullable<int> Line
-		{
-			get
-			{
-				return this._Line;
-			}
-			set
-			{
-				if ((this._Line != value))
-				{
-					this._Line = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Word Number", Storage="_Word_Number", DbType="Int")]
-		public System.Nullable<int> Word_Number
-		{
-			get
-			{
-				return this._Word_Number;
-			}
-			set
-			{
-				if ((this._Word_Number != value))
-				{
-					this._Word_Number = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Document", DbType="VarChar(50)")]
-		public string Document
-		{
-			get
-			{
-				return this._Document;
-			}
-			set
-			{
-				if ((this._Document != value))
-				{
-					this._Document = value;
 				}
 			}
 		}
@@ -1151,6 +1066,86 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Doc_PAth != value))
 				{
 					this._Doc_PAth = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ContextWordsResult
+	{
+		
+		private string _Context;
+		
+		private System.Nullable<int> _Line;
+		
+		private System.Nullable<int> _Word_Number;
+		
+		private string _Document;
+		
+		public ContextWordsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Context", DbType="VarChar(50)")]
+		public string Context
+		{
+			get
+			{
+				return this._Context;
+			}
+			set
+			{
+				if ((this._Context != value))
+				{
+					this._Context = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Line", DbType="Int")]
+		public System.Nullable<int> Line
+		{
+			get
+			{
+				return this._Line;
+			}
+			set
+			{
+				if ((this._Line != value))
+				{
+					this._Line = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Word Number", Storage="_Word_Number", DbType="Int")]
+		public System.Nullable<int> Word_Number
+		{
+			get
+			{
+				return this._Word_Number;
+			}
+			set
+			{
+				if ((this._Word_Number != value))
+				{
+					this._Word_Number = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Document", DbType="VarChar(50)")]
+		public string Document
+		{
+			get
+			{
+				return this._Document;
+			}
+			set
+			{
+				if ((this._Document != value))
+				{
+					this._Document = value;
 				}
 			}
 		}

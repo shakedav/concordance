@@ -16504,7 +16504,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[36];
+            this._commandCollection = new global::System.Data.IDbCommand[35];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[0])).CommandText = "dbo.addAttributes";
@@ -16546,174 +16546,177 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[5])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandText = "dbo.ContextWords";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandText = "dbo.ExportTable";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TableName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[6])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filename", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[7] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandText = "dbo.ExportTable";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandText = "dbo.GetAttTypeID";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TableName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@filename", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[7])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@attName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[8] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandText = "dbo.GetAttTypeID";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandText = "dbo.GetContainingDocs";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@attName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[8])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[9] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).CommandText = "dbo.GetContainingDocs";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).CommandText = "dbo.GetContainingExpressions";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[9])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[10] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).CommandText = "dbo.GetContainingExpressions";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).CommandText = "dbo.GetContainingRelations";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[10])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[11] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).CommandText = "dbo.GetContainingRelations";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).CommandText = "dbo.GetContainingTags";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[11])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[12] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).CommandText = "dbo.GetContainingTags";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).CommandText = "dbo.getDocID";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[12])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fileName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[13] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).CommandText = "dbo.getDocID";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).CommandText = "dbo.GetDocType";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fileName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[13])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@typeName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[14] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).CommandText = "dbo.GetDocType";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).CommandText = "dbo.GetTotalAppearances";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@typeName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[14])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[15] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).CommandText = "dbo.GetTotalAppearances";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).CommandText = "dbo.GetWordID";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[15])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[16] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).CommandText = "dbo.GetWordID";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).CommandText = "dbo.GetWordSearches";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[16])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[17] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).CommandText = "dbo.GetWordSearches";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).CommandText = "dbo.Import_AttType";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[17])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[18] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).CommandText = "dbo.Import_AttType";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).CommandText = "dbo.Import_AttValue";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[18])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Value", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[19] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).CommandText = "dbo.Import_AttValue";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).CommandText = "dbo.Import_DocAtts";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Value", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[19])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocTypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[20] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).CommandText = "dbo.Import_DocAtts";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).CommandText = "dbo.Import_Docs";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AttID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocTypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[20])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[21] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).CommandText = "dbo.Import_Docs";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).CommandText = "dbo.Import_DocTypes";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[21])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[22] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).CommandText = "dbo.Import_DocTypes";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).CommandText = "dbo.Import_expressions";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Type", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@expression", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[22])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[23] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).CommandText = "dbo.Import_expressions";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).CommandText = "dbo.Import_Relations";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@expression", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[23])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RelationName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[24] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).CommandText = "dbo.Import_Relations";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).CommandText = "dbo.Import_Tag";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RelationName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[24])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TagName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[25] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).CommandText = "dbo.Import_Tag";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).CommandText = "dbo.Import_WordAppearances";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TagName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LineNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[25])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frequency", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[26] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).CommandText = "dbo.Import_WordAppearances";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).CommandText = "dbo.Import_WordRelations";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LineNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Frequency", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word1ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RelationID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[26])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word2ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[27] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).CommandText = "dbo.Import_WordRelations";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).CommandText = "dbo.Import_Words";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word1ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RelationID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word2ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalCount", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[27])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SearchNums", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[28] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).CommandText = "dbo.Import_Words";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).CommandText = "dbo.Import_WordTags";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TotalCount", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SearchNums", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[28])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TagID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[29] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).CommandText = "dbo.Import_WordTags";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).CommandText = "dbo.InsertDocument";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TagID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[29])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Path", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[30] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).CommandText = "dbo.InsertDocument";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).CommandText = "dbo.InsertWord";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TypeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FileName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Path", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Line", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[30])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[31] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).CommandText = "dbo.InsertWord";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).CommandText = "dbo.InsertWord2";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16722,37 +16725,28 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[31])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[32] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).CommandText = "dbo.InsertWord2";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).CommandText = "dbo.RelateWords";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Line", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DocID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word1", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@relation", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word2", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[32])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isDual", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[33] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).CommandText = "dbo.RelateWords";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).CommandText = "dbo.SaveExpression";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word1", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@relation", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@word2", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isDual", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expression", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[33])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[34] = new global::System.Data.SqlClient.SqlCommand();
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).CommandText = "dbo.SaveExpression";
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).CommandText = "dbo.TagWord";
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).CommandType = global::System.Data.CommandType.StoredProcedure;
             ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expression", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@WordNum", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[35] = new global::System.Data.SqlClient.SqlCommand();
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[35])).Connection = new global::System.Data.SqlClient.SqlConnection(global::concordanceapConcordationDataSetTableAdaptersp.Properties.Settings.Default.ConcordationConnectionString);
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[35])).CommandText = "dbo.TagWord";
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[35])).CommandType = global::System.Data.CommandType.StoredProcedure;
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[35])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[35])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[35])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TagName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Word", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            ((global::System.Data.SqlClient.SqlCommand)(this._commandCollection[34])).Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TagName", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16944,36 +16938,8 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int ContextWords(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[6]));
-            if ((word == null)) {
-                command.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                command.Parameters[1].Value = ((string)(word));
-            }
-            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
-            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                command.Connection.Open();
-            }
-            int returnValue;
-            try {
-                returnValue = command.ExecuteNonQuery();
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    command.Connection.Close();
-                }
-            }
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int ExportTable(string TableName, string filename) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[7]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[6]));
             if ((TableName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17007,7 +16973,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetAttTypeID(string attName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[8]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[7]));
             if ((attName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17035,7 +17001,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetContainingDocs(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[9]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[8]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17063,7 +17029,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetContainingExpressions(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[10]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[9]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17091,7 +17057,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetContainingRelations(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[11]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[10]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17119,7 +17085,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetContainingTags(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[12]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[11]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17147,7 +17113,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int getDocID(string fileName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[13]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[12]));
             if ((fileName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17175,7 +17141,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetDocType(string typeName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[14]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[13]));
             if ((typeName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17203,7 +17169,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetTotalAppearances(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[15]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[14]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17231,7 +17197,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetWordID(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[16]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[15]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17259,7 +17225,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int GetWordSearches(string word) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[17]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[16]));
             if ((word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17287,7 +17253,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_AttType(string AttName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[18]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[17]));
             if ((AttName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17315,7 +17281,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_AttValue(global::System.Nullable<int> DocID, global::System.Nullable<int> AttID, string Value) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[19]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[18]));
             if ((DocID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(DocID.Value));
             }
@@ -17355,7 +17321,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_DocAtts(global::System.Nullable<int> AttID, global::System.Nullable<int> DocTypeID) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[20]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[19]));
             if ((AttID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(AttID.Value));
             }
@@ -17389,7 +17355,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_Docs(global::System.Nullable<int> TypeID) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[21]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[20]));
             if ((TypeID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(TypeID.Value));
             }
@@ -17417,7 +17383,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_DocTypes(string Type) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[22]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[21]));
             if ((Type == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17445,7 +17411,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_expressions(string expression, global::System.Nullable<int> WordID, global::System.Nullable<int> WordNum) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[23]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[22]));
             if ((expression == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17485,7 +17451,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_Relations(string RelationName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[24]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[23]));
             if ((RelationName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17513,7 +17479,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_Tag(string TagName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[25]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[24]));
             if ((TagName == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17541,7 +17507,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_WordAppearances(global::System.Nullable<int> WordID, global::System.Nullable<int> DocID, global::System.Nullable<int> LineNum, global::System.Nullable<int> WordNum, global::System.Nullable<int> Frequency) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[26]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[25]));
             if ((WordID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(WordID.Value));
             }
@@ -17593,7 +17559,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_WordRelations(global::System.Nullable<int> Word1ID, global::System.Nullable<int> RelationID, global::System.Nullable<int> Word2ID) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[27]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[26]));
             if ((Word1ID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(Word1ID.Value));
             }
@@ -17633,7 +17599,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_Words(string Word, global::System.Nullable<int> TotalCount, global::System.Nullable<int> SearchNums) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[28]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[27]));
             if ((Word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17673,7 +17639,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Import_WordTags(global::System.Nullable<int> WordID, global::System.Nullable<int> TagID) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[29]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[28]));
             if ((WordID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(WordID.Value));
             }
@@ -17707,7 +17673,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int InsertDocument(global::System.Nullable<int> TypeID, string FileName, string Path) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[30]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[29]));
             if ((TypeID.HasValue == true)) {
                 command.Parameters[1].Value = ((int)(TypeID.Value));
             }
@@ -17747,7 +17713,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int InsertWord(string Word, global::System.Nullable<int> Line, global::System.Nullable<int> WordNum, global::System.Nullable<int> DocID) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[31]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[30]));
             if ((Word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17793,7 +17759,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int InsertWord2(string Word, global::System.Nullable<int> Line, global::System.Nullable<int> WordNum, global::System.Nullable<int> DocID) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[32]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[31]));
             if ((Word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17839,7 +17805,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int RelateWords(string word1, string relation, string word2, global::System.Nullable<int> isDual) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[33]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[32]));
             if ((word1 == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17885,7 +17851,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int SaveExpression(string Expression, string Word, global::System.Nullable<int> WordNum) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[34]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[33]));
             if ((Expression == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -17925,7 +17891,7 @@ SELECT ID, Word, TotalCount, SearchNums FROM Words WHERE (ID = @ID)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int TagWord(string Word, string TagName) {
-            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[35]));
+            global::System.Data.SqlClient.SqlCommand command = ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[34]));
             if ((Word == null)) {
                 command.Parameters[1].Value = global::System.DBNull.Value;
             }
