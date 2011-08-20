@@ -289,7 +289,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\ContextWordsResult.datasource" />
+    <None Include="Properties\DataSources\GetAllTagsResult.datasource" />
     <None Include="Properties\DataSources\GetAllWordsResult.datasource" />
+    <None Include="Properties\DataSources\GetAvailableAttsResult.datasource" />
     <None Include="Properties\DataSources\GetDocAttrsResult.datasource" />
     <None Include="Properties\DataSources\GetDocsOfWordResult.datasource" />
     <None Include="Properties\DataSources\GetExistingAttsfordocResult.datasource" />

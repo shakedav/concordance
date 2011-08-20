@@ -38,7 +38,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             string SongName = form.DocumentName;
             int DocID = form.DocType;
 
-            if (string.IsNullOrEmpty(Author) || string.IsNullOrEmpty(SongName) )/*|| string.IsNullOrEmpty(Composer))*/
+            if (string.IsNullOrEmpty(Author) || string.IsNullOrEmpty(SongName) )
             {
                 form.Close();
             }
@@ -62,18 +62,17 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 /* insert the attributes to the DB */
                 DB.addAttributes(DocID, author, (int)AttributeTypes.AUTHOR);
                 DB.addAttributes(DocID, name, (int)AttributeTypes.NAME);
-                ProgressBar pbar = new ProgressBar(fileName);
-                pbar.Show();
-                pbar.Medium();
+                PleaseWait form = new PleaseWait();
+                form.Show();
+                Application.DoEvents();
                 FileHandler.ParseFile(filePath + fileName, DocID);
                 /*foreach (WordItem word in words)
                 {
                     pbar.AdvancedStep();
                     DB.InsertWord2(word.word, word.lineNum, word.wordNum, DocID);
                 }*/
-                pbar.Fill();
+                form.Close();
                 MessageBox.Show("Document Loading Finished");
-                pbar.Close();
             }
         }
 
@@ -108,6 +107,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 TotAppeartxt.Enabled = false;
             else
                 TotAppeartxt.Enabled = true;
+
+            CharactersNum.Text = SearchBox.Text.Length.ToString();
+            CharactersNum.Visible = true;
 
             NumOfSearchestxt.Text = DB.GetWordSearches(SearchBox.Text).ToString();
             NumOfSearchlbl.Visible = true;
@@ -161,55 +163,55 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private void ContainingDocsnum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DocNames form = new DocNames(SearchBox.Text, this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void TagsNum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             WordTags form = new WordTags(SearchBox.Text,this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void AddTagLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddTag form = new AddTag(this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void AddRelationsLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddRelation form = new AddRelation(this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void RelationsNum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             WordRelation form = new WordRelation(SearchBox.Text,this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void ExpressionsNum_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             WordExpression form = new WordExpression(SearchBox.Text, this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void AddExpression_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddExpression form = new AddExpression(this);
-            form.Show();
+            form.ShowDialog();
         }
 
         private void AddDocTypeLbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddDocType form = new AddDocType();
-            form.Show();
+            form.ShowDialog();
         }
 
         private void ShowAllWords_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AllWords form = new AllWords();
-            form.Show();
+            form.ShowDialog();
         }
 
         private void AdvancedSearch_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

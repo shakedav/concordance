@@ -85,6 +85,7 @@
             this.ClientSize = new System.Drawing.Size(287, 204);
             this.Controls.Add(this.DocNamesGrid);
             this.Name = "DocNames";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Document Names";
             ((System.ComponentModel.ISupportInitialize)(this.DocNamesGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getDocsOfWordResultBindingSource)).EndInit();

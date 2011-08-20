@@ -90,6 +90,7 @@
             this.ClientSize = new System.Drawing.Size(415, 234);
             this.Controls.Add(this.WordExpressionDG);
             this.Name = "WordExpression";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Word Expression";
             this.Load += new System.EventHandler(this.WordExpression_Load);
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();

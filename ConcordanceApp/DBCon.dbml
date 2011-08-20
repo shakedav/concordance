@@ -279,11 +279,28 @@
   <Function Name="dbo.ContextWords" Method="ContextWords">
     <Parameter Name="word" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="DocTypeID" Parameter="docTypeID" Type="System.Int32" DbType="Int" />
-	<ElementType Name="ContextWordsResult">
+    <ElementType Name="ContextWordsResult">
       <Column Name="Context" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="Line" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Word Number" Member="Word_Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Document" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllTags" Method="GetAllTags">
+    <ElementType Name="GetAllTagsResult">
+      <Column Name="TagName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDocNameByAtt" Method="GetDocNameByAtt">
+    <Parameter Name="att" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GetDocNameByAttResult">
+      <Column Name="value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAvailableAtts" Method="GetAvailableAtts">
+    <Parameter Name="AttID" Parameter="attID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetAvailableAttsResult">
+      <Column Name="value" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
 </Database>

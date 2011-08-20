@@ -103,6 +103,7 @@
             this.Controls.Add(this.WordsGrid);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AllWords";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "All Words";
             ((System.ComponentModel.ISupportInitialize)(this.WordsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getAllWordsResultBindingSource)).EndInit();

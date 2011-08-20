@@ -20,16 +20,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 	using System.Linq.Expressions;
 	using System.ComponentModel;
 	using System;
-
-
-    public partial class DBConDataContext : System.Data.Linq.DataContext
-    {
-        partial void OnCreated()
-        {
-            this.CommandTimeout = 3600;
-        }
-    }
-
+	
+	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Concordation")]
 	public partial class DBConDataContext : System.Data.Linq.DataContext
 	{
@@ -432,6 +424,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), word, docTypeID);
 			return ((ISingleResult<ContextWordsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetAllTags")]
+		public ISingleResult<GetAllTagsResult> GetAllTags()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetAllTagsResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetDocNameByAtt")]
+		public ISingleResult<GetDocNameByAttResult> GetDocNameByAtt([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string att)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), att);
+			return ((ISingleResult<GetDocNameByAttResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetAvailableAtts")]
+		public ISingleResult<GetAvailableAttsResult> GetAvailableAtts([global::System.Data.Linq.Mapping.ParameterAttribute(Name="AttID", DbType="Int")] System.Nullable<int> attID)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), attID);
+			return ((ISingleResult<GetAvailableAttsResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -1154,6 +1167,84 @@ namespace concordanceapConcordationDataSetTableAdaptersp
 				if ((this._Document != value))
 				{
 					this._Document = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetAllTagsResult
+	{
+		
+		private string _TagName;
+		
+		public GetAllTagsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TagName", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string TagName
+		{
+			get
+			{
+				return this._TagName;
+			}
+			set
+			{
+				if ((this._TagName != value))
+				{
+					this._TagName = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetDocNameByAttResult
+	{
+		
+		private string _value;
+		
+		public GetDocNameByAttResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_value", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string value
+		{
+			get
+			{
+				return this._value;
+			}
+			set
+			{
+				if ((this._value != value))
+				{
+					this._value = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetAvailableAttsResult
+	{
+		
+		private string _value;
+		
+		public GetAvailableAttsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_value", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string value
+		{
+			get
+			{
+				return this._value;
+			}
+			set
+			{
+				if ((this._value != value))
+				{
+					this._value = value;
 				}
 			}
 		}

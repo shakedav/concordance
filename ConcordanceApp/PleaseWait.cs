@@ -14,6 +14,9 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         public PleaseWait()
         {
             InitializeComponent();
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.ControlBox = false;
         }
     }
 }

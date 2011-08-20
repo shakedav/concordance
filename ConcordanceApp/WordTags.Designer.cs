@@ -158,6 +158,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Tags);
             this.Name = "WordTags";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Word Tags";
             this.Load += new System.EventHandler(this.WordTags_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Tags)).EndInit();

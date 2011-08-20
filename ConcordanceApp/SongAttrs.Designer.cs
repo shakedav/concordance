@@ -132,7 +132,7 @@
             this.Controls.Add(this.PublishDatelbl);
             this.Controls.Add(this.Composerlbl);
             this.Name = "SongAttrs";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Song Attributes";
             this.ResumeLayout(false);
             this.PerformLayout();

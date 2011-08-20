@@ -67,6 +67,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "AddDocType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddDocType";
             this.ResumeLayout(false);
             this.PerformLayout();

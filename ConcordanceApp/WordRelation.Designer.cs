@@ -131,6 +131,7 @@
             this.Controls.Add(this.AddTaglnk);
             this.MinimumSize = new System.Drawing.Size(419, 319);
             this.Name = "WordRelation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WordRelation";
             this.Load += new System.EventHandler(this.WordRelation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WordRelationsGrid)).EndInit();
