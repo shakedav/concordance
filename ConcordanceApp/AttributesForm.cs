@@ -30,15 +30,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             }
         }
 
-        /*public string Composer
-        {
-            set { Composertxt.Text = value; }
-            get
-            {
-                return Composertxt.Text;
-            }
-        }*/
-
         public string DocumentName
         {
             set { Nametxt.Text = value; }

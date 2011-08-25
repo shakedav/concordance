@@ -90,6 +90,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.label2 = new System.Windows.Forms.Label();
             this.NumbersGB = new System.Windows.Forms.GroupBox();
             this.DocumentsGrid = new System.Windows.Forms.DataGridView();
+            this.Welcome1 = new System.Windows.Forms.Label();
             this.Welcomelbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).BeginInit();
@@ -104,22 +105,22 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // SearchBox
             // 
+            this.SearchBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.Location = new System.Drawing.Point(72, 12);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(95, 21);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.Text = "Word";
-            this.SearchBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // SearchLabel
             // 
             this.SearchLabel.AutoSize = true;
+            this.SearchLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchLabel.Location = new System.Drawing.Point(14, 15);
             this.SearchLabel.Name = "SearchLabel";
             this.SearchLabel.Size = new System.Drawing.Size(52, 13);
             this.SearchLabel.TabIndex = 1;
             this.SearchLabel.Text = "Search:";
-            this.SearchLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // StoryCB
             // 
@@ -246,6 +247,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             // SearchBtn
             // 
+            this.SearchBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBtn.Location = new System.Drawing.Point(175, 10);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(75, 22);
@@ -253,7 +255,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            this.SearchBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // RegularSearchGrid
             // 
@@ -274,13 +275,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.RegularSearchGrid.DataSource = this.contextWordsResultBindingSource;
+            this.RegularSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegularSearchGrid.Location = new System.Drawing.Point(275, 38);
             this.RegularSearchGrid.Name = "RegularSearchGrid";
             this.RegularSearchGrid.ReadOnly = true;
             this.RegularSearchGrid.Size = new System.Drawing.Size(812, 419);
             this.RegularSearchGrid.TabIndex = 21;
             this.RegularSearchGrid.Visible = false;
-            this.RegularSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -481,6 +482,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // ShowAllWords
             // 
             this.ShowAllWords.AutoSize = true;
+            this.ShowAllWords.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ShowAllWords.LinkColor = System.Drawing.Color.DodgerBlue;
             this.ShowAllWords.Location = new System.Drawing.Point(12, 394);
             this.ShowAllWords.Name = "ShowAllWords";
@@ -490,7 +492,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.ShowAllWords.Text = "Show All Words";
             this.ShowAllWords.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.ShowAllWords.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowAllWords_LinkClicked);
-            this.ShowAllWords.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // AdvancedSearch
             // 
@@ -619,6 +620,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.wordNumDataGridViewTextBoxColumn,
             this.valueDataGridViewTextBoxColumn});
             this.AdvancedSearchGrid.DataSource = this.getWordByLineAndNumResultBindingSource;
+            this.AdvancedSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdvancedSearchGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.AdvancedSearchGrid.Location = new System.Drawing.Point(275, 36);
             this.AdvancedSearchGrid.Name = "AdvancedSearchGrid";
@@ -626,7 +628,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AdvancedSearchGrid.Size = new System.Drawing.Size(814, 434);
             this.AdvancedSearchGrid.TabIndex = 46;
             this.AdvancedSearchGrid.Visible = false;
-            this.AdvancedSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // wordDataGridViewTextBoxColumn
             // 
@@ -676,13 +677,13 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.wordDataGridViewTextBoxColumn1,
             this.tagNameDataGridViewTextBoxColumn});
             this.TagSearchGrid.DataSource = this.getWordByTagNameResultBindingSource;
+            this.TagSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TagSearchGrid.Location = new System.Drawing.Point(275, 36);
             this.TagSearchGrid.Name = "TagSearchGrid";
             this.TagSearchGrid.ReadOnly = true;
             this.TagSearchGrid.Size = new System.Drawing.Size(814, 434);
             this.TagSearchGrid.TabIndex = 47;
             this.TagSearchGrid.Visible = false;
-            this.TagSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // wordDataGridViewTextBoxColumn1
             // 
@@ -719,6 +720,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.BackupRestore.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.BackupRestore.AutoSize = true;
+            this.BackupRestore.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackupRestore.LinkColor = System.Drawing.Color.DodgerBlue;
             this.BackupRestore.Location = new System.Drawing.Point(14, 444);
             this.BackupRestore.Name = "BackupRestore";
@@ -727,7 +729,6 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.BackupRestore.TabStop = true;
             this.BackupRestore.Text = "Backup / Restore";
             this.BackupRestore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BackupRestore_LinkClicked);
-            this.BackupRestore.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label2
             // 
@@ -758,29 +759,41 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // DocumentsGrid
             // 
             this.DocumentsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.DocumentsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DocumentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DocumentsGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentsGrid.Location = new System.Drawing.Point(275, 36);
             this.DocumentsGrid.Name = "DocumentsGrid";
             this.DocumentsGrid.Size = new System.Drawing.Size(832, 412);
             this.DocumentsGrid.TabIndex = 52;
             this.DocumentsGrid.Visible = false;
-            this.DocumentsGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // Welcome1
+            // 
+            this.Welcome1.AutoSize = true;
+            this.Welcome1.Font = new System.Drawing.Font("Verdana", 14F);
+            this.Welcome1.Location = new System.Drawing.Point(273, 17);
+            this.Welcome1.Name = "Welcome1";
+            this.Welcome1.Size = new System.Drawing.Size(271, 23);
+            this.Welcome1.TabIndex = 54;
+            this.Welcome1.Text = "Welcome To Word Tracker!";
             // 
             // Welcomelbl
             // 
-            this.Welcomelbl.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Welcomelbl.Location = new System.Drawing.Point(310, 84);
+            this.Welcomelbl.Font = new System.Drawing.Font("Verdana", 16F);
+            this.Welcomelbl.Location = new System.Drawing.Point(275, 140);
             this.Welcomelbl.Name = "Welcomelbl";
-            this.Welcomelbl.Size = new System.Drawing.Size(777, 329);
+            this.Welcomelbl.Size = new System.Drawing.Size(777, 122);
             this.Welcomelbl.TabIndex = 53;
-            this.Welcomelbl.Text = "Welcome To Concordance  \r\n\r\n* Click \"Upload Document\"  to upload a new document\r\n" +
-                "* Enter a word and click search to find the word appearances\r\n";
+            this.Welcomelbl.Text = "\r\n* Click \"Upload Document\"  to upload a new document\r\n\r\n* Enter a word and click" +
+                " search to find the word appearances\r\n";
             // 
             // ConcordanceApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1358, 660);
+            this.Controls.Add(this.Welcome1);
             this.Controls.Add(this.Welcomelbl);
             this.Controls.Add(this.DocumentsGrid);
             this.Controls.Add(this.NumbersGB);
@@ -815,7 +828,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.MinimumSize = new System.Drawing.Size(1187, 463);
             this.Name = "ConcordanceApp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Concordance";
+            this.Text = "Word Tracker";
             ((System.ComponentModel.ISupportInitialize)(this.RegularSearchGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.contextWordsResultBindingSource)).EndInit();
             this.StatsGB.ResumeLayout(false);
@@ -892,6 +905,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         private Label CharactersNum;
         private Label Characterslbl;
         public DataGridView DocumentsGrid;
+        private Label Welcome1;
         private Label Welcomelbl;
     }
 }

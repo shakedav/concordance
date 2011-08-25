@@ -35,7 +35,6 @@
             this.SongNamelbl = new System.Windows.Forms.Label();
             this.Nextbtn = new System.Windows.Forms.Button();
             this.NameError = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ComposerError = new System.Windows.Forms.ErrorProvider(this.components);
             this.AuthorError = new System.Windows.Forms.ErrorProvider(this.components);
             this.DocTypelbl = new System.Windows.Forms.Label();
             this.DocTypeBox = new System.Windows.Forms.ComboBox();
@@ -43,7 +42,6 @@
             this.concordationDataSet = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSet();
             this.documentTypesTableAdapter = new concordanceapConcordationDataSetTableAdaptersp.ConcordationDataSetTableAdapters.DocumentTypesTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.NameError)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComposerError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorError)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentTypesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).BeginInit();
@@ -97,14 +95,12 @@
             // 
             // NameError
             // 
+            this.NameError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.NameError.ContainerControl = this;
-            // 
-            // ComposerError
-            // 
-            this.ComposerError.ContainerControl = this;
             // 
             // AuthorError
             // 
+            this.AuthorError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.AuthorError.ContainerControl = this;
             // 
             // DocTypelbl
@@ -161,7 +157,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AttributesForm_FormClosed);
             this.Load += new System.EventHandler(this.AttributesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NameError)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ComposerError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AuthorError)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentTypesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
@@ -178,7 +173,6 @@
         private System.Windows.Forms.Label SongNamelbl;
         private System.Windows.Forms.Button Nextbtn;
         private System.Windows.Forms.ErrorProvider NameError;
-        private System.Windows.Forms.ErrorProvider ComposerError;
         private System.Windows.Forms.ErrorProvider AuthorError;
         private System.Windows.Forms.ComboBox DocTypeBox;
         private System.Windows.Forms.Label DocTypelbl;
