@@ -65,10 +65,11 @@
             this.WordExpressionDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.expressionDataGridViewTextBoxColumn});
             this.WordExpressionDG.DataSource = this.getExpressionsOfWordResultBindingSource;
-            this.WordExpressionDG.Location = new System.Drawing.Point(13, 13);
+            this.WordExpressionDG.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WordExpressionDG.Location = new System.Drawing.Point(15, 13);
             this.WordExpressionDG.Name = "WordExpressionDG";
             this.WordExpressionDG.ReadOnly = true;
-            this.WordExpressionDG.Size = new System.Drawing.Size(390, 204);
+            this.WordExpressionDG.Size = new System.Drawing.Size(455, 204);
             this.WordExpressionDG.TabIndex = 0;
             // 
             // expressionDataGridViewTextBoxColumn
@@ -85,13 +86,14 @@
             // 
             // WordExpression
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 234);
+            this.ClientSize = new System.Drawing.Size(484, 234);
             this.Controls.Add(this.WordExpressionDG);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Name = "WordExpression";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Word Expression";
+            this.Text = "Word Expressions";
             this.Load += new System.EventHandler(this.WordExpression_Load);
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expressionsBindingSource)).EndInit();

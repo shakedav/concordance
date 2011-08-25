@@ -55,10 +55,11 @@
             this.AddTagDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tagNameDataGridViewTextBoxColumn});
             this.AddTagDataGrid.DataSource = this.tagsBindingSource;
-            this.AddTagDataGrid.Location = new System.Drawing.Point(13, 13);
+            this.AddTagDataGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTagDataGrid.Location = new System.Drawing.Point(15, 13);
             this.AddTagDataGrid.Name = "AddTagDataGrid";
             this.AddTagDataGrid.ReadOnly = true;
-            this.AddTagDataGrid.Size = new System.Drawing.Size(416, 271);
+            this.AddTagDataGrid.Size = new System.Drawing.Size(485, 271);
             this.AddTagDataGrid.TabIndex = 0;
             // 
             // tagNameDataGridViewTextBoxColumn
@@ -90,24 +91,24 @@
             // AddTagTagNamelbl
             // 
             this.AddTagTagNamelbl.AutoSize = true;
-            this.AddTagTagNamelbl.Location = new System.Drawing.Point(12, 301);
+            this.AddTagTagNamelbl.Location = new System.Drawing.Point(14, 301);
             this.AddTagTagNamelbl.Name = "AddTagTagNamelbl";
-            this.AddTagTagNamelbl.Size = new System.Drawing.Size(60, 13);
+            this.AddTagTagNamelbl.Size = new System.Drawing.Size(70, 13);
             this.AddTagTagNamelbl.TabIndex = 1;
             this.AddTagTagNamelbl.Text = "Tag Name:";
             // 
             // AddTagTxtBox
             // 
-            this.AddTagTxtBox.Location = new System.Drawing.Point(78, 298);
+            this.AddTagTxtBox.Location = new System.Drawing.Point(91, 298);
             this.AddTagTxtBox.Name = "AddTagTxtBox";
-            this.AddTagTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.AddTagTxtBox.Size = new System.Drawing.Size(116, 21);
             this.AddTagTxtBox.TabIndex = 2;
             // 
             // AddTagbtn
             // 
-            this.AddTagbtn.Location = new System.Drawing.Point(184, 290);
+            this.AddTagbtn.Location = new System.Drawing.Point(215, 290);
             this.AddTagbtn.Name = "AddTagbtn";
-            this.AddTagbtn.Size = new System.Drawing.Size(75, 34);
+            this.AddTagbtn.Size = new System.Drawing.Size(87, 34);
             this.AddTagbtn.TabIndex = 3;
             this.AddTagbtn.Text = "Add Tag";
             this.AddTagbtn.UseVisualStyleBackColor = true;
@@ -115,9 +116,9 @@
             // 
             // Delbtn
             // 
-            this.Delbtn.Location = new System.Drawing.Point(265, 290);
+            this.Delbtn.Location = new System.Drawing.Point(309, 290);
             this.Delbtn.Name = "Delbtn";
-            this.Delbtn.Size = new System.Drawing.Size(75, 34);
+            this.Delbtn.Size = new System.Drawing.Size(87, 34);
             this.Delbtn.TabIndex = 4;
             this.Delbtn.Text = "Delete Tag";
             this.Delbtn.UseVisualStyleBackColor = true;
@@ -125,19 +126,20 @@
             // 
             // AddTag
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 336);
+            this.ClientSize = new System.Drawing.Size(505, 336);
             this.Controls.Add(this.Delbtn);
             this.Controls.Add(this.AddTagbtn);
             this.Controls.Add(this.AddTagTxtBox);
             this.Controls.Add(this.AddTagTagNamelbl);
             this.Controls.Add(this.AddTagDataGrid);
-            this.MaximumSize = new System.Drawing.Size(449, 374);
-            this.MinimumSize = new System.Drawing.Size(449, 374);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.MaximumSize = new System.Drawing.Size(521, 374);
+            this.MinimumSize = new System.Drawing.Size(521, 374);
             this.Name = "AddTag";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Tag";
+            this.Text = "Add / Delete Tags";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTag_FormClosed);
             this.Load += new System.EventHandler(this.AddTag_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AddTagDataGrid)).EndInit();

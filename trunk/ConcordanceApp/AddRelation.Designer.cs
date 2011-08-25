@@ -53,10 +53,11 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.relationNameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.relationsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 13);
+            this.dataGridView1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.Location = new System.Drawing.Point(15, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(408, 269);
+            this.dataGridView1.Size = new System.Drawing.Size(476, 269);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
@@ -85,19 +86,19 @@
             // AddRelationlbl
             // 
             this.AddRelationlbl.AutoSize = true;
-            this.AddRelationlbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRelationlbl.Location = new System.Drawing.Point(13, 289);
+            this.AddRelationlbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRelationlbl.Location = new System.Drawing.Point(15, 289);
             this.AddRelationlbl.Name = "AddRelationlbl";
-            this.AddRelationlbl.Size = new System.Drawing.Size(80, 13);
+            this.AddRelationlbl.Size = new System.Drawing.Size(95, 13);
             this.AddRelationlbl.TabIndex = 1;
             this.AddRelationlbl.Text = "Relation Name:";
             // 
             // AddRelationbtn
             // 
-            this.AddRelationbtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRelationbtn.Location = new System.Drawing.Point(205, 286);
+            this.AddRelationbtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddRelationbtn.Location = new System.Drawing.Point(257, 286);
             this.AddRelationbtn.Name = "AddRelationbtn";
-            this.AddRelationbtn.Size = new System.Drawing.Size(87, 38);
+            this.AddRelationbtn.Size = new System.Drawing.Size(101, 38);
             this.AddRelationbtn.TabIndex = 5;
             this.AddRelationbtn.Text = "Add Relation";
             this.AddRelationbtn.UseVisualStyleBackColor = true;
@@ -105,17 +106,17 @@
             // 
             // AddRelationTxtBox
             // 
-            this.AddRelationTxtBox.Location = new System.Drawing.Point(99, 286);
+            this.AddRelationTxtBox.Location = new System.Drawing.Point(133, 286);
             this.AddRelationTxtBox.Name = "AddRelationTxtBox";
-            this.AddRelationTxtBox.Size = new System.Drawing.Size(100, 20);
+            this.AddRelationTxtBox.Size = new System.Drawing.Size(116, 21);
             this.AddRelationTxtBox.TabIndex = 4;
             // 
             // Deletebtn
             // 
-            this.Deletebtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletebtn.Location = new System.Drawing.Point(298, 286);
+            this.Deletebtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebtn.Location = new System.Drawing.Point(365, 286);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(92, 38);
+            this.Deletebtn.Size = new System.Drawing.Size(107, 38);
             this.Deletebtn.TabIndex = 6;
             this.Deletebtn.Text = "Delete Relation";
             this.Deletebtn.UseVisualStyleBackColor = true;
@@ -123,19 +124,20 @@
             // 
             // AddRelation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 336);
+            this.ClientSize = new System.Drawing.Size(505, 336);
             this.Controls.Add(this.Deletebtn);
             this.Controls.Add(this.AddRelationbtn);
             this.Controls.Add(this.AddRelationTxtBox);
             this.Controls.Add(this.AddRelationlbl);
             this.Controls.Add(this.dataGridView1);
-            this.MaximumSize = new System.Drawing.Size(449, 374);
-            this.MinimumSize = new System.Drawing.Size(449, 374);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.MaximumSize = new System.Drawing.Size(521, 374);
+            this.MinimumSize = new System.Drawing.Size(521, 374);
             this.Name = "AddRelation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Word Relation";
+            this.Text = "Add / Delete Word Relations";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddRelation_FormClosed);
             this.Load += new System.EventHandler(this.AddRelation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -157,5 +159,6 @@
         private System.Windows.Forms.Button AddRelationbtn;
         private System.Windows.Forms.TextBox AddRelationTxtBox;
         private System.Windows.Forms.Button Deletebtn;
+        
     }
 }

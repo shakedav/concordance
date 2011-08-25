@@ -51,12 +51,13 @@
             this.docNameDataGridViewTextBoxColumn,
             this.docPAthDataGridViewTextBoxColumn});
             this.DocNamesGrid.DataSource = this.getDocsOfWordResultBindingSource;
-            this.DocNamesGrid.Location = new System.Drawing.Point(12, 12);
+            this.DocNamesGrid.Location = new System.Drawing.Point(14, 12);
             this.DocNamesGrid.Name = "DocNamesGrid";
             this.DocNamesGrid.ReadOnly = true;
             this.DocNamesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.DocNamesGrid.Size = new System.Drawing.Size(266, 180);
+            this.DocNamesGrid.Size = new System.Drawing.Size(310, 180);
             this.DocNamesGrid.TabIndex = 1;
+            this.DocNamesGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // docNameDataGridViewTextBoxColumn
             // 
@@ -80,10 +81,11 @@
             // 
             // DocNames
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 204);
+            this.ClientSize = new System.Drawing.Size(335, 204);
             this.Controls.Add(this.DocNamesGrid);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Name = "DocNames";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Document Names";

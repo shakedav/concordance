@@ -36,39 +36,43 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.label1.Location = new System.Drawing.Point(15, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.Size = new System.Drawing.Size(102, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Document Type:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 10);
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.textBox1.Location = new System.Drawing.Point(141, 10);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(116, 21);
             this.textBox1.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(119, 36);
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.button1.Location = new System.Drawing.Point(139, 36);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Add Type";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // AddDocType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(331, 262);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Name = "AddDocType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddDocType";
+            this.Text = "Add Document Type";
             this.ResumeLayout(false);
             this.PerformLayout();
 
