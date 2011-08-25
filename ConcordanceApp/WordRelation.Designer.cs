@@ -48,14 +48,18 @@
             // 
             // AddTaglnk
             // 
+            this.AddTaglnk.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTaglnk.AutoSize = true;
-            this.AddTaglnk.Location = new System.Drawing.Point(12, 218);
-            this.AddTaglnk.MaximumSize = new System.Drawing.Size(398, 286);
+            this.AddTaglnk.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTaglnk.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.AddTaglnk.Location = new System.Drawing.Point(14, 218);
+            this.AddTaglnk.MaximumSize = new System.Drawing.Size(464, 286);
             this.AddTaglnk.Name = "AddTaglnk";
-            this.AddTaglnk.Size = new System.Drawing.Size(103, 13);
+            this.AddTaglnk.Size = new System.Drawing.Size(119, 13);
             this.AddTaglnk.TabIndex = 8;
             this.AddTaglnk.TabStop = true;
             this.AddTaglnk.Text = "Add A New Relation";
+            this.AddTaglnk.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTaglnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddTaglnk_LinkClicked);
             // 
             // WordRelationsGrid
@@ -70,10 +74,11 @@
             this.RelationName,
             this.word2});
             this.WordRelationsGrid.DataSource = this.getRelationsOfWordResultBindingSource1;
-            this.WordRelationsGrid.Location = new System.Drawing.Point(13, 13);
+            this.WordRelationsGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WordRelationsGrid.Location = new System.Drawing.Point(15, 13);
             this.WordRelationsGrid.Name = "WordRelationsGrid";
             this.WordRelationsGrid.ReadOnly = true;
-            this.WordRelationsGrid.Size = new System.Drawing.Size(434, 194);
+            this.WordRelationsGrid.Size = new System.Drawing.Size(506, 194);
             this.WordRelationsGrid.TabIndex = 9;
             // 
             // word1DataGridViewTextBoxColumn
@@ -124,15 +129,16 @@
             // 
             // WordRelation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 281);
+            this.ClientSize = new System.Drawing.Size(535, 281);
             this.Controls.Add(this.WordRelationsGrid);
             this.Controls.Add(this.AddTaglnk);
-            this.MinimumSize = new System.Drawing.Size(419, 319);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.MinimumSize = new System.Drawing.Size(486, 319);
             this.Name = "WordRelation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WordRelation";
+            this.Text = "Word Relations";
             this.Load += new System.EventHandler(this.WordRelation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WordRelationsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.getRelationsOfWordResultBindingSource1)).EndInit();

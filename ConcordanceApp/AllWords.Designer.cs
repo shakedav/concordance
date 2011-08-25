@@ -57,6 +57,7 @@
             this.WordsGrid.ReadOnly = true;
             this.WordsGrid.Size = new System.Drawing.Size(752, 470);
             this.WordsGrid.TabIndex = 0;
+            this.WordsGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // wordDataGridViewTextBoxColumn
             // 

@@ -57,10 +57,11 @@
             this.Tags.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tagNameDataGridViewTextBoxColumn});
             this.Tags.DataSource = this.getTagsofWordBindingSource;
-            this.Tags.Location = new System.Drawing.Point(12, 12);
+            this.Tags.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tags.Location = new System.Drawing.Point(14, 12);
             this.Tags.Name = "Tags";
             this.Tags.ReadOnly = true;
-            this.Tags.Size = new System.Drawing.Size(475, 194);
+            this.Tags.Size = new System.Drawing.Size(554, 194);
             this.Tags.TabIndex = 0;
             // 
             // tagNameDataGridViewTextBoxColumn
@@ -90,9 +91,9 @@
             this.comboBox1.DataSource = this.tagsBindingSource;
             this.comboBox1.DisplayMember = "TagName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(99, 212);
+            this.comboBox1.Location = new System.Drawing.Point(115, 212);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(115, 21);
+            this.comboBox1.Size = new System.Drawing.Size(133, 21);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "TagName";
             this.comboBox1.Enter += new System.EventHandler(this.comboBox1_Enter);
@@ -105,17 +106,19 @@
             // tagsList
             // 
             this.tagsList.AutoSize = true;
-            this.tagsList.Location = new System.Drawing.Point(13, 215);
+            this.tagsList.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tagsList.Location = new System.Drawing.Point(15, 215);
             this.tagsList.Name = "tagsList";
-            this.tagsList.Size = new System.Drawing.Size(80, 13);
+            this.tagsList.Size = new System.Drawing.Size(95, 13);
             this.tagsList.TabIndex = 2;
             this.tagsList.Text = "Available Tags:";
             // 
             // AddTag
             // 
-            this.AddTag.Location = new System.Drawing.Point(309, 210);
+            this.AddTag.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTag.Location = new System.Drawing.Point(360, 210);
             this.AddTag.Name = "AddTag";
-            this.AddTag.Size = new System.Drawing.Size(86, 23);
+            this.AddTag.Size = new System.Drawing.Size(100, 23);
             this.AddTag.TabIndex = 3;
             this.AddTag.Text = "Tag Word";
             this.AddTag.UseVisualStyleBackColor = true;
@@ -123,13 +126,17 @@
             // 
             // AddTaglnk
             // 
+            this.AddTaglnk.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTaglnk.AutoSize = true;
-            this.AddTaglnk.Location = new System.Drawing.Point(220, 215);
+            this.AddTaglnk.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddTaglnk.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.AddTaglnk.Location = new System.Drawing.Point(257, 215);
             this.AddTaglnk.Name = "AddTaglnk";
-            this.AddTaglnk.Size = new System.Drawing.Size(83, 13);
+            this.AddTaglnk.Size = new System.Drawing.Size(94, 13);
             this.AddTaglnk.TabIndex = 4;
             this.AddTaglnk.TabStop = true;
             this.AddTaglnk.Text = "Add A New Tag";
+            this.AddTaglnk.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AddTaglnk.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AddTaglnk_LinkClicked);
             // 
             // tagsTableAdapter
@@ -138,9 +145,10 @@
             // 
             // Removebtn
             // 
-            this.Removebtn.Location = new System.Drawing.Point(401, 210);
+            this.Removebtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Removebtn.Location = new System.Drawing.Point(468, 210);
             this.Removebtn.Name = "Removebtn";
-            this.Removebtn.Size = new System.Drawing.Size(86, 23);
+            this.Removebtn.Size = new System.Drawing.Size(100, 23);
             this.Removebtn.TabIndex = 5;
             this.Removebtn.Text = "Remove Tag";
             this.Removebtn.UseVisualStyleBackColor = true;
@@ -148,15 +156,16 @@
             // 
             // WordTags
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 248);
+            this.ClientSize = new System.Drawing.Size(581, 248);
             this.Controls.Add(this.Removebtn);
             this.Controls.Add(this.AddTaglnk);
             this.Controls.Add(this.AddTag);
             this.Controls.Add(this.tagsList);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Tags);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Name = "WordTags";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Word Tags";

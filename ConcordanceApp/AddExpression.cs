@@ -29,8 +29,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
         {
             // TODO: This line of code loads data into the 'concordationDataSet.Expressions' table. You can move, or remove it, as needed.
             //this.expressionsTableAdapter.Fill(this.concordationDataSet.Expressions);
-            ExpressionsGrid.DataSource = DB.GetExpressions();
-            
+            ExpressionsGrid.DataSource = DB.GetExpressions();            
         }
 
         private void Expressionbtn_Click(object sender, EventArgs e)

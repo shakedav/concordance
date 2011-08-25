@@ -41,9 +41,9 @@
             // 
             // Savebtn
             // 
-            this.Savebtn.Location = new System.Drawing.Point(122, 117);
+            this.Savebtn.Location = new System.Drawing.Point(142, 117);
             this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(84, 23);
+            this.Savebtn.Size = new System.Drawing.Size(98, 23);
             this.Savebtn.TabIndex = 11;
             this.Savebtn.Text = "Add Attributes";
             this.Savebtn.UseVisualStyleBackColor = true;
@@ -51,77 +51,77 @@
             // 
             // PublishDatetxt
             // 
-            this.PublishDatetxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.PublishDatetxt.Location = new System.Drawing.Point(106, 36);
+            this.PublishDatetxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.PublishDatetxt.Location = new System.Drawing.Point(124, 36);
             this.PublishDatetxt.Name = "PublishDatetxt";
-            this.PublishDatetxt.Size = new System.Drawing.Size(100, 21);
+            this.PublishDatetxt.Size = new System.Drawing.Size(116, 21);
             this.PublishDatetxt.TabIndex = 10;
             // 
             // Composertxt
             // 
-            this.Composertxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Composertxt.Location = new System.Drawing.Point(106, 9);
+            this.Composertxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Composertxt.Location = new System.Drawing.Point(124, 9);
             this.Composertxt.Name = "Composertxt";
-            this.Composertxt.Size = new System.Drawing.Size(100, 21);
+            this.Composertxt.Size = new System.Drawing.Size(116, 21);
             this.Composertxt.TabIndex = 9;
             // 
             // PublishDatelbl
             // 
             this.PublishDatelbl.AutoSize = true;
-            this.PublishDatelbl.Location = new System.Drawing.Point(12, 39);
+            this.PublishDatelbl.Location = new System.Drawing.Point(14, 39);
             this.PublishDatelbl.Name = "PublishDatelbl";
-            this.PublishDatelbl.Size = new System.Drawing.Size(70, 13);
+            this.PublishDatelbl.Size = new System.Drawing.Size(83, 13);
             this.PublishDatelbl.TabIndex = 8;
             this.PublishDatelbl.Text = "Publish Date:";
             // 
             // Composerlbl
             // 
             this.Composerlbl.AutoSize = true;
-            this.Composerlbl.Location = new System.Drawing.Point(12, 12);
+            this.Composerlbl.Location = new System.Drawing.Point(14, 12);
             this.Composerlbl.Name = "Composerlbl";
-            this.Composerlbl.Size = new System.Drawing.Size(57, 13);
+            this.Composerlbl.Size = new System.Drawing.Size(71, 13);
             this.Composerlbl.TabIndex = 7;
             this.Composerlbl.Text = "Composer:";
             // 
             // Publishertxt
             // 
-            this.Publishertxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Publishertxt.Location = new System.Drawing.Point(106, 63);
+            this.Publishertxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Publishertxt.Location = new System.Drawing.Point(124, 63);
             this.Publishertxt.Name = "Publishertxt";
-            this.Publishertxt.Size = new System.Drawing.Size(100, 21);
+            this.Publishertxt.Size = new System.Drawing.Size(116, 21);
             this.Publishertxt.TabIndex = 13;
             // 
             // Publisherlbl
             // 
             this.Publisherlbl.AutoSize = true;
-            this.Publisherlbl.Location = new System.Drawing.Point(12, 66);
+            this.Publisherlbl.Location = new System.Drawing.Point(14, 66);
             this.Publisherlbl.Name = "Publisherlbl";
-            this.Publisherlbl.Size = new System.Drawing.Size(53, 13);
+            this.Publisherlbl.Size = new System.Drawing.Size(64, 13);
             this.Publisherlbl.TabIndex = 12;
             this.Publisherlbl.Text = "Publisher:";
             // 
             // Performertxt
             // 
-            this.Performertxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Performertxt.Location = new System.Drawing.Point(106, 90);
+            this.Performertxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Performertxt.Location = new System.Drawing.Point(124, 90);
             this.Performertxt.Name = "Performertxt";
-            this.Performertxt.Size = new System.Drawing.Size(100, 21);
+            this.Performertxt.Size = new System.Drawing.Size(116, 21);
             this.Performertxt.TabIndex = 15;
             // 
             // Performerlbl
             // 
             this.Performerlbl.AutoSize = true;
-            this.Performerlbl.Location = new System.Drawing.Point(12, 93);
+            this.Performerlbl.Location = new System.Drawing.Point(14, 93);
             this.Performerlbl.Name = "Performerlbl";
-            this.Performerlbl.Size = new System.Drawing.Size(55, 13);
+            this.Performerlbl.Size = new System.Drawing.Size(70, 13);
             this.Performerlbl.TabIndex = 14;
             this.Performerlbl.Text = "Performer:";
             // 
             // SongAttrs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(218, 155);
+            this.ClientSize = new System.Drawing.Size(254, 155);
             this.Controls.Add(this.Performertxt);
             this.Controls.Add(this.Performerlbl);
             this.Controls.Add(this.Publishertxt);
@@ -131,6 +131,7 @@
             this.Controls.Add(this.Composertxt);
             this.Controls.Add(this.PublishDatelbl);
             this.Controls.Add(this.Composerlbl);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Name = "SongAttrs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Song Attributes";

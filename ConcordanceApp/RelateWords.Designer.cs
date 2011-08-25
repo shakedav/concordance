@@ -53,30 +53,30 @@
             // Word1lbl
             // 
             this.Word1lbl.AutoSize = true;
-            this.Word1lbl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Word1lbl.Location = new System.Drawing.Point(12, 9);
+            this.Word1lbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Word1lbl.Location = new System.Drawing.Point(12, 12);
             this.Word1lbl.Name = "Word1lbl";
-            this.Word1lbl.Size = new System.Drawing.Size(64, 16);
+            this.Word1lbl.Size = new System.Drawing.Size(62, 13);
             this.Word1lbl.TabIndex = 0;
             this.Word1lbl.Text = "Word #1:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 16);
+            this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Relation Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.label2.Location = new System.Drawing.Point(12, 65);
+            this.label2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Word #2:";
             // 
@@ -84,11 +84,11 @@
             // 
             this.Word1Box.DataSource = this.wordsBindingSource;
             this.Word1Box.DisplayMember = "Word";
-            this.Word1Box.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Word1Box.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.Word1Box.FormattingEnabled = true;
             this.Word1Box.Location = new System.Drawing.Point(115, 9);
             this.Word1Box.Name = "Word1Box";
-            this.Word1Box.Size = new System.Drawing.Size(121, 21);
+            this.Word1Box.Size = new System.Drawing.Size(121, 22);
             this.Word1Box.TabIndex = 3;
             this.Word1Box.ValueMember = "Word";
             // 
@@ -106,11 +106,11 @@
             // 
             this.RelationBox.DataSource = this.relationsBindingSource;
             this.RelationBox.DisplayMember = "RelationName";
-            this.RelationBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.RelationBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.RelationBox.FormattingEnabled = true;
             this.RelationBox.Location = new System.Drawing.Point(115, 38);
             this.RelationBox.Name = "RelationBox";
-            this.RelationBox.Size = new System.Drawing.Size(121, 21);
+            this.RelationBox.Size = new System.Drawing.Size(121, 22);
             this.RelationBox.TabIndex = 4;
             this.RelationBox.ValueMember = "RelationName";
             this.RelationBox.Enter += new System.EventHandler(this.RelationBox_Enter);
@@ -124,11 +124,11 @@
             // 
             this.Word2Box.DataSource = this.wordsBindingSource1;
             this.Word2Box.DisplayMember = "Word";
-            this.Word2Box.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
+            this.Word2Box.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.Word2Box.FormattingEnabled = true;
             this.Word2Box.Location = new System.Drawing.Point(115, 65);
             this.Word2Box.Name = "Word2Box";
-            this.Word2Box.Size = new System.Drawing.Size(121, 21);
+            this.Word2Box.Size = new System.Drawing.Size(121, 22);
             this.Word2Box.TabIndex = 5;
             this.Word2Box.ValueMember = "Word";
             // 
@@ -147,18 +147,23 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(242, 41);
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.DodgerBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(239, 41);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(93, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(107, 13);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add New Relation";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(245, 90);
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(254, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 23);
             this.button1.TabIndex = 7;
@@ -169,9 +174,10 @@
             // Direction
             // 
             this.Direction.AutoSize = true;
-            this.Direction.Location = new System.Drawing.Point(115, 96);
+            this.Direction.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Direction.Location = new System.Drawing.Point(115, 94);
             this.Direction.Name = "Direction";
-            this.Direction.Size = new System.Drawing.Size(88, 17);
+            this.Direction.Size = new System.Drawing.Size(103, 17);
             this.Direction.TabIndex = 8;
             this.Direction.Text = "Bi-Directional";
             this.Direction.UseVisualStyleBackColor = true;
@@ -180,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(341, 125);
+            this.ClientSize = new System.Drawing.Size(358, 125);
             this.Controls.Add(this.Direction);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.linkLabel1);
@@ -192,7 +198,7 @@
             this.Controls.Add(this.Word1lbl);
             this.Name = "RelateWords";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RelateWords";
+            this.Text = "Relate Words";
             this.Load += new System.EventHandler(this.RelateWords_Load);
             ((System.ComponentModel.ISupportInitialize)(this.wordsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.concordationDataSet)).EndInit();

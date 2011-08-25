@@ -108,7 +108,8 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(95, 21);
             this.SearchBox.TabIndex = 0;
-            this.SearchBox.Text = "Word / Term";
+            this.SearchBox.Text = "Word";
+            this.SearchBox.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // SearchLabel
             // 
@@ -118,6 +119,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.SearchLabel.Size = new System.Drawing.Size(52, 13);
             this.SearchLabel.TabIndex = 1;
             this.SearchLabel.Text = "Search:";
+            this.SearchLabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // StoryCB
             // 
@@ -251,6 +253,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.SearchBtn.Text = "Search";
             this.SearchBtn.UseVisualStyleBackColor = true;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            this.SearchBtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // RegularSearchGrid
             // 
@@ -277,6 +280,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.RegularSearchGrid.Size = new System.Drawing.Size(812, 419);
             this.RegularSearchGrid.TabIndex = 21;
             this.RegularSearchGrid.Visible = false;
+            this.RegularSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -477,7 +481,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // ShowAllWords
             // 
             this.ShowAllWords.AutoSize = true;
-            this.ShowAllWords.LinkColor = System.Drawing.Color.SlateGray;
+            this.ShowAllWords.LinkColor = System.Drawing.Color.DodgerBlue;
             this.ShowAllWords.Location = new System.Drawing.Point(12, 394);
             this.ShowAllWords.Name = "ShowAllWords";
             this.ShowAllWords.Size = new System.Drawing.Size(96, 13);
@@ -486,23 +490,27 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.ShowAllWords.Text = "Show All Words";
             this.ShowAllWords.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.ShowAllWords.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ShowAllWords_LinkClicked);
+            this.ShowAllWords.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // AdvancedSearch
             // 
+            this.AdvancedSearch.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.AdvancedSearch.AutoSize = true;
+            this.AdvancedSearch.LinkColor = System.Drawing.Color.DodgerBlue;
             this.AdvancedSearch.Location = new System.Drawing.Point(141, 39);
             this.AdvancedSearch.Name = "AdvancedSearch";
             this.AdvancedSearch.Size = new System.Drawing.Size(107, 13);
             this.AdvancedSearch.TabIndex = 39;
             this.AdvancedSearch.TabStop = true;
             this.AdvancedSearch.Text = "Advanced Search";
+            this.AdvancedSearch.VisitedLinkColor = System.Drawing.Color.DodgerBlue;
             this.AdvancedSearch.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.AdvancedSearch_LinkClicked);
             // 
             // Statslbl
             // 
             this.Statslbl.AutoSize = true;
             this.Statslbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Statslbl.ForeColor = System.Drawing.Color.Blue;
+            this.Statslbl.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Statslbl.Location = new System.Drawing.Point(7, 10);
             this.Statslbl.Name = "Statslbl";
             this.Statslbl.Size = new System.Drawing.Size(58, 13);
@@ -618,6 +626,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.AdvancedSearchGrid.Size = new System.Drawing.Size(814, 434);
             this.AdvancedSearchGrid.TabIndex = 46;
             this.AdvancedSearchGrid.Visible = false;
+            this.AdvancedSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // wordDataGridViewTextBoxColumn
             // 
@@ -673,6 +682,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.TagSearchGrid.Size = new System.Drawing.Size(814, 434);
             this.TagSearchGrid.TabIndex = 47;
             this.TagSearchGrid.Visible = false;
+            this.TagSearchGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // wordDataGridViewTextBoxColumn1
             // 
@@ -709,6 +719,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             // 
             this.BackupRestore.ActiveLinkColor = System.Drawing.Color.DodgerBlue;
             this.BackupRestore.AutoSize = true;
+            this.BackupRestore.LinkColor = System.Drawing.Color.DodgerBlue;
             this.BackupRestore.Location = new System.Drawing.Point(14, 444);
             this.BackupRestore.Name = "BackupRestore";
             this.BackupRestore.Size = new System.Drawing.Size(106, 13);
@@ -716,6 +727,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.BackupRestore.TabStop = true;
             this.BackupRestore.Text = "Backup / Restore";
             this.BackupRestore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.BackupRestore_LinkClicked);
+            this.BackupRestore.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label2
             // 
@@ -752,6 +764,7 @@ namespace concordanceapConcordationDataSetTableAdaptersp
             this.DocumentsGrid.Size = new System.Drawing.Size(832, 412);
             this.DocumentsGrid.TabIndex = 52;
             this.DocumentsGrid.Visible = false;
+            this.DocumentsGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Welcomelbl
             // 

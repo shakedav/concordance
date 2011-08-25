@@ -62,27 +62,28 @@
             // AddExpressionlbl
             // 
             this.AddExpressionlbl.AutoSize = true;
-            this.AddExpressionlbl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.AddExpressionlbl.Location = new System.Drawing.Point(10, 205);
+            this.AddExpressionlbl.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddExpressionlbl.Location = new System.Drawing.Point(12, 205);
             this.AddExpressionlbl.Name = "AddExpressionlbl";
-            this.AddExpressionlbl.Size = new System.Drawing.Size(63, 13);
+            this.AddExpressionlbl.Size = new System.Drawing.Size(74, 13);
             this.AddExpressionlbl.TabIndex = 1;
             this.AddExpressionlbl.Text = "Expression:";
             // 
             // Expressiontxt
             // 
-            this.Expressiontxt.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Expressiontxt.Location = new System.Drawing.Point(79, 202);
+            this.Expressiontxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expressiontxt.Location = new System.Drawing.Point(105, 202);
             this.Expressiontxt.Name = "Expressiontxt";
-            this.Expressiontxt.Size = new System.Drawing.Size(100, 21);
+            this.Expressiontxt.Size = new System.Drawing.Size(116, 21);
+            this.Expressiontxt.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Expressiontxt.TabIndex = 2;
             // 
             // Expressionbtn
             // 
-            this.Expressionbtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Expressionbtn.Location = new System.Drawing.Point(185, 200);
+            this.Expressionbtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expressionbtn.Location = new System.Drawing.Point(229, 200);
             this.Expressionbtn.Name = "Expressionbtn";
-            this.Expressionbtn.Size = new System.Drawing.Size(100, 23);
+            this.Expressionbtn.Size = new System.Drawing.Size(117, 23);
             this.Expressionbtn.TabIndex = 3;
             this.Expressionbtn.Text = "Save Expression";
             this.Expressionbtn.UseVisualStyleBackColor = true;
@@ -98,12 +99,13 @@
             this.ExpressionsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.expressionDataGridViewTextBoxColumn});
             this.ExpressionsGrid.DataSource = this.getExpressionsResultBindingSource;
-            this.ExpressionsGrid.Location = new System.Drawing.Point(13, 13);
+            this.ExpressionsGrid.Location = new System.Drawing.Point(15, 13);
             this.ExpressionsGrid.Name = "ExpressionsGrid";
             this.ExpressionsGrid.ReadOnly = true;
-            this.ExpressionsGrid.Size = new System.Drawing.Size(479, 173);
+            this.ExpressionsGrid.Size = new System.Drawing.Size(559, 173);
             this.ExpressionsGrid.TabIndex = 0;
             this.ExpressionsGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExpressionsGrid_CellDoubleClick);
+            this.ExpressionsGrid.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // expressionDataGridViewTextBoxColumn
             // 
@@ -119,10 +121,10 @@
             // 
             // Deletebtn
             // 
-            this.Deletebtn.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
-            this.Deletebtn.Location = new System.Drawing.Point(291, 200);
+            this.Deletebtn.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebtn.Location = new System.Drawing.Point(352, 200);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(112, 23);
+            this.Deletebtn.Size = new System.Drawing.Size(131, 23);
             this.Deletebtn.TabIndex = 4;
             this.Deletebtn.Text = "Delete Expression";
             this.Deletebtn.UseVisualStyleBackColor = true;
@@ -130,14 +132,15 @@
             // 
             // AddExpression
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 262);
+            this.ClientSize = new System.Drawing.Size(588, 262);
             this.Controls.Add(this.Deletebtn);
             this.Controls.Add(this.Expressionbtn);
             this.Controls.Add(this.Expressiontxt);
             this.Controls.Add(this.AddExpressionlbl);
             this.Controls.Add(this.ExpressionsGrid);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.Name = "AddExpression";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add / Delete Expression";
