@@ -62,26 +62,23 @@ namespace concordanceapConcordationDataSetTableAdaptersp
                 /* insert the attributes to the DB */
                 DB.addAttributes(DocID, author, (int)AttributeTypes.AUTHOR);
                 DB.addAttributes(DocID, name, (int)AttributeTypes.NAME);
-                PleaseWait form = new PleaseWait();
-                form.Show();
                 Application.DoEvents();
-                FileHandler.ParseFile(filePath + fileName, DocID);
-                /*foreach (WordItem word in words)
-                {
-                    pbar.AdvancedStep();
-                    DB.InsertWord2(word.word, word.lineNum, word.wordNum, DocID);
-                }*/
-                form.Close();
-                MessageBox.Show("Document Loading Finished");
+                Thread t = new Thread(delegate() { FileHandler.ParseFile(filePath + fileName, DocID); });
+                t.Start();
+                MessageBox.Show("The file will be uploaded in the background");
+                Thread t1 = new Thread(delegate() {while (t.IsAlive){ } MessageBox.Show("Document Loading Finished");});
+                t1.Start();
             }
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            //DB.CommandTimeout = 3600;
+            DB.CommandTimeout = 3600;
             RegularSearchGrid.Visible = false;
             StatsGB.Visible = false;
-            NumbersGB.Visible = false;            
+            NumbersGB.Visible = false;
+            Welcomelbl.Visible = false;
+            Welcome1.Visible = false;
             Wordtxt.Text = "Searching...";
             Wordtxt.Visible = true;
             Application.DoEvents();
